@@ -94,12 +94,8 @@ export default function RootLayout({
           defaultTheme="system"
           disableTransitionOnChange={false}
         >
-          <div className="flex min-h-screen w-full flex-col">
-            <Header />
-            <main className="mx-auto my-8 w-full max-w-screen-lg flex-1">
-              {children}
-            </main>
-          </div>
+          <Header />
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
