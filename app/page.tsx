@@ -1,3 +1,14 @@
+// todo: 
+// - eyes adjust with mouth expression
+// - add more quotes
+// - name him 
+// - message animations
+// - priority quotes
+// - add "squint" animation
+// - if blink happens while animation is happening, blink will not happen
+// - fix weird line around eyes which pupil is near edge
+// - default eye sizing
+
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
@@ -7,6 +18,9 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover'
 import { Kbd } from '@/components/ui/kbd'
+
+// * TYPES
+type MouthExpression = 'closed' | 'happy' | 'sad' | 'surprised' | 'open'
 
 // * CONSTANTS
 // Delay for eyes opening on page load
@@ -29,6 +43,10 @@ const BLINK_DURATION = 150
 const MOUTH_DURATION = 4000
 // Offset for eye tracking to center on mouse
 const CENTER_OFFSET = 15
+// Minimum blink delay
+const BLINK_DELAY_MIN = 4000
+// Maximum blink delay
+const BLINK_DELAY_MAX = 8000
 
 const randomQuotes = [
   'Hey there! 👋',
@@ -64,9 +82,17 @@ function AnimatedEyes() {
   const [isJumping, setIsJumping] = useState(false)
   const [isSurprised, setIsSurprised] = useState(false)
   const [isWinking, setIsWinking] = useState(false)
-  type MouthExpression = 'closed' | 'happy' | 'sad' | 'surprised' | 'open'
   const [mouthExpression, setMouthExpression] =
     useState<MouthExpression>('closed')
+
+  // * HELPER FUNCTIONS
+  const addQuote = (text: string) => {
+    const newQuote = { id: Date.now(), text }
+    setAllQuotes((prev) => {
+      const updated = [...prev, newQuote]
+      return updated.length > 3 ? updated.slice(-3) : updated
+    })
+  }
 
   // * MOUSE TRACKING EFFECT
   useEffect(() => {
@@ -102,7 +128,8 @@ function AnimatedEyes() {
       }
 
       const scheduleNextBlink = () => {
-        const delay = Math.random() * 4000 + 4000
+        const delay =
+          Math.random() * (BLINK_DELAY_MAX - BLINK_DELAY_MIN) + BLINK_DELAY_MIN
         setTimeout(() => {
           blink()
           scheduleNextBlink()
@@ -169,26 +196,12 @@ function AnimatedEyes() {
         case 'j':
           setIsJumping(true)
           setTimeout(() => setIsJumping(false), JUMP_DURATION)
-          const jumpQuote = {
-            id: Date.now(),
-            text: '👆 I just jumped! 😎',
-          }
-          setAllQuotes((prev) => {
-            const updated = [...prev, jumpQuote]
-            return updated.length > 3 ? updated.slice(-3) : updated
-          })
+          addQuote('👆 I just jumped! 😎')
           break
         case 's':
           setIsSurprised(true)
           setMouthExpression('surprised')
-          const surprisedQuote = {
-            id: Date.now(),
-            text: '😱 Woah! That surprised me!',
-          }
-          setAllQuotes((prev) => {
-            const updated = [...prev, surprisedQuote]
-            return updated.length > 3 ? updated.slice(-3) : updated
-          })
+          addQuote('😱 Woah! That surprised me!')
           setTimeout(() => {
             setIsSurprised(false)
             setMouthExpression('closed')
@@ -196,42 +209,21 @@ function AnimatedEyes() {
           break
         case 'w':
           setIsWinking(true)
-          const winkQuote = {
-            id: Date.now(),
-            text: '😉 Just winking at you!',
-          }
-          setAllQuotes((prev) => {
-            const updated = [...prev, winkQuote]
-            return updated.length > 3 ? updated.slice(-3) : updated
-          })
+          addQuote('😉 Just winking at you!')
           setTimeout(() => {
             setIsWinking(false)
           }, INTERACTION_BUBBLE_DURATION)
           break
         case 'y':
           setMouthExpression('happy')
-          const happyQuote = {
-            id: Date.now(),
-            text: "😊 I'm so happy!",
-          }
-          setAllQuotes((prev) => {
-            const updated = [...prev, happyQuote]
-            return updated.length > 3 ? updated.slice(-3) : updated
-          })
+          addQuote("😊 I'm so happy!")
           setTimeout(() => {
             setMouthExpression('closed')
           }, MOUTH_DURATION)
           break
         case 'n':
           setMouthExpression('sad')
-          const sadQuote = {
-            id: Date.now(),
-            text: "😢 I'm feeling sad...",
-          }
-          setAllQuotes((prev) => {
-            const updated = [...prev, sadQuote]
-            return updated.length > 3 ? updated.slice(-3) : updated
-          })
+          addQuote("😢 I'm feeling sad...")
           setTimeout(() => {
             setMouthExpression('closed')
           }, MOUTH_DURATION)
