@@ -19,8 +19,6 @@ const FIRST_QUOTE_DELAY = 2000
 const QUOTE_INTERVAL_MIN = 8000
 // Maximum interval between quotes
 const QUOTE_INTERVAL_MAX = 15000
-// Duration of speech bubble
-const SPEECH_BUBBLE_DURATION = 3000
 // Duration of interaction bubble
 const INTERACTION_BUBBLE_DURATION = 2000
 // Duration of jump animation
@@ -60,7 +58,7 @@ function AnimatedEyes() {
   const [isBlinking, setIsBlinking] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [allQuotes, setAllQuotes] = useState<
-    Array<{ id: number; text: string; timestamp: number }>
+    Array<{ id: number; text: string }>
   >([])
   const [showHelpMenu, setShowHelpMenu] = useState(false)
   const [isJumping, setIsJumping] = useState(false)
@@ -127,7 +125,6 @@ function AnimatedEyes() {
       const newQuote = {
         id: Date.now(),
         text: randomQuotes[randomIndex],
-        timestamp: Date.now(),
       }
 
       setAllQuotes((prev) => {
@@ -172,6 +169,14 @@ function AnimatedEyes() {
         case 'j':
           setIsJumping(true)
           setTimeout(() => setIsJumping(false), JUMP_DURATION)
+          const jumpQuote = {
+            id: Date.now(),
+            text: '👆 I just jumped! 😎',
+          }
+          setAllQuotes((prev) => {
+            const updated = [...prev, jumpQuote]
+            return updated.length > 3 ? updated.slice(-3) : updated
+          })
           break
         case 's':
           setIsSurprised(true)
@@ -179,7 +184,6 @@ function AnimatedEyes() {
           const surprisedQuote = {
             id: Date.now(),
             text: '😱 Woah! That surprised me!',
-            timestamp: Date.now(),
           }
           setAllQuotes((prev) => {
             const updated = [...prev, surprisedQuote]
@@ -195,7 +199,6 @@ function AnimatedEyes() {
           const winkQuote = {
             id: Date.now(),
             text: '😉 Just winking at you!',
-            timestamp: Date.now(),
           }
           setAllQuotes((prev) => {
             const updated = [...prev, winkQuote]
@@ -211,7 +214,6 @@ function AnimatedEyes() {
           const happyQuote = {
             id: Date.now(),
             text: "😊 I'm so happy!",
-            timestamp: Date.now(),
           }
           setAllQuotes((prev) => {
             const updated = [...prev, happyQuote]
@@ -228,7 +230,6 @@ function AnimatedEyes() {
           const sadQuote = {
             id: Date.now(),
             text: "😢 I'm feeling sad...",
-            timestamp: Date.now(),
           }
           setAllQuotes((prev) => {
             const updated = [...prev, sadQuote]
@@ -308,10 +309,6 @@ function AnimatedEyes() {
           {/* Teeth */}
           <div className="absolute -top-4 left-1/2 z-10 h-6 w-8 -translate-x-1/2 transform rounded-b-lg bg-white"></div>
           <div className="absolute -bottom-4 left-1/2 z-10 h-6 w-8 -translate-x-1/2 transform rounded-t-lg bg-white"></div>
-          {/* Tongue */}
-          <div className="absolute bottom-0 left-1/2 h-8 w-16 -translate-x-1/2 transform rounded-t-full bg-pink-400"></div>
-          {/* Inner mouth */}
-          <div className="absolute inset-0 rounded-full bg-red-700"></div>
         </div>
       </div>
 
