@@ -316,7 +316,7 @@ function AnimatedEyes() {
       </div>
 
       {/* ALL QUOTES STACK */}
-      <div className="pointer-events-none fixed right-8 bottom-8">
+      <div className="pointer-events-none fixed right-6 bottom-8">
         <div className="flex flex-col items-end gap-2">
           {allQuotes.map((quote, index) => (
             <div
@@ -330,8 +330,6 @@ function AnimatedEyes() {
               <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {quote.text}
               </p>
-              {/* Speech bubble tail */}
-              <div className="absolute top-4 -right-2 h-4 w-4 rotate-45 transform border-r border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800"></div>
             </div>
           ))}
         </div>
