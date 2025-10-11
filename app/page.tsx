@@ -61,6 +61,8 @@ function AnimatedEyes() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentQuote, setCurrentQuote] = useState('')
   const [showBubble, setShowBubble] = useState(false)
+  const [randomQuote, setRandomQuote] = useState('')
+  const [showRandomBubble, setShowRandomBubble] = useState(false)
   const [showHelpMenu, setShowHelpMenu] = useState(false)
   const [isJumping, setIsJumping] = useState(false)
   const [isSurprised, setIsSurprised] = useState(false)
@@ -123,11 +125,11 @@ function AnimatedEyes() {
   useEffect(() => {
     const showRandomQuote = () => {
       const randomIndex = Math.floor(Math.random() * randomQuotes.length)
-      setCurrentQuote(randomQuotes[randomIndex])
-      setShowBubble(true)
+      setRandomQuote(randomQuotes[randomIndex])
+      setShowRandomBubble(true)
 
       setTimeout(() => {
-        setShowBubble(false)
+        setShowRandomBubble(false)
       }, SPEECH_BUBBLE_DURATION)
     }
 
@@ -212,12 +214,6 @@ function AnimatedEyes() {
         case 'escape':
           setShowHelpMenu(false)
           break
-        case 't':
-          const randomIndex = Math.floor(Math.random() * randomQuotes.length)
-          setCurrentQuote(randomQuotes[randomIndex])
-          setShowBubble(true)
-          setTimeout(() => setShowBubble(false), SPEECH_BUBBLE_DURATION)
-          break
       }
     }
 
@@ -277,8 +273,8 @@ function AnimatedEyes() {
               : isSmiling
                 ? 'h-12 w-48'
                 : isFrowning
-                  ? 'h-12 w-32'
-                  : 'h-12 w-40'
+                  ? 'h-8 w-30'
+                  : 'h-16 w-40'
           }`}
         >
           {/* Teeth */}
@@ -291,12 +287,25 @@ function AnimatedEyes() {
         </div>
       </div>
 
-      {/* SPEECH BUBBLE */}
+      {/* HOTKEY SPEECH BUBBLE */}
       {showBubble && (
         <div className="pointer-events-none fixed right-8 bottom-8">
           <div className="relative max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
             <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
               {currentQuote}
+            </p>
+            {/* Speech bubble tail */}
+            <div className="absolute top-4 -right-2 h-4 w-4 rotate-45 transform border-r border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800"></div>
+          </div>
+        </div>
+      )}
+
+      {/* RANDOM QUOTES BUBBLE */}
+      {showRandomBubble && (
+        <div className="pointer-events-none fixed right-8 bottom-32">
+          <div className="relative max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
+            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              {randomQuote}
             </p>
             {/* Speech bubble tail */}
             <div className="absolute top-4 -right-2 h-4 w-4 rotate-45 transform border-r border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800"></div>
@@ -339,10 +348,6 @@ function AnimatedEyes() {
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">N</Kbd>
                 <span>Frown</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <Kbd className="font-mono font-semibold">T</Kbd>
-                <span>Random quote</span>
               </div>
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">H</Kbd>
