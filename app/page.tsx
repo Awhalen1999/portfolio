@@ -64,9 +64,9 @@ function AnimatedEyes() {
   const [isJumping, setIsJumping] = useState(false)
   const [isSurprised, setIsSurprised] = useState(false)
   const [isWinking, setIsWinking] = useState(false)
-  const [isSmiling, setIsSmiling] = useState(false)
-  const [isFrowning, setIsFrowning] = useState(false)
-  const [isMouthOpen, setIsMouthOpen] = useState(false)
+  type MouthExpression = 'closed' | 'happy' | 'sad' | 'surprised' | 'open'
+  const [mouthExpression, setMouthExpression] =
+    useState<MouthExpression>('closed')
 
   // * MOUSE TRACKING EFFECT
   useEffect(() => {
@@ -180,7 +180,7 @@ function AnimatedEyes() {
           break
         case 's':
           setIsSurprised(true)
-          setIsMouthOpen(true)
+          setMouthExpression('surprised')
           const surprisedQuote = {
             id: Date.now(),
             text: '😱 Woah! That surprised me!',
@@ -191,7 +191,7 @@ function AnimatedEyes() {
           })
           setTimeout(() => {
             setIsSurprised(false)
-            setIsMouthOpen(false)
+            setMouthExpression('closed')
           }, INTERACTION_BUBBLE_DURATION)
           break
         case 'w':
@@ -209,8 +209,7 @@ function AnimatedEyes() {
           }, INTERACTION_BUBBLE_DURATION)
           break
         case 'y':
-          setIsSmiling(true)
-          setIsMouthOpen(true)
+          setMouthExpression('happy')
           const happyQuote = {
             id: Date.now(),
             text: "😊 I'm so happy!",
@@ -220,13 +219,11 @@ function AnimatedEyes() {
             return updated.length > 3 ? updated.slice(-3) : updated
           })
           setTimeout(() => {
-            setIsSmiling(false)
-            setIsMouthOpen(false)
+            setMouthExpression('closed')
           }, MOUTH_DURATION)
           break
         case 'n':
-          setIsFrowning(true)
-          setIsMouthOpen(true)
+          setMouthExpression('sad')
           const sadQuote = {
             id: Date.now(),
             text: "😢 I'm feeling sad...",
@@ -236,8 +233,7 @@ function AnimatedEyes() {
             return updated.length > 3 ? updated.slice(-3) : updated
           })
           setTimeout(() => {
-            setIsFrowning(false)
-            setIsMouthOpen(false)
+            setMouthExpression('closed')
           }, MOUTH_DURATION)
           break
         case 'escape':
@@ -248,7 +244,7 @@ function AnimatedEyes() {
 
     document.addEventListener('keydown', handleKeyPress)
     return () => document.removeEventListener('keydown', handleKeyPress)
-  }, [showHelpMenu, isMouthOpen])
+  }, [showHelpMenu])
 
   // * RENDER
   return (
@@ -297,13 +293,15 @@ function AnimatedEyes() {
         {/* MOUTH */}
         <div
           className={`absolute top-full left-1/2 mt-8 -translate-x-1/2 overflow-hidden rounded-full border-4 border-red-300 bg-red-500 transition-all duration-300 ease-out ${
-            !isMouthOpen
+            mouthExpression === 'closed'
               ? 'h-1 w-40'
-              : isSmiling
+              : mouthExpression === 'happy'
                 ? 'h-12 w-48'
-                : isFrowning
+                : mouthExpression === 'sad'
                   ? 'h-8 w-30'
-                  : 'h-16 w-40'
+                  : mouthExpression === 'surprised'
+                    ? 'h-16 w-40'
+                    : 'h-16 w-40'
           }`}
         >
           {/* Teeth */}
