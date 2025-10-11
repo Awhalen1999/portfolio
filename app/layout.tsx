@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
-import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 
 export const viewport: Viewport = {
@@ -95,10 +94,11 @@ export default function RootLayout({
           defaultTheme="system"
           disableTransitionOnChange={false}
         >
-          <div className="mx-auto flex min-h-screen w-full max-w-screen-lg flex-col">
+          <div className="flex min-h-screen w-full flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
+            <main className="mx-auto my-8 w-full max-w-screen-lg flex-1">
+              {children}
+            </main>
           </div>
         </ThemeProvider>
       </body>

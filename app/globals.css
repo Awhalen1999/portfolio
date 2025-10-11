@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
 
@@ -154,5 +154,48 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Typography System */
+@layer utilities {
+  .text-body {
+    @apply text-sm leading-relaxed font-normal;
+  }
+
+  .text-body-bold {
+    @apply text-sm leading-relaxed font-semibold;
+  }
+
+  .text-caption {
+    @apply text-sm leading-normal font-normal;
+  }
+
+  .text-caption-bold {
+    @apply text-sm leading-normal font-semibold;
+  }
+
+  .text-title {
+    @apply text-lg leading-tight font-semibold;
+  }
+
+  .text-title-bold {
+    @apply text-lg leading-tight font-bold;
+  }
+
+  .text-heading {
+    @apply text-xl leading-tight font-semibold;
+  }
+
+  .text-heading-bold {
+    @apply text-xl leading-tight font-bold;
+  }
+
+  .text-display {
+    @apply text-2xl leading-tight font-bold;
+  }
+
+  .text-display-large {
+    @apply text-3xl leading-tight font-bold;
   }
 }
