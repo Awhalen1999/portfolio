@@ -59,10 +59,9 @@ function AnimatedEyes() {
   const ballRefs = useRef<(HTMLDivElement | null)[]>([])
   const [isBlinking, setIsBlinking] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-  const [currentQuote, setCurrentQuote] = useState('')
-  const [showBubble, setShowBubble] = useState(false)
-  const [randomQuote, setRandomQuote] = useState('')
-  const [showRandomBubble, setShowRandomBubble] = useState(false)
+  const [allQuotes, setAllQuotes] = useState<
+    Array<{ id: number; text: string; timestamp: number }>
+  >([])
   const [showHelpMenu, setShowHelpMenu] = useState(false)
   const [isJumping, setIsJumping] = useState(false)
   const [isSurprised, setIsSurprised] = useState(false)
@@ -125,12 +124,17 @@ function AnimatedEyes() {
   useEffect(() => {
     const showRandomQuote = () => {
       const randomIndex = Math.floor(Math.random() * randomQuotes.length)
-      setRandomQuote(randomQuotes[randomIndex])
-      setShowRandomBubble(true)
+      const newQuote = {
+        id: Date.now(),
+        text: randomQuotes[randomIndex],
+        timestamp: Date.now(),
+      }
 
-      setTimeout(() => {
-        setShowRandomBubble(false)
-      }, SPEECH_BUBBLE_DURATION)
+      setAllQuotes((prev) => {
+        const updated = [...prev, newQuote]
+        // Keep only the last 3 quotes
+        return updated.length > 3 ? updated.slice(-3) : updated
+      })
     }
 
     // Show first quote after eyes open
@@ -172,43 +176,67 @@ function AnimatedEyes() {
         case 's':
           setIsSurprised(true)
           setIsMouthOpen(true)
-          setCurrentQuote('😱 Woah! That surprised me!')
-          setShowBubble(true)
+          const surprisedQuote = {
+            id: Date.now(),
+            text: '😱 Woah! That surprised me!',
+            timestamp: Date.now(),
+          }
+          setAllQuotes((prev) => {
+            const updated = [...prev, surprisedQuote]
+            return updated.length > 3 ? updated.slice(-3) : updated
+          })
           setTimeout(() => {
             setIsSurprised(false)
             setIsMouthOpen(false)
-            setShowBubble(false)
           }, INTERACTION_BUBBLE_DURATION)
           break
         case 'w':
           setIsWinking(true)
-          setCurrentQuote('😉 Just winking at you!')
-          setShowBubble(true)
+          const winkQuote = {
+            id: Date.now(),
+            text: '😉 Just winking at you!',
+            timestamp: Date.now(),
+          }
+          setAllQuotes((prev) => {
+            const updated = [...prev, winkQuote]
+            return updated.length > 3 ? updated.slice(-3) : updated
+          })
           setTimeout(() => {
             setIsWinking(false)
-            setShowBubble(false)
           }, INTERACTION_BUBBLE_DURATION)
           break
         case 'y':
           setIsSmiling(true)
           setIsMouthOpen(true)
-          setCurrentQuote("😊 I'm so happy!")
-          setShowBubble(true)
+          const happyQuote = {
+            id: Date.now(),
+            text: "😊 I'm so happy!",
+            timestamp: Date.now(),
+          }
+          setAllQuotes((prev) => {
+            const updated = [...prev, happyQuote]
+            return updated.length > 3 ? updated.slice(-3) : updated
+          })
           setTimeout(() => {
             setIsSmiling(false)
             setIsMouthOpen(false)
-            setShowBubble(false)
           }, MOUTH_DURATION)
           break
         case 'n':
           setIsFrowning(true)
           setIsMouthOpen(true)
-          setCurrentQuote("😢 I'm feeling sad...")
-          setShowBubble(true)
+          const sadQuote = {
+            id: Date.now(),
+            text: "😢 I'm feeling sad...",
+            timestamp: Date.now(),
+          }
+          setAllQuotes((prev) => {
+            const updated = [...prev, sadQuote]
+            return updated.length > 3 ? updated.slice(-3) : updated
+          })
           setTimeout(() => {
             setIsFrowning(false)
             setIsMouthOpen(false)
-            setShowBubble(false)
           }, MOUTH_DURATION)
           break
         case 'escape':
@@ -287,31 +315,27 @@ function AnimatedEyes() {
         </div>
       </div>
 
-      {/* HOTKEY SPEECH BUBBLE */}
-      {showBubble && (
-        <div className="pointer-events-none fixed right-8 bottom-8">
-          <div className="relative max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
-            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-              {currentQuote}
-            </p>
-            {/* Speech bubble tail */}
-            <div className="absolute top-4 -right-2 h-4 w-4 rotate-45 transform border-r border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800"></div>
-          </div>
+      {/* ALL QUOTES STACK */}
+      <div className="pointer-events-none fixed right-8 bottom-8">
+        <div className="flex flex-col items-end gap-2">
+          {allQuotes.map((quote, index) => (
+            <div
+              key={quote.id}
+              className="relative w-fit max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg dark:border-zinc-700 dark:bg-zinc-800"
+              style={{
+                transform: `translateY(${index * 4}px)`,
+                opacity: 1 - index * 0.1,
+              }}
+            >
+              <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                {quote.text}
+              </p>
+              {/* Speech bubble tail */}
+              <div className="absolute top-4 -right-2 h-4 w-4 rotate-45 transform border-r border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800"></div>
+            </div>
+          ))}
         </div>
-      )}
-
-      {/* RANDOM QUOTES BUBBLE */}
-      {showRandomBubble && (
-        <div className="pointer-events-none fixed right-8 bottom-32">
-          <div className="relative max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
-            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-              {randomQuote}
-            </p>
-            {/* Speech bubble tail */}
-            <div className="absolute top-4 -right-2 h-4 w-4 rotate-45 transform border-r border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800"></div>
-          </div>
-        </div>
-      )}
+      </div>
 
       {/* HELP MENU */}
       <Popover open={showHelpMenu} onOpenChange={setShowHelpMenu}>
