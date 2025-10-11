@@ -8,6 +8,7 @@
 // - if blink happens while animation is happening, blink will not happen
 // - fix weird line around eyes which pupil is near edge
 // - default eye sizing
+// - reorder hot keys
 
 'use client'
 
