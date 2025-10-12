@@ -43,6 +43,8 @@ const QUOTE_INTERVAL_MAX = 15000
 const INTERACTION_BUBBLE_DURATION = 2000
 // Duration of jump animation
 const JUMP_DURATION = 600
+// Duration of confused tilt animation
+const TILT_DURATION = 2000
 // Duration of blink animation
 const BLINK_DURATION = 150
 // Duration of mouth expression animation
@@ -104,13 +106,15 @@ function AnimatedEyes() {
   // * STATE MANAGEMENT
   const ballRefs = useRef<(HTMLDivElement | null)[]>([])
   const [isBlinking, setIsBlinking] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
   const [allQuotes, setAllQuotes] = useState<
     Array<{ id: number; text: string }>
   >([])
   const [showHelpMenu, setShowHelpMenu] = useState(false)
   const [isJumping, setIsJumping] = useState(false)
   const [isWinking, setIsWinking] = useState(false)
+  const [isTilted, setIsTilted] = useState(false)
+  const [tiltDirection, setTiltDirection] = useState<'left' | 'right'>('left')
   const [expression, setExpression] = useState<Expression>('closed')
 
   // * HELPER FUNCTIONS
@@ -146,32 +150,21 @@ function AnimatedEyes() {
 
   // * EYE ANIMATION EFFECT
   useEffect(() => {
-    const openTimer = setTimeout(() => {
-      setIsOpen(true)
-    }, EYE_OPEN_DELAY)
-
-    const blinkTimer = setTimeout(() => {
-      const blink = () => {
-        setIsBlinking(true)
-        setTimeout(() => setIsBlinking(false), BLINK_DURATION)
-      }
-
-      const scheduleNextBlink = () => {
-        const delay =
-          Math.random() * (BLINK_DELAY_MAX - BLINK_DELAY_MIN) + BLINK_DELAY_MIN
-        setTimeout(() => {
-          blink()
-          scheduleNextBlink()
-        }, delay)
-      }
-
-      scheduleNextBlink()
-    }, BLINK_START_DELAY)
-
-    return () => {
-      clearTimeout(openTimer)
-      clearTimeout(blinkTimer)
+    const blink = () => {
+      setIsBlinking(true)
+      setTimeout(() => setIsBlinking(false), BLINK_DURATION)
     }
+
+    const scheduleNextBlink = () => {
+      const delay =
+        Math.random() * (BLINK_DELAY_MAX - BLINK_DELAY_MIN) + BLINK_DELAY_MIN
+      setTimeout(() => {
+        blink()
+        scheduleNextBlink()
+      }, delay)
+    }
+
+    scheduleNextBlink()
   }, [])
 
   // * RANDOM QUOTES SYSTEM
@@ -240,6 +233,16 @@ function AnimatedEyes() {
             setIsWinking(false)
           }, INTERACTION_BUBBLE_DURATION)
           break
+        case 'c':
+          // Random tilt direction
+          const randomDirection = Math.random() < 0.5 ? 'left' : 'right'
+          setTiltDirection(randomDirection)
+          setIsTilted(true)
+          addQuote("🤔 Hmm, that's confusing...")
+          setTimeout(() => {
+            setIsTilted(false)
+          }, TILT_DURATION)
+          break
 
         // * EMOTIONS (eye + mouth expressions)
         case 'y':
@@ -282,7 +285,13 @@ function AnimatedEyes() {
     <div className="pointer-events-none fixed inset-0 flex items-center justify-center">
       {/* FACE CONTAINER */}
       <div
-        className={`relative transition-all duration-300 ${isJumping ? '-translate-y-8 transform' : ''}`}
+        className={`relative transition-all duration-300 ${isJumping ? '-translate-y-8 transform' : ''} ${
+          isTilted
+            ? tiltDirection === 'left'
+              ? '-rotate-12'
+              : 'rotate-12'
+            : ''
+        }`}
       >
         {/* EYES CONTAINER */}
         <div className="flex gap-20">
@@ -359,7 +368,7 @@ function AnimatedEyes() {
 
         {/* MOUTH */}
         <div
-          className={`absolute top-full left-1/2 mt-8 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white bg-red-500 transition-all duration-300 ease-out ${
+          className={`absolute top-full left-1/2 mt-8 -translate-x-1/2 overflow-hidden rounded-full border-4 border-red-300 bg-red-500 transition-all duration-300 ease-out ${
             expression === 'closed'
               ? MOUTH_CLOSED
               : expression === 'happy'
@@ -412,21 +421,10 @@ function AnimatedEyes() {
         <PopoverContent className="w-80" side="top" align="start">
           <div className="space-y-2">
             <h4 className="mb-4 leading-none font-medium">
-              Keyboard Shortcuts
+              Keyboard Shortcuts to interact
             </h4>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center justify-between">
-                <Kbd className="font-mono font-semibold">J</Kbd>
-                <span>Jump</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <Kbd className="font-mono font-semibold">S</Kbd>
-                <span>Surprised</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <Kbd className="font-mono font-semibold">W</Kbd>
-                <span>Wink</span>
-              </div>
+              {/* EXPRESSIONS */}
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">Y</Kbd>
                 <span>Smile</span>
@@ -436,9 +434,29 @@ function AnimatedEyes() {
                 <span>Frown</span>
               </div>
               <div className="flex items-center justify-between">
+                <Kbd className="font-mono font-semibold">S</Kbd>
+                <span>Surprised</span>
+              </div>
+              <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">X</Kbd>
                 <span>Suspicious</span>
               </div>
+
+              {/* OTHER ANIMATIONS */}
+              <div className="flex items-center justify-between">
+                <Kbd className="font-mono font-semibold">J</Kbd>
+                <span>Jump</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <Kbd className="font-mono font-semibold">W</Kbd>
+                <span>Wink</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <Kbd className="font-mono font-semibold">C</Kbd>
+                <span>Head Tilt</span>
+              </div>
+
+              {/* MENU OPTIONS */}
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">H</Kbd>
                 <span>Toggle help</span>
