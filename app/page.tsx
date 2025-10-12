@@ -3,11 +3,9 @@
 // - name him
 // - message animations
 // - priority quotes
-// - add "squint" animation
 // - if blink happens while animation is happening, blink will not happen
 // - fix weird line around eyes which pupil is near edge
-// - default eye sizing
-// - reorder hot keys
+// - add tail to messages
 
 'use client'
 
@@ -82,6 +80,7 @@ const EYE_HEIGHT_NORMAL = 'h-32'
 
 const randomQuotes = [
   'Hey there! 👋',
+  "Hello! 👋 I am Glorp - Alex's assistant. Dont worry he feeds me every day 🍗",
   'Welcome to my portfolio!',
   "I'm Alex, a developer who loves creating cool stuff",
   'Check out my projects! 🚀',
@@ -233,7 +232,7 @@ function AnimatedEyes() {
             setIsWinking(false)
           }, INTERACTION_BUBBLE_DURATION)
           break
-        case 'c':
+        case 't':
           // Random tilt direction
           const randomDirection = Math.random() < 0.5 ? 'left' : 'right'
           setTiltDirection(randomDirection)
@@ -452,7 +451,7 @@ function AnimatedEyes() {
                 <span>Wink</span>
               </div>
               <div className="flex items-center justify-between">
-                <Kbd className="font-mono font-semibold">C</Kbd>
+                <Kbd className="font-mono font-semibold">T</Kbd>
                 <span>Head Tilt</span>
               </div>
 
