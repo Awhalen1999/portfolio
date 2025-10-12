@@ -20,7 +20,7 @@ import {
 import { Kbd } from '@/components/ui/kbd'
 
 // * TYPES
-type MouthExpression =
+type Expression =
   | 'closed'
   | 'happy'
   | 'sad'
@@ -56,6 +56,28 @@ const BLINK_DELAY_MIN = 4000
 // Maximum blink delay
 const BLINK_DELAY_MAX = 8000
 
+// * EXPRESSION SCALING CONSTANTS
+const EYE_SCALE_HAPPY = 'scale-105'
+const EYE_SCALE_SAD = 'scale-95'
+const EYE_SCALE_SURPRISED = 'scale-110'
+const EYE_SCALE_SUSPICIOUS = 'scale-90'
+
+const PUPIL_SCALE_SURPRISED = 'scale-115'
+
+// * MOUTH SIZE CONSTANTS
+const MOUTH_CLOSED = 'h-1 w-40'
+const MOUTH_HAPPY = 'h-12 w-48'
+const MOUTH_SAD = 'h-8 w-30'
+const MOUTH_SURPRISED = 'h-16 w-40'
+const MOUTH_SUSPICIOUS = 'h-1 w-20'
+
+// * EYE HEIGHT CONSTANTS
+const EYE_HEIGHT_CLOSED = 'h-1'
+const EYE_HEIGHT_SAD = 'h-24'
+const EYE_HEIGHT_SUSPICIOUS = 'h-24'
+const EYE_HEIGHT_HAPPY = 'h-36'
+const EYE_HEIGHT_NORMAL = 'h-32'
+
 const randomQuotes = [
   'Hey there! 👋',
   'Welcome to my portfolio!',
@@ -88,10 +110,8 @@ function AnimatedEyes() {
   >([])
   const [showHelpMenu, setShowHelpMenu] = useState(false)
   const [isJumping, setIsJumping] = useState(false)
-  const [isSurprised, setIsSurprised] = useState(false)
   const [isWinking, setIsWinking] = useState(false)
-  const [mouthExpression, setMouthExpression] =
-    useState<MouthExpression>('closed')
+  const [expression, setExpression] = useState<Expression>('closed')
 
   // * HELPER FUNCTIONS
   const addQuote = (text: string) => {
@@ -199,22 +219,19 @@ function AnimatedEyes() {
       const key = event.key.toLowerCase()
 
       switch (key) {
+        // * HELP MENU
         case 'h':
           setShowHelpMenu(!showHelpMenu)
           break
+        case 'escape':
+          setShowHelpMenu(false)
+          break
+
+        // * SIMPLE ANIMATIONS
         case 'j':
           setIsJumping(true)
           setTimeout(() => setIsJumping(false), JUMP_DURATION)
           addQuote('👆 I just jumped! 😎')
-          break
-        case 's':
-          setIsSurprised(true)
-          setMouthExpression('surprised')
-          addQuote('😱 Woah! That surprised me!')
-          setTimeout(() => {
-            setIsSurprised(false)
-            setMouthExpression('closed')
-          }, INTERACTION_BUBBLE_DURATION)
           break
         case 'w':
           setIsWinking(true)
@@ -223,25 +240,35 @@ function AnimatedEyes() {
             setIsWinking(false)
           }, INTERACTION_BUBBLE_DURATION)
           break
+
+        // * EMOTIONS (eye + mouth expressions)
         case 'y':
-          setMouthExpression('happy')
+          setExpression('happy')
           addQuote("😊 I'm so happy!")
           setTimeout(() => {
-            setMouthExpression('closed')
+            setExpression('closed')
           }, MOUTH_DURATION)
           break
         case 'n':
-          setMouthExpression('sad')
+          setExpression('sad')
           addQuote("😢 I'm feeling sad...")
           setTimeout(() => {
-            setMouthExpression('closed')
+            setExpression('closed')
           }, MOUTH_DURATION)
           break
-        case 'x':
-          addQuote('🤔 Something seems fishy...')
+        case 's':
+          setExpression('surprised')
+          addQuote('😱 Woah! That surprised me!')
+          setTimeout(() => {
+            setExpression('closed')
+          }, INTERACTION_BUBBLE_DURATION)
           break
-        case 'escape':
-          setShowHelpMenu(false)
+        case 'x':
+          setExpression('suspicious')
+          addQuote('🤔 Something seems fishy...')
+          setTimeout(() => {
+            setExpression('closed')
+          }, MOUTH_DURATION)
           break
       }
     }
@@ -263,23 +290,23 @@ function AnimatedEyes() {
           <div
             className={`relative w-60 overflow-hidden rounded-full bg-gray-200 transition-all duration-300 ease-out dark:bg-white ${
               !isOpen || isBlinking || isWinking
-                ? 'h-1'
-                : mouthExpression === 'sad'
-                  ? 'h-24'
-                  : mouthExpression === 'suspicious'
-                    ? 'h-24'
-                    : mouthExpression === 'happy'
-                      ? 'h-36'
-                      : 'h-32'
+                ? EYE_HEIGHT_CLOSED
+                : expression === 'sad'
+                  ? EYE_HEIGHT_SAD
+                  : expression === 'suspicious'
+                    ? EYE_HEIGHT_SUSPICIOUS
+                    : expression === 'happy'
+                      ? EYE_HEIGHT_HAPPY
+                      : EYE_HEIGHT_NORMAL
             } ${
-              isSurprised
-                ? 'scale-110'
-                : mouthExpression === 'suspicious'
-                  ? 'scale-90'
-                  : mouthExpression === 'happy'
-                    ? 'scale-105'
-                    : mouthExpression === 'sad'
-                      ? 'scale-95'
+              expression === 'surprised'
+                ? EYE_SCALE_SURPRISED
+                : expression === 'suspicious'
+                  ? EYE_SCALE_SUSPICIOUS
+                  : expression === 'happy'
+                    ? EYE_SCALE_HAPPY
+                    : expression === 'sad'
+                      ? EYE_SCALE_SAD
                       : ''
             }`}
           >
@@ -288,7 +315,7 @@ function AnimatedEyes() {
                 ballRefs.current[0] = el
               }}
               className={`absolute h-20 w-20 rounded-full bg-black transition-all duration-100 ease-out ${
-                isSurprised ? 'scale-125' : ''
+                expression === 'surprised' ? PUPIL_SCALE_SURPRISED : ''
               }`}
               style={{ transform: 'translate(50%, 50%)' }}
             />
@@ -299,22 +326,22 @@ function AnimatedEyes() {
             className={`relative w-60 overflow-hidden rounded-full bg-gray-200 transition-all duration-300 ease-out dark:bg-white ${
               !isOpen || isBlinking
                 ? 'h-1'
-                : mouthExpression === 'sad'
+                : expression === 'sad'
                   ? 'h-24'
-                  : mouthExpression === 'suspicious'
+                  : expression === 'suspicious'
                     ? 'h-24'
-                    : mouthExpression === 'happy'
+                    : expression === 'happy'
                       ? 'h-36'
                       : 'h-32'
             } ${
-              isSurprised
-                ? 'scale-110'
-                : mouthExpression === 'suspicious'
-                  ? 'scale-90'
-                  : mouthExpression === 'happy'
-                    ? 'scale-105'
-                    : mouthExpression === 'sad'
-                      ? 'scale-95'
+              expression === 'surprised'
+                ? EYE_SCALE_SURPRISED
+                : expression === 'suspicious'
+                  ? EYE_SCALE_SUSPICIOUS
+                  : expression === 'happy'
+                    ? EYE_SCALE_HAPPY
+                    : expression === 'sad'
+                      ? EYE_SCALE_SAD
                       : ''
             }`}
           >
@@ -323,7 +350,7 @@ function AnimatedEyes() {
                 ballRefs.current[1] = el
               }}
               className={`absolute h-20 w-20 rounded-full bg-black transition-all duration-100 ease-out ${
-                isSurprised ? 'scale-125' : ''
+                expression === 'surprised' ? PUPIL_SCALE_SURPRISED : ''
               }`}
               style={{ transform: 'translate(50%, 50%)' }}
             />
@@ -333,17 +360,17 @@ function AnimatedEyes() {
         {/* MOUTH */}
         <div
           className={`absolute top-full left-1/2 mt-8 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white bg-red-500 transition-all duration-300 ease-out ${
-            mouthExpression === 'closed'
-              ? 'h-1 w-40'
-              : mouthExpression === 'happy'
-                ? 'h-12 w-48'
-                : mouthExpression === 'sad'
-                  ? 'h-8 w-30'
-                  : mouthExpression === 'suspicious'
-                    ? 'h-1 w-56'
-                    : mouthExpression === 'surprised'
-                      ? 'h-16 w-40'
-                      : 'h-16 w-40'
+            expression === 'closed'
+              ? MOUTH_CLOSED
+              : expression === 'happy'
+                ? MOUTH_HAPPY
+                : expression === 'sad'
+                  ? MOUTH_SAD
+                  : expression === 'suspicious'
+                    ? MOUTH_SUSPICIOUS
+                    : expression === 'surprised'
+                      ? MOUTH_SURPRISED
+                      : MOUTH_SURPRISED
           }`}
         >
           {/* Teeth */}
