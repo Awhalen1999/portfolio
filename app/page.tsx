@@ -1,7 +1,6 @@
-// todo: 
-// - eyes adjust with mouth expression
+// todo:
 // - add more quotes
-// - name him 
+// - name him
 // - message animations
 // - priority quotes
 // - add "squint" animation
@@ -21,7 +20,13 @@ import {
 import { Kbd } from '@/components/ui/kbd'
 
 // * TYPES
-type MouthExpression = 'closed' | 'happy' | 'sad' | 'surprised' | 'open'
+type MouthExpression =
+  | 'closed'
+  | 'happy'
+  | 'sad'
+  | 'surprised'
+  | 'open'
+  | 'suspicious'
 
 // * CONSTANTS
 // Delay for eyes opening on page load
@@ -43,7 +48,9 @@ const BLINK_DURATION = 150
 // Duration of mouth expression animation
 const MOUTH_DURATION = 4000
 // Offset for eye tracking to center on mouse
-const CENTER_OFFSET = 15
+const CENTER_OFFSET = 16
+// Vertical offset for eye tracking
+const VERTICAL_OFFSET = 12
 // Minimum blink delay
 const BLINK_DELAY_MIN = 4000
 // Maximum blink delay
@@ -99,7 +106,8 @@ function AnimatedEyes() {
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const x = (event.clientX * 100) / window.innerWidth - 50 + CENTER_OFFSET
-      const y = (event.clientY * 100) / window.innerHeight - 50
+      const y =
+        (event.clientY * 100) / window.innerHeight - 50 - VERTICAL_OFFSET
 
       ballRefs.current.forEach((ball) => {
         if (ball) {
@@ -229,6 +237,9 @@ function AnimatedEyes() {
             setMouthExpression('closed')
           }, MOUTH_DURATION)
           break
+        case 'x':
+          addQuote('🤔 Something seems fishy...')
+          break
         case 'escape':
           setShowHelpMenu(false)
           break
@@ -251,8 +262,26 @@ function AnimatedEyes() {
           {/* LEFT EYE */}
           <div
             className={`relative w-60 overflow-hidden rounded-full bg-gray-200 transition-all duration-300 ease-out dark:bg-white ${
-              !isOpen || isBlinking || isWinking ? 'h-1' : 'h-32'
-            } ${isSurprised ? 'scale-110' : ''}`}
+              !isOpen || isBlinking || isWinking
+                ? 'h-1'
+                : mouthExpression === 'sad'
+                  ? 'h-24'
+                  : mouthExpression === 'suspicious'
+                    ? 'h-24'
+                    : mouthExpression === 'happy'
+                      ? 'h-36'
+                      : 'h-32'
+            } ${
+              isSurprised
+                ? 'scale-110'
+                : mouthExpression === 'suspicious'
+                  ? 'scale-90'
+                  : mouthExpression === 'happy'
+                    ? 'scale-105'
+                    : mouthExpression === 'sad'
+                      ? 'scale-95'
+                      : ''
+            }`}
           >
             <div
               ref={(el) => {
@@ -268,8 +297,26 @@ function AnimatedEyes() {
           {/* RIGHT EYE */}
           <div
             className={`relative w-60 overflow-hidden rounded-full bg-gray-200 transition-all duration-300 ease-out dark:bg-white ${
-              !isOpen || isBlinking ? 'h-1' : 'h-32'
-            } ${isSurprised ? 'scale-110' : ''}`}
+              !isOpen || isBlinking
+                ? 'h-1'
+                : mouthExpression === 'sad'
+                  ? 'h-24'
+                  : mouthExpression === 'suspicious'
+                    ? 'h-24'
+                    : mouthExpression === 'happy'
+                      ? 'h-36'
+                      : 'h-32'
+            } ${
+              isSurprised
+                ? 'scale-110'
+                : mouthExpression === 'suspicious'
+                  ? 'scale-90'
+                  : mouthExpression === 'happy'
+                    ? 'scale-105'
+                    : mouthExpression === 'sad'
+                      ? 'scale-95'
+                      : ''
+            }`}
           >
             <div
               ref={(el) => {
@@ -285,16 +332,18 @@ function AnimatedEyes() {
 
         {/* MOUTH */}
         <div
-          className={`absolute top-full left-1/2 mt-8 -translate-x-1/2 overflow-hidden rounded-full border-4 border-red-300 bg-red-500 transition-all duration-300 ease-out ${
+          className={`absolute top-full left-1/2 mt-8 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white bg-red-500 transition-all duration-300 ease-out ${
             mouthExpression === 'closed'
               ? 'h-1 w-40'
               : mouthExpression === 'happy'
                 ? 'h-12 w-48'
                 : mouthExpression === 'sad'
                   ? 'h-8 w-30'
-                  : mouthExpression === 'surprised'
-                    ? 'h-16 w-40'
-                    : 'h-16 w-40'
+                  : mouthExpression === 'suspicious'
+                    ? 'h-1 w-56'
+                    : mouthExpression === 'surprised'
+                      ? 'h-16 w-40'
+                      : 'h-16 w-40'
           }`}
         >
           {/* Teeth */}
@@ -358,6 +407,10 @@ function AnimatedEyes() {
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">N</Kbd>
                 <span>Frown</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <Kbd className="font-mono font-semibold">X</Kbd>
+                <span>Suspicious</span>
               </div>
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">H</Kbd>
