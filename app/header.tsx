@@ -68,7 +68,7 @@ function ThemeSwitch() {
 
 export function Header() {
   return (
-    <header className="relative z-40">
+    <header className="relative z-40 border-b">
       <div className="flex items-center p-4 px-8">
         {/* Left side - Logo */}
         <div className="flex items-center">
@@ -81,7 +81,7 @@ export function Header() {
         <nav className="ml-auto flex items-center gap-6">
           <Link
             href="/about"
-            className="text-caption opacity-60 transition-opacity hover:opacity-100"
+            className="text-caption tracking-tight opacity-60 transition-opacity hover:opacity-100"
           >
             <span className="hidden md:inline">About</span>
             <span className="md:hidden">
@@ -90,7 +90,7 @@ export function Header() {
           </Link>
           <Link
             href="/projects"
-            className="text-caption opacity-60 transition-opacity hover:opacity-100"
+            className="text-caption tracking-tight opacity-60 transition-opacity hover:opacity-100"
           >
             <span className="hidden md:inline">Projects</span>
             <span className="md:hidden">
