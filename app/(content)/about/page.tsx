@@ -15,7 +15,7 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="space-y-6 border">
+    <div className="space-y-6">
       {/* Name and Introduction */}
       <div className="space-y-3">
         <h1 className="text-4xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-100">
@@ -28,44 +28,48 @@ export default function AboutPage() {
       </div>
 
       {/* Working At */}
-      <div className="flex items-center gap-2">
-        <p className="leading-snug tracking-tight text-zinc-700 dark:text-zinc-300">
-          Working at
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <Chip
-            icon={<span className="text-blue-600">💼</span>}
-            href="https://example.com"
-          >
-            Your Company
-          </Chip>
-          <Chip
-            icon={<span className="text-green-600">🚀</span>}
-            href="https://example.com"
-          >
-            Freelance
-          </Chip>
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <p className="leading-snug tracking-tight text-zinc-700 dark:text-zinc-300">
+            Working at
+          </p>
+          <div className="flex flex-wrap gap-1">
+            <Chip
+              icon={<span className="text-blue-600">💼</span>}
+              href="https://example.com"
+            >
+              Your Company
+            </Chip>
+            <Chip
+              icon={<span className="text-green-600">🚀</span>}
+              href="https://example.com"
+            >
+              Freelance
+            </Chip>
+          </div>
         </div>
-      </div>
 
-      {/* Tech Stack */}
-      <div className="flex items-center gap-2">
-        <p className="leading-snug tracking-tight text-zinc-700 dark:text-zinc-300">
-          Tech Stack
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <Chip icon={<span className="text-blue-500">⚛️</span>}>React</Chip>
-          <Chip icon={<span className="text-blue-600">🔷</span>}>
-            TypeScript
-          </Chip>
-          <Chip icon={<span className="text-black dark:text-white">▲</span>}>
-            Next.js
-          </Chip>
-          <Chip icon={<span className="text-green-500">🟢</span>}>Node.js</Chip>
-          <Chip icon={<span className="text-purple-500">💜</span>}>
-            Tailwind CSS
-          </Chip>
-          <Chip icon={<span className="text-yellow-500">⚡</span>}>Vite</Chip>
+        {/* Tech Stack */}
+        <div className="flex items-center gap-2">
+          <p className="leading-snug tracking-tight text-zinc-700 dark:text-zinc-300">
+            Tech Stack
+          </p>
+          <div className="flex flex-wrap gap-1">
+            <Chip icon={<span className="text-blue-500">⚛️</span>}>React</Chip>
+            <Chip icon={<span className="text-blue-600">🔷</span>}>
+              TypeScript
+            </Chip>
+            <Chip icon={<span className="text-black dark:text-white">▲</span>}>
+              Next.js
+            </Chip>
+            <Chip icon={<span className="text-green-500">🟢</span>}>
+              Node.js
+            </Chip>
+            <Chip icon={<span className="text-purple-500">💜</span>}>
+              Tailwind CSS
+            </Chip>
+            <Chip icon={<span className="text-yellow-500">⚡</span>}>Vite</Chip>
+          </div>
         </div>
       </div>
 
@@ -117,11 +121,11 @@ export default function AboutPage() {
       </div>
 
       {/* Find Me On */}
-      <div className="flex items-center gap-4">
-        <h2 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+      <div className="flex items-center gap-1">
+        <p className="leading-snug tracking-tight text-zinc-700 dark:text-zinc-300">
           Find me on
-        </h2>
-        <div className="flex flex-wrap gap-2">
+        </p>
+        <div className="flex flex-wrap gap-1">
           <Chip
             href="https://github.com/awhalen1999"
             icon={<Github className="h-4 w-4" />}
