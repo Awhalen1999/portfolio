@@ -1,13 +1,6 @@
 'use client'
 import Link from 'next/link'
-import {
-  MoonIcon,
-  SunIcon,
-  Github,
-  Folder,
-  UserSearch,
-  Book,
-} from 'lucide-react'
+import { MoonIcon, SunIcon, Github, Folder, UserSearch } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
@@ -70,15 +63,6 @@ export function Header() {
             <span className="hidden md:inline">Projects</span>
             <span className="md:hidden">
               <Folder className="h-4 w-4" />
-            </span>
-          </Link>
-          <Link
-            href="/blog"
-            className="text-caption opacity-60 transition-opacity hover:opacity-100"
-          >
-            <span className="hidden md:inline">Blog</span>
-            <span className="md:hidden">
-              <Book className="h-4 w-4" />
             </span>
           </Link>
           <a
