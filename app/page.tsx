@@ -1,9 +1,7 @@
 // todo:
 // - add more quotes
 // - name him
-// - message animations
 // - priority quotes
-// - if blink happens while animation is happening, blink will not happen
 // - fix weird line around eyes which pupil is near edge
 // - add tail to messages
 
@@ -107,7 +105,7 @@ function AnimatedEyes() {
   const [isBlinking, setIsBlinking] = useState(false)
   const [isOpen, setIsOpen] = useState(true)
   const [allQuotes, setAllQuotes] = useState<
-    Array<{ id: number; text: string }>
+    Array<{ id: number; text: string; isNew?: boolean }>
   >([])
   const [showHelpMenu, setShowHelpMenu] = useState(false)
   const [isJumping, setIsJumping] = useState(false)
@@ -118,11 +116,20 @@ function AnimatedEyes() {
 
   // * HELPER FUNCTIONS
   const addQuote = (text: string) => {
-    const newQuote = { id: Date.now(), text }
+    const newQuote = { id: Date.now(), text, isNew: true }
     setAllQuotes((prev) => {
       const updated = [...prev, newQuote]
       return updated.length > 3 ? updated.slice(-3) : updated
     })
+
+    // Remove the isNew flag after animation completes
+    setTimeout(() => {
+      setAllQuotes((prev) =>
+        prev.map((quote) =>
+          quote.id === newQuote.id ? { ...quote, isNew: false } : quote,
+        ),
+      )
+    }, 200)
   }
 
   // * MOUSE TRACKING EFFECT
@@ -173,6 +180,7 @@ function AnimatedEyes() {
       const newQuote = {
         id: Date.now(),
         text: randomQuotes[randomIndex],
+        isNew: true,
       }
 
       setAllQuotes((prev) => {
@@ -180,6 +188,15 @@ function AnimatedEyes() {
         // Keep only the last 3 quotes
         return updated.length > 3 ? updated.slice(-3) : updated
       })
+
+      // Remove the isNew flag after animation completes
+      setTimeout(() => {
+        setAllQuotes((prev) =>
+          prev.map((quote) =>
+            quote.id === newQuote.id ? { ...quote, isNew: false } : quote,
+          ),
+        )
+      }, 100)
     }
 
     // Show first quote after eyes open
@@ -333,14 +350,14 @@ function AnimatedEyes() {
           <div
             className={`relative w-60 overflow-hidden rounded-full bg-gray-200 transition-all duration-300 ease-out dark:bg-white ${
               !isOpen || isBlinking
-                ? 'h-1'
+                ? EYE_HEIGHT_CLOSED
                 : expression === 'sad'
-                  ? 'h-24'
+                  ? EYE_HEIGHT_SAD
                   : expression === 'suspicious'
-                    ? 'h-24'
+                    ? EYE_HEIGHT_SUSPICIOUS
                     : expression === 'happy'
-                      ? 'h-36'
-                      : 'h-32'
+                      ? EYE_HEIGHT_HAPPY
+                      : EYE_HEIGHT_NORMAL
             } ${
               expression === 'surprised'
                 ? EYE_SCALE_SURPRISED
@@ -393,10 +410,12 @@ function AnimatedEyes() {
           {allQuotes.map((quote, index) => (
             <div
               key={quote.id}
-              className="relative w-fit max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg dark:border-zinc-700 dark:bg-zinc-800"
+              className="relative w-fit max-w-xs rounded-lg border border-zinc-200 bg-white px-4 py-3 shadow-lg transition-all duration-200 ease-out dark:border-zinc-700 dark:bg-zinc-800"
               style={{
-                transform: `translateY(${index * 4}px)`,
-                opacity: 1 - index * 0.1,
+                transform: `translateY(${index * 4}px) ${
+                  quote.isNew ? 'translateX(2rem)' : 'translateX(0)'
+                }`,
+                opacity: quote.isNew ? 0 : 1 - index * 0.1,
               }}
             >
               <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">

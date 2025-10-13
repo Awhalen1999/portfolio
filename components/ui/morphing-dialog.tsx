@@ -19,7 +19,6 @@ import {
 import { createPortal } from 'react-dom'
 import { cn } from '@/lib/utils'
 import { XIcon } from 'lucide-react'
-import useClickOutside from '@/hooks/useClickOutside'
 
 export type MorphingDialogContextType = {
   isOpen: boolean
@@ -197,12 +196,6 @@ function MorphingDialogContent({
       triggerRef.current?.focus()
     }
   }, [isOpen, triggerRef])
-
-  useClickOutside(containerRef, () => {
-    if (isOpen) {
-      setIsOpen(false)
-    }
-  })
 
   return (
     <motion.div
