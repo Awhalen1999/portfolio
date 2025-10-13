@@ -1,8 +1,38 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MoonIcon, SunIcon, Github, Folder, UserSearch } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+
+function AnimatedSignature() {
+  const [mounted, setMounted] = useState(false)
+  const { theme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const signatureSrc =
+    theme === 'light'
+      ? '/transparent-sig-black.gif'
+      : '/transparent-sig-white.gif'
+
+  // Add cache-busting parameter to ensure GIF restarts on page refresh
+  const cacheBuster = Date.now()
+
+  return (
+    <Image
+      src={`${signatureSrc}?v=${cacheBuster}`}
+      alt="Alex Whalen Signature"
+      width={100}
+      height={100}
+      className="h-14 w-auto object-contain"
+      priority
+      unoptimized
+    />
+  )
+}
 
 function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
@@ -38,15 +68,17 @@ function ThemeSwitch() {
 
 export function Header() {
   return (
-    <header className="relative z-40">
-      {/* Logo */}
-      <Link href="/" className="absolute top-5 left-5 xl:fixed">
-        <div className="text-heading">AW</div>
-      </Link>
+    <header className="relative z-40 border">
+      <div className="flex items-center p-4 px-8">
+        {/* Left side - Logo */}
+        <div className="flex items-center">
+          <Link href="/" className="xl:fixed xl:left-1">
+            <AnimatedSignature />
+          </Link>
+        </div>
 
-      {/* Navigation */}
-      <nav className="flex justify-end p-4 px-8">
-        <div className="flex items-center gap-6">
+        {/* Right side - Navigation */}
+        <nav className="ml-auto flex items-center gap-6">
           <Link
             href="/about"
             className="text-caption opacity-60 transition-opacity hover:opacity-100"
@@ -68,13 +100,14 @@ export function Header() {
           <a
             href="https://github.com/awhalen1999"
             target="_blank"
+            rel="noopener noreferrer"
             className="opacity-60 transition-opacity hover:opacity-100 md:inline"
           >
             <Github className="h-4 w-4" />
           </a>
           <ThemeSwitch />
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   )
 }
