@@ -116,7 +116,7 @@ export function Header() {
         </div>
 
         {/* Right side - Navigation */}
-        <nav className="ml-auto flex items-center gap-6">
+        <nav className="ml-auto flex items-center gap-4">
           <Link
             href="/projects"
             className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
@@ -139,7 +139,7 @@ export function Header() {
             href="https://github.com/awhalen1999"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-60 transition-opacity hover:opacity-100 md:inline"
+            className="inline-flex h-7 w-7 items-center justify-center opacity-60 transition-opacity hover:opacity-100"
           >
             <Github className="h-4 w-4" />
           </a>
