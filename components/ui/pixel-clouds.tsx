@@ -71,10 +71,10 @@ interface PixelCloudProps {
  */
 function PixelCloud({ size }: PixelCloudProps) {
   const pixelCount = {
-    small: 9,
-    medium: 15,
-    large: 21,
-    xlarge: 27,
+    small: 4,
+    medium: 5,
+    large: 6,
+    xlarge: 7,
   }
 
   return (

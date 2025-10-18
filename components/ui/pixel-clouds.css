@@ -44,55 +44,21 @@
   top: 0.5rem;
   left: 1.5rem;
   width: 0.5rem;
-  height: 0.5rem;
 }
 .cloud-small .cloud-pixel:nth-child(2) {
   top: 0.5rem;
   left: 2rem;
   width: 1rem;
-  height: 0.5rem;
 }
 .cloud-small .cloud-pixel:nth-child(3) {
   top: 0.5rem;
   left: 3rem;
   width: 0.5rem;
-  height: 0.5rem;
 }
 .cloud-small .cloud-pixel:nth-child(4) {
   top: 1rem;
   left: 1rem;
   width: 3rem;
-  height: 0.5rem;
-}
-.cloud-small .cloud-pixel:nth-child(5) {
-  top: 1.5rem;
-  left: 0.5rem;
-  width: 4rem;
-  height: 0.5rem;
-}
-.cloud-small .cloud-pixel:nth-child(6) {
-  top: 2rem;
-  left: 1rem;
-  width: 3rem;
-  height: 0.5rem;
-}
-.cloud-small .cloud-pixel:nth-child(7) {
-  top: 1rem;
-  left: 1.25rem;
-  width: 2.5rem;
-  height: 0.5rem;
-}
-.cloud-small .cloud-pixel:nth-child(8) {
-  top: 1.5rem;
-  left: 0.75rem;
-  width: 3.5rem;
-  height: 0.5rem;
-}
-.cloud-small .cloud-pixel:nth-child(9) {
-  top: 2rem;
-  left: 1.25rem;
-  width: 2.5rem;
-  height: 0.5rem;
 }
 
 /* Medium Cloud Pattern */
@@ -100,91 +66,26 @@
   top: 0.5rem;
   left: 2rem;
   width: 1rem;
-  height: 0.5rem;
 }
 .cloud-medium .cloud-pixel:nth-child(2) {
   top: 0.5rem;
   left: 3rem;
   width: 0.5rem;
-  height: 0.5rem;
 }
 .cloud-medium .cloud-pixel:nth-child(3) {
   top: 1rem;
   left: 1.5rem;
   width: 2rem;
-  height: 0.5rem;
 }
 .cloud-medium .cloud-pixel:nth-child(4) {
   top: 1rem;
   left: 3.5rem;
   width: 1rem;
-  height: 0.5rem;
 }
 .cloud-medium .cloud-pixel:nth-child(5) {
   top: 1.5rem;
   left: 1rem;
   width: 5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(6) {
-  top: 2rem;
-  left: 0.5rem;
-  width: 6rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(7) {
-  top: 2.5rem;
-  left: 1rem;
-  width: 5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(8) {
-  top: 3rem;
-  left: 1.5rem;
-  width: 4rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(9) {
-  top: 1rem;
-  left: 1.75rem;
-  width: 1.5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(10) {
-  top: 1.5rem;
-  left: 1.25rem;
-  width: 4.5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(11) {
-  top: 2rem;
-  left: 0.75rem;
-  width: 5.5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(12) {
-  top: 2.5rem;
-  left: 1.25rem;
-  width: 4.5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(13) {
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 4rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(14) {
-  top: 2rem;
-  left: 1rem;
-  width: 5rem;
-  height: 0.5rem;
-}
-.cloud-medium .cloud-pixel:nth-child(15) {
-  top: 2.5rem;
-  left: 1.5rem;
-  width: 4rem;
-  height: 0.5rem;
 }
 
 /* Large Cloud Pattern */
@@ -192,127 +93,31 @@
   top: 0.25rem;
   left: 2.5rem;
   width: 1.5rem;
-  height: 0.5rem;
 }
 .cloud-large .cloud-pixel:nth-child(2) {
   top: 0.25rem;
   left: 4rem;
   width: 1rem;
-  height: 0.5rem;
 }
 .cloud-large .cloud-pixel:nth-child(3) {
   top: 0.75rem;
   left: 2rem;
   width: 2.5rem;
-  height: 0.5rem;
 }
 .cloud-large .cloud-pixel:nth-child(4) {
   top: 0.75rem;
   left: 4.5rem;
   width: 1.5rem;
-  height: 0.5rem;
 }
 .cloud-large .cloud-pixel:nth-child(5) {
   top: 1.25rem;
   left: 1.5rem;
   width: 6rem;
-  height: 0.5rem;
 }
 .cloud-large .cloud-pixel:nth-child(6) {
   top: 1.75rem;
   left: 1rem;
   width: 7rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(7) {
-  top: 2.25rem;
-  left: 0.5rem;
-  width: 8rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(8) {
-  top: 2.75rem;
-  left: 1rem;
-  width: 7rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(9) {
-  top: 3.25rem;
-  left: 1.5rem;
-  width: 6rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(10) {
-  top: 3.75rem;
-  left: 2.5rem;
-  width: 4rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(11) {
-  top: 0.75rem;
-  left: 2.25rem;
-  width: 2rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(12) {
-  top: 1.25rem;
-  left: 1.75rem;
-  width: 5.5rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(13) {
-  top: 1.75rem;
-  left: 1.25rem;
-  width: 6.5rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(14) {
-  top: 2.25rem;
-  left: 0.75rem;
-  width: 7.5rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(15) {
-  top: 2.75rem;
-  left: 1.25rem;
-  width: 6.5rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(16) {
-  top: 3.25rem;
-  left: 1.75rem;
-  width: 5.5rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(17) {
-  top: 1.25rem;
-  left: 2rem;
-  width: 5rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(18) {
-  top: 1.75rem;
-  left: 1.5rem;
-  width: 6rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(19) {
-  top: 2.25rem;
-  left: 1rem;
-  width: 7rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(20) {
-  top: 2.75rem;
-  left: 1.5rem;
-  width: 6rem;
-  height: 0.5rem;
-}
-.cloud-large .cloud-pixel:nth-child(21) {
-  top: 3.25rem;
-  left: 2rem;
-  width: 5rem;
-  height: 0.5rem;
 }
 
 /* XLarge Cloud Pattern */
@@ -320,163 +125,36 @@
   top: 0.25rem;
   left: 3.5rem;
   width: 2rem;
-  height: 0.5rem;
 }
 .cloud-xlarge .cloud-pixel:nth-child(2) {
   top: 0.25rem;
   left: 5.5rem;
   width: 1rem;
-  height: 0.5rem;
 }
 .cloud-xlarge .cloud-pixel:nth-child(3) {
   top: 0.75rem;
   left: 2.5rem;
   width: 3rem;
-  height: 0.5rem;
 }
 .cloud-xlarge .cloud-pixel:nth-child(4) {
   top: 0.75rem;
   left: 5.5rem;
   width: 2rem;
-  height: 0.5rem;
 }
 .cloud-xlarge .cloud-pixel:nth-child(5) {
   top: 1.25rem;
   left: 2rem;
   width: 7rem;
-  height: 0.5rem;
 }
 .cloud-xlarge .cloud-pixel:nth-child(6) {
   top: 1.75rem;
   left: 1.5rem;
   width: 8rem;
-  height: 0.5rem;
 }
 .cloud-xlarge .cloud-pixel:nth-child(7) {
   top: 2.25rem;
   left: 1rem;
   width: 9rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(8) {
-  top: 2.75rem;
-  left: 0.5rem;
-  width: 10rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(9) {
-  top: 3.25rem;
-  left: 1rem;
-  width: 9rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(10) {
-  top: 3.75rem;
-  left: 1.5rem;
-  width: 8rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(11) {
-  top: 4.25rem;
-  left: 2rem;
-  width: 7rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(12) {
-  top: 4.75rem;
-  left: 3rem;
-  width: 5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(13) {
-  top: 0.75rem;
-  left: 2.75rem;
-  width: 2.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(14) {
-  top: 1.25rem;
-  left: 2.25rem;
-  width: 6.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(15) {
-  top: 1.75rem;
-  left: 1.75rem;
-  width: 7.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(16) {
-  top: 2.25rem;
-  left: 1.25rem;
-  width: 8.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(17) {
-  top: 2.75rem;
-  left: 0.75rem;
-  width: 9.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(18) {
-  top: 3.25rem;
-  left: 1.25rem;
-  width: 8.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(19) {
-  top: 3.75rem;
-  left: 1.75rem;
-  width: 7.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(20) {
-  top: 4.25rem;
-  left: 2.25rem;
-  width: 6.5rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(21) {
-  top: 1.25rem;
-  left: 2.5rem;
-  width: 6rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(22) {
-  top: 1.75rem;
-  left: 2rem;
-  width: 7rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(23) {
-  top: 2.25rem;
-  left: 1.5rem;
-  width: 8rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(24) {
-  top: 2.75rem;
-  left: 1rem;
-  width: 9rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(25) {
-  top: 3.25rem;
-  left: 1.5rem;
-  width: 8rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(26) {
-  top: 3.75rem;
-  left: 2rem;
-  width: 7rem;
-  height: 0.5rem;
-}
-.cloud-xlarge .cloud-pixel:nth-child(27) {
-  top: 4.25rem;
-  left: 2.5rem;
-  width: 6rem;
-  height: 0.5rem;
 }
 
 /* Base cloud pixel styling */
