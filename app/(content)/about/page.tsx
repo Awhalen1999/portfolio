@@ -32,14 +32,7 @@ export default function AboutPage() {
       <div className="space-y-6">
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
           I'm a serial SaaS idea guy who's obsessed with turning wild ideas into
-          real tools that people actually use. Check out my{' '}
-          <Link
-            href="/projects"
-            className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
-          >
-            projects here
-          </Link>
-          .
+          real tools that people actually use.
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
@@ -54,8 +47,15 @@ export default function AboutPage() {
           </Link>
           , building tools for nutrition analysis that help health
           professionals. I'm also working on and contributing to various (too
-          many) projects. From time to time, I try to attend as many hackathons
-          and coding experiments as I can.
+          many){' '}
+          <Link
+            href="/projects"
+            className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
+          >
+            projects
+          </Link>
+          . When I find the time, I try to attend as many hackathons and coding
+          experiments as I can.
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
