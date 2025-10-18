@@ -105,99 +105,155 @@ function PixelCloud({ size, version }: PixelCloudProps) {
         {/* Small clouds */}
         {size === 'small' && version === 1 && (
           <>
-            <div className="absolute top-2 left-6 h-2 w-8 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-4 left-4 h-2 w-12 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-6 left-2 h-2 w-16 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-8 left-4 h-2 w-12 bg-black/20 dark:bg-white/15" />
+            {/* Top of cloud - rounded puffy top */}
+            <div className="absolute top-1 left-7 h-1 w-4 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-5 h-1 w-8 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-4 h-1 w-10 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-3 h-1 w-12 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-2 h-1 w-14 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-2 h-1 w-15 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-2 h-1 w-15 bg-black/20 dark:bg-white/15" />
+            {/* Bottom of cloud - flatter bottom */}
+            <div className="absolute top-8 left-3 h-1 w-13 bg-black/20 dark:bg-white/15" />
           </>
         )}
 
         {size === 'small' && version === 2 && (
           <>
-            <div className="absolute top-1 left-4 h-2 w-6 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-3 left-2 h-2 w-10 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-5 left-1 h-2 w-14 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-7 left-3 h-2 w-10 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-9 left-5 h-2 w-8 bg-black/20 dark:bg-white/15" />
+            {/* Top of cloud - split top with two bumps */}
+            <div className="absolute top-1 left-3 h-1 w-4 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-1 left-10 h-1 w-5 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-2 h-1 w-6 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-9 h-1 w-7 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-2 h-1 w-14 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-1 h-1 w-16 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-1 h-1 w-16 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-1 h-1 w-16 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-2 h-1 w-14 bg-black/20 dark:bg-white/15" />
+            {/* Bottom of cloud - flatter bottom */}
           </>
         )}
 
         {/* Medium clouds */}
         {size === 'medium' && version === 1 && (
           <>
-            <div className="absolute top-2 left-8 h-2 w-6 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-4 left-6 h-2 w-12 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-6 left-4 h-2 w-20 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-8 left-2 h-2 w-24 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-10 left-4 h-2 w-20 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-12 left-6 h-2 w-16 bg-black/20 dark:bg-white/15" />
+            {/* Top of cloud - asymmetric with left bump higher */}
+            <div className="absolute top-1 left-8 h-1 w-7 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-6 h-1 w-11 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-5 h-1 w-15 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-4 h-1 w-18 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-3 h-1 w-21 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-2 h-1 w-23 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-2 h-1 w-24 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-8 left-2 h-1 w-24 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-9 left-2 h-1 w-23 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-10 left-3 h-1 w-21 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-11 left-4 h-1 w-18 bg-black/20 dark:bg-white/15" />
           </>
         )}
 
         {size === 'medium' && version === 2 && (
           <>
-            <div className="absolute top-1 left-6 h-2 w-8 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-3 left-4 h-2 w-14 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-5 left-2 h-2 w-18 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-7 left-1 h-2 w-22 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-9 left-3 h-2 w-18 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-11 left-5 h-2 w-14 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-13 left-7 h-2 w-10 bg-black/20 dark:bg-white/15" />
+            {/* Top of cloud - three bumps across the top */}
+            <div className="absolute top-1 left-5 h-1 w-5 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-1 left-12 h-1 w-6 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-4 h-1 w-7 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-11 h-1 w-12 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-3 h-1 w-22 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-2 h-1 w-24 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-1 h-1 w-26 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-1 h-1 w-26 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-1 h-1 w-25 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-8 left-1 h-1 w-24 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-9 left-2 h-1 w-22 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-10 left-3 h-1 w-19 bg-black/20 dark:bg-white/15" />
           </>
         )}
 
         {/* Large clouds */}
         {size === 'large' && version === 1 && (
           <>
-            <div className="absolute top-1 left-10 h-2 w-10 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-3 left-8 h-2 w-16 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-5 left-6 h-2 w-24 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-7 left-4 h-2 w-28 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-9 left-2 h-2 w-32 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-11 left-4 h-2 w-28 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-13 left-6 h-2 w-24 bg-black/20 dark:bg-white/15" />
+            {/* Top of cloud - wide flat top with bumps on sides */}
+            <div className="absolute top-1 left-10 h-1 w-6 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-1 left-20 h-1 w-8 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-8 h-1 w-9 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-18 h-1 w-11 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-7 h-1 w-23 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-6 h-1 w-25 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-5 h-1 w-27 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-4 h-1 w-29 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-3 h-1 w-31 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-8 left-2 h-1 w-32 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-9 left-2 h-1 w-32 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-10 left-2 h-1 w-32 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-11 left-2 h-1 w-31 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-12 left-3 h-1 w-29 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-13 left-4 h-1 w-26 bg-black/20 dark:bg-white/15" />
           </>
         )}
 
         {size === 'large' && version === 2 && (
           <>
-            <div className="absolute top-0 left-8 h-2 w-12 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-2 left-6 h-2 w-18 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-4 left-4 h-2 w-26 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-6 left-2 h-2 w-30 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-8 left-1 h-2 w-32 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-10 left-3 h-2 w-30 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-12 left-5 h-2 w-26 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-14 left-7 h-2 w-20 bg-black/20 dark:bg-white/15" />
+            {/* Top of cloud - tall narrow cloud with single peak */}
+            <div className="absolute top-1 left-19 h-1 w-7 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-17 h-1 w-11 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-15 h-1 w-14 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-12 h-1 w-18 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-10 h-1 w-21 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-9 h-1 w-23 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-7 h-1 w-25 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-8 left-5 h-1 w-27 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-9 left-4 h-1 w-29 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-10 left-3 h-1 w-31 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-11 left-3 h-1 w-31 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-12 left-3 h-1 w-30 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-13 left-4 h-1 w-28 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-14 left-5 h-1 w-25 bg-black/20 dark:bg-white/15" />
           </>
         )}
 
         {/* XLarge clouds */}
         {size === 'xlarge' && version === 1 && (
           <>
-            <div className="absolute top-1 left-14 h-2 w-12 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-3 left-10 h-2 w-20 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-5 left-8 h-2 w-28 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-7 left-6 h-2 w-32 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-9 left-4 h-2 w-36 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-11 left-2 h-2 w-40 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-13 left-4 h-2 w-36 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-15 left-8 h-2 w-30 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-1 left-12 h-1 w-7 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-10 h-1 w-11 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-8 h-1 w-14 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-24 h-1 w-10 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-7 h-1 w-30 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-6 h-1 w-32 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-5 h-1 w-34 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-4 h-1 w-36 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-8 left-3 h-1 w-38 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-9 left-2 h-1 w-40 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-10 left-2 h-1 w-40 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-11 left-2 h-1 w-40 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-12 left-2 h-1 w-39 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-13 left-3 h-1 w-37 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-14 left-4 h-1 w-34 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-15 left-6 h-1 w-30 bg-black/20 dark:bg-white/15" />
           </>
         )}
 
         {size === 'xlarge' && version === 2 && (
           <>
-            <div className="absolute top-0 left-12 h-2 w-14 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-2 left-8 h-2 w-22 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-4 left-6 h-2 w-30 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-6 left-4 h-2 w-34 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-8 left-2 h-2 w-38 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-10 left-1 h-2 w-40 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-12 left-3 h-2 w-38 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-14 left-5 h-2 w-34 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-16 left-7 h-2 w-28 bg-black/20 dark:bg-white/15" />
-            <div className="absolute top-18 left-10 h-2 w-20 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-1 left-8 h-1 w-6 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-1 left-16 h-1 w-7 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-6 h-1 w-11 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-2 left-17 h-1 w-11 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-3 left-5 h-1 w-29 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-4 left-4 h-1 w-34 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-5 left-3 h-1 w-36 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-6 left-2 h-1 w-39 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-7 left-1 h-1 w-42 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-8 left-1 h-1 w-42 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-9 left-1 h-1 w-42 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-10 left-1 h-1 w-41 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-11 left-2 h-1 w-39 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-12 left-3 h-1 w-37 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-13 left-4 h-1 w-34 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-14 left-6 h-1 w-30 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-15 left-6 h-1 w-28 bg-black/20 dark:bg-white/15" />
+            <div className="absolute top-16 left-8 h-1 w-24 bg-black/20 dark:bg-white/15" />
           </>
         )}
       </div>
