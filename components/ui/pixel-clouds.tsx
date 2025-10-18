@@ -20,20 +20,20 @@ interface Cloud {
 }
 
 const clouds: Cloud[] = [
-  { id: 1, size: 'small', version: 1, duration: 48, delay: 0, top: '8%' },
-  { id: 2, size: 'medium', version: 2, duration: 72, delay: 15, top: '18%' },
-  { id: 3, size: 'large', version: 1, duration: 88, delay: 30, top: '12%' },
-  { id: 4, size: 'small', version: 2, duration: 52, delay: 45, top: '28%' },
-  { id: 5, size: 'xlarge', version: 1, duration: 98, delay: 60, top: '5%' },
-  { id: 6, size: 'medium', version: 1, duration: 68, delay: 75, top: '38%' },
-  { id: 7, size: 'small', version: 1, duration: 50, delay: 90, top: '48%' },
+  { id: 1, size: 'small', version: 1, duration: 50, delay: 0, top: '8%' },
+  { id: 2, size: 'medium', version: 2, duration: 70, delay: 15, top: '18%' },
+  { id: 3, size: 'large', version: 1, duration: 90, delay: 30, top: '12%' },
+  { id: 4, size: 'small', version: 2, duration: 55, delay: 45, top: '28%' },
+  { id: 5, size: 'xlarge', version: 1, duration: 100, delay: 60, top: '5%' },
+  { id: 6, size: 'medium', version: 1, duration: 65, delay: 75, top: '38%' },
+  { id: 7, size: 'small', version: 1, duration: 52, delay: 90, top: '48%' },
   { id: 8, size: 'large', version: 2, duration: 85, delay: 105, top: '35%' },
-  { id: 9, size: 'medium', version: 2, duration: 70, delay: 120, top: '58%' },
+  { id: 9, size: 'medium', version: 2, duration: 68, delay: 120, top: '58%' },
   { id: 10, size: 'xlarge', version: 2, duration: 95, delay: 135, top: '52%' },
-  { id: 11, size: 'small', version: 2, duration: 54, delay: 150, top: '68%' },
-  { id: 12, size: 'large', version: 1, duration: 90, delay: 165, top: '62%' },
+  { id: 11, size: 'small', version: 2, duration: 58, delay: 150, top: '68%' },
+  { id: 12, size: 'large', version: 1, duration: 88, delay: 165, top: '62%' },
   { id: 13, size: 'medium', version: 1, duration: 72, delay: 180, top: '78%' },
-  { id: 14, size: 'small', version: 1, duration: 56, delay: 195, top: '72%' },
+  { id: 14, size: 'small', version: 1, duration: 60, delay: 195, top: '72%' },
   { id: 15, size: 'xlarge', version: 2, duration: 92, delay: 210, top: '85%' },
 ]
 
@@ -42,6 +42,28 @@ export function PixelClouds() {
     <div
       className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
       aria-hidden="true"
+      style={{
+        maskImage: `
+          linear-gradient(to right, 
+            black 0%, 
+            black 15%, 
+            rgba(0,0,0,0.2) 25%, 
+            rgba(0,0,0,0.2) 75%, 
+            black 85%, 
+            black 100%
+          )
+        `,
+        WebkitMaskImage: `
+          linear-gradient(to right, 
+            black 0%, 
+            black 15%, 
+            rgba(0,0,0,0.2) 25%, 
+            rgba(0,0,0,0.2) 75%, 
+            black 85%, 
+            black 100%
+          )
+        `,
+      }}
     >
       {clouds.map((cloud) => (
         <div
