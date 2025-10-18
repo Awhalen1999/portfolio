@@ -1,9 +1,10 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MoonIcon, SunIcon, Github, Folder, Wrench } from 'lucide-react'
+import { MoonIcon, SunIcon, Github, Folder, Wrench, Cloud } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { useClouds } from '../lib/clouds-context'
 
 function AnimatedSignature() {
   const [mounted, setMounted] = useState(false)
@@ -79,6 +80,30 @@ function ThemeSwitch() {
   )
 }
 
+function CloudsToggle() {
+  const [mounted, setMounted] = useState(false)
+  const { showClouds, toggleClouds } = useClouds()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  return (
+    <button
+      onClick={toggleClouds}
+      className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 hover:text-zinc-950 focus-visible:outline-2 dark:hover:text-zinc-50"
+      type="button"
+      aria-label="Toggle clouds"
+    >
+      <Cloud className="h-4 w-4" fill={showClouds ? 'currentColor' : 'none'} />
+    </button>
+  )
+}
+
 export function Header() {
   return (
     <header className="relative z-40">
@@ -118,6 +143,7 @@ export function Header() {
           >
             <Github className="h-4 w-4" />
           </a>
+          <CloudsToggle />
           <ThemeSwitch />
         </nav>
       </div>
