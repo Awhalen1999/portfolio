@@ -182,4 +182,25 @@
   .text-chip-main {
     @apply text-sm font-normal tracking-tight;
   }
+
+  /* Pixel cloud animation - continuous horizontal scroll */
+  @keyframes cloud {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-200px);
+    }
+  }
+
+  .animate-cloud {
+    animation: cloud linear infinite;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-cloud {
+      animation-play-state: paused;
+    }
+  }
 }
