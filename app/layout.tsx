@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
 import { ThemeProvider } from 'next-themes'
+import { Footer } from './footer'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -94,8 +95,13 @@ export default function RootLayout({
           defaultTheme="system"
           disableTransitionOnChange={false}
         >
-          <Header />
-          <main>{children}</main>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="mx-auto max-w-2xl px-6 py-16 lg:px-8">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

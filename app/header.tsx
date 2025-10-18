@@ -1,25 +1,38 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MoonIcon, SunIcon, Github, Folder, UserSearch } from 'lucide-react'
+import { MoonIcon, SunIcon, Github, Folder, Wrench } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 function AnimatedSignature() {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
+  // Only add cache-busting on mount, not every render
+  const [cacheBuster] = useState(() => Date.now())
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  if (!mounted) {
+    return (
+      <Image
+        src="/transparent-sig-black.gif"
+        alt="Alex Whalen Signature"
+        width={100}
+        height={100}
+        className="h-14 w-auto object-contain"
+        priority
+        unoptimized
+      />
+    )
+  }
+
   const signatureSrc =
     theme === 'light'
       ? '/transparent-sig-black.gif'
       : '/transparent-sig-white.gif'
-
-  // Only add cache-busting on mount, not every render
-  const [cacheBuster] = useState(() => Date.now())
 
   return (
     <Image
@@ -80,21 +93,21 @@ export function Header() {
         {/* Right side - Navigation */}
         <nav className="ml-auto flex items-center gap-6">
           <Link
-            href="/about"
-            className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
-          >
-            <span className="hidden md:inline">About</span>
-            <span className="md:hidden">
-              <UserSearch className="h-4 w-4" />
-            </span>
-          </Link>
-          <Link
             href="/projects"
             className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
           >
             <span className="hidden md:inline">Projects</span>
             <span className="md:hidden">
               <Folder className="h-4 w-4" />
+            </span>
+          </Link>
+          <Link
+            href="/Tools"
+            className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
+          >
+            <span className="hidden md:inline">Tools</span>
+            <span className="md:hidden">
+              <Wrench className="h-4 w-4" />
             </span>
           </Link>
           <a
