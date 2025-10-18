@@ -25,7 +25,7 @@ function ScrollToTop() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 dark:border-zinc-800">
+    <footer>
       <div className="flex items-center justify-between p-4 px-8">
         <Link
           href="/"

@@ -68,7 +68,7 @@ function ThemeSwitch() {
 
 export function Header() {
   return (
-    <header className="relative z-40 border-b">
+    <header className="relative z-40">
       <div className="flex items-center p-4 px-8">
         {/* Left side - Logo */}
         <div className="flex items-center">

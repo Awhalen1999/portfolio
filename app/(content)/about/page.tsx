@@ -23,40 +23,39 @@ export default function AboutPage() {
           Alex Whalen
         </h1>
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Hey! I'm Alex Whalen, a passionate full-stack developer and creative
-          problem solver.
+          Hey! I'm Alex Whalen, a full stack mobile/web developer who enjoys
+          building products that are reliable, scalable, and easy to use.
         </p>
       </div>
 
       {/* Detailed Sections */}
       <div className="space-y-6">
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Dreaming up cool ideas and making them come true is where my passion
-          lies. I am enthusiastic about building tools that help myself and
-          others to be more productive and enjoy the process of crafting. You
-          can find my{' '}
+          I'm a serial SaaS idea guy who's obsessed with turning wild ideas into
+          real tools that people actually use. Check out my{' '}
           <Link
             href="/projects"
             className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
           >
-            full projects list here
+            projects here
           </Link>
           .
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          I give{' '}
-          <strong className="text-body-bold text-zinc-900 dark:text-zinc-100">
-            talks
-          </strong>{' '}
-          and write{' '}
-          <strong className="text-body-bold text-zinc-900 dark:text-zinc-100">
-            blog posts
-          </strong>{' '}
-          about web development, coding, and technology. Occasionally, I do live
-          coding streams and share my development process. I am also passionate
-          about open source and contribute to various projects. From time to
-          time, I make some creative coding experiments and interactive art.
+          Currently, I lead the enterprise software team at{' '}
+          <Link
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
+          >
+            Nutraforge Technologies
+          </Link>
+          , building tools for nutrition analysis that help health
+          professionals. I'm also working on and contributing to various (too
+          many) projects. From time to time, I try to attend as many hackathons
+          and coding experiments as I can.
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
