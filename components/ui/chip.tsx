@@ -11,7 +11,11 @@ export function Chip({ children, icon, href, className = '' }: ChipProps) {
 
   const content = (
     <>
-      {icon}
+      {icon && (
+        <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center [&>img]:h-full [&>img]:w-full [&>img]:object-contain [&>svg]:h-full [&>svg]:w-full">
+          {icon}
+        </div>
+      )}
       {children}
     </>
   )

@@ -101,8 +101,9 @@ export default function AboutPage() {
                 <Image
                   src="/typescript.svg"
                   alt="TypeScript"
-                  width={15}
-                  height={15}
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
                 />
               }
             >
@@ -114,8 +115,9 @@ export default function AboutPage() {
                 <Image
                   src="/javascript.svg"
                   alt="JavaScript"
-                  width={15}
-                  height={15}
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
                 />
               }
             >
@@ -123,7 +125,15 @@ export default function AboutPage() {
             </Chip>
             <Chip
               href="https://dart.dev"
-              icon={<Image src="/dart.svg" alt="Dart" width={15} height={15} />}
+              icon={
+                <Image
+                  src="/dart.svg"
+                  alt="Dart"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
               Dart
             </Chip>
@@ -139,7 +149,13 @@ export default function AboutPage() {
             <Chip
               href="https://react.dev"
               icon={
-                <Image src="/react.svg" alt="React" width={15} height={15} />
+                <Image
+                  src="/react.svg"
+                  alt="React"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
               }
             >
               React
@@ -147,7 +163,13 @@ export default function AboutPage() {
             <Chip
               href="https://nextjs.org"
               icon={
-                <Image src="/next.svg" alt="Next.js" width={15} height={15} />
+                <Image
+                  src="/next.svg"
+                  alt="Next.js"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
               }
             >
               Next.js
@@ -158,8 +180,9 @@ export default function AboutPage() {
                 <Image
                   src="/tailwindcss.svg"
                   alt="Tailwind CSS"
-                  width={15}
-                  height={15}
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
                 />
               }
             >
@@ -171,8 +194,9 @@ export default function AboutPage() {
                 <Image
                   src="/flutter.svg"
                   alt="Flutter"
-                  width={15}
-                  height={15}
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
                 />
               }
             >
@@ -189,72 +213,101 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://nodejs.org"
-              icon={<span className="text-green-500">N</span>}
+              icon={
+                <Image
+                  src="/nodejs.svg"
+                  alt="Node.js"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
               Node.js
             </Chip>
             <Chip
-              href="https://expressjs.com"
-              icon={<span className="text-orange-500">E</span>}
+              href="https://deno.land"
+              icon={
+                <Image
+                  src="/deno.svg"
+                  alt="Deno"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
-              Express
+              Deno
+            </Chip>
+            <Chip
+              href="https://hono.dev"
+              icon={
+                <Image
+                  src="/hono.svg"
+                  alt="Hono"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Hono
             </Chip>
             <Chip
               href="https://www.postgresql.org"
-              icon={<span className="text-blue-400">P</span>}
+              icon={
+                <Image
+                  src="/postgresql.svg"
+                  alt="PostgreSQL"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
               PostgreSQL
             </Chip>
             <Chip
               href="https://www.mongodb.com"
-              icon={<span className="text-green-600">M</span>}
+              icon={
+                <Image
+                  src="/mongodb.svg"
+                  alt="MongoDB"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
               MongoDB
             </Chip>
             <Chip
-              href="https://firebase.google.com"
-              icon={<span className="text-red-500">F</span>}
+              href="https://cloud.google.com"
+              icon={
+                <Image
+                  src="/gcloud.svg"
+                  alt="Google Cloud"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
-              Firebase
+              Google Cloud
             </Chip>
             <Chip
-              href="https://supabase.com"
-              icon={<span className="text-blue-500">S</span>}
+              href="https://aws.amazon.com"
+              icon={
+                <Image
+                  src="/aws.svg"
+                  alt="AWS"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
-              Supabase
-            </Chip>
-          </div>
-        </div>
-
-        {/* Design & UI */}
-        <div className="flex items-start gap-2">
-          <p className="text-chip-main text-zinc-700 dark:text-zinc-300">
-            Design & UI
-          </p>
-          <div className="flex flex-wrap gap-1">
-            <Chip
-              href="https://www.figma.com"
-              icon={<span className="text-purple-600">F</span>}
-            >
-              Figma
-            </Chip>
-            <Chip
-              href="https://www.adobe.com/products/xd.html"
-              icon={<span className="text-blue-500">A</span>}
-            >
-              Adobe XD
-            </Chip>
-            <Chip
-              href="https://www.adobe.com/creativecloud.html"
-              icon={<span className="text-orange-500">A</span>}
-            >
-              Adobe Creative Suite
-            </Chip>
-            <Chip
-              href="https://principleformac.com"
-              icon={<span className="text-pink-500">P</span>}
-            >
-              Principle
+              AWS
             </Chip>
           </div>
         </div>
@@ -265,24 +318,6 @@ export default function AboutPage() {
             Tools & Development
           </p>
           <div className="flex flex-wrap gap-1">
-            <Chip
-              href="https://vitejs.dev"
-              icon={<span className="text-yellow-500">V</span>}
-            >
-              Vite
-            </Chip>
-            <Chip
-              href="https://webpack.js.org"
-              icon={<span className="text-orange-600">W</span>}
-            >
-              Webpack
-            </Chip>
-            <Chip
-              href="https://jestjs.io"
-              icon={<span className="text-green-600">J</span>}
-            >
-              Jest
-            </Chip>
             <Chip
               href="https://testing-library.com/react"
               icon={<span className="text-blue-500">R</span>}
