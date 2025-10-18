@@ -315,74 +315,148 @@ export default function AboutPage() {
         {/* Tools & Development */}
         <div className="flex items-start gap-2">
           <p className="text-chip-main text-zinc-700 dark:text-zinc-300">
-            Tools & Development
+            Tools
           </p>
           <div className="flex flex-wrap gap-1">
             <Chip
-              href="https://testing-library.com/react"
-              icon={<span className="text-blue-500">R</span>}
-            >
-              React Testing Library
-            </Chip>
-            <Chip
-              href="https://www.cypress.io"
-              icon={<span className="text-purple-500">C</span>}
-            >
-              Cypress
-            </Chip>
-            <Chip
-              href="https://eslint.org"
-              icon={<span className="text-red-500">E</span>}
-            >
-              ESLint
-            </Chip>
-            <Chip
-              href="https://prettier.io"
-              icon={<span className="text-pink-400">P</span>}
-            >
-              Prettier
-            </Chip>
-            <Chip
-              href="https://vercel.com"
-              icon={<span className="text-black dark:text-white">V</span>}
-            >
-              Vercel
-            </Chip>
-            <Chip
-              href="https://www.docker.com"
-              icon={<span className="text-orange-500">D</span>}
-            >
-              Docker
-            </Chip>
-            <Chip
-              href="https://aws.amazon.com"
-              icon={<span className="text-blue-500">A</span>}
-            >
-              AWS
-            </Chip>
-            <Chip
               href="https://github.com"
-              icon={<span className="text-orange-500">G</span>}
+              icon={
+                <Image
+                  src="/github.svg"
+                  alt="GitHub"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
               GitHub
             </Chip>
             <Chip
-              href="https://gitlab.com"
-              icon={<span className="text-blue-500">G</span>}
+              href="https://www.figma.com"
+              icon={
+                <Image
+                  src="/figma.svg"
+                  alt="Figma"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
-              GitLab
+              Figma
             </Chip>
             <Chip
-              href="https://linear.app"
-              icon={<span className="text-purple-500">L</span>}
+              href="https://firebase.google.com"
+              icon={
+                <Image
+                  src="/firebase.svg"
+                  alt="Firebase"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
-              Linear
+              Firebase
             </Chip>
             <Chip
-              href="https://slack.com"
-              icon={<span className="text-green-500">S</span>}
+              href="https://supabase.com"
+              icon={
+                <Image
+                  src="/supabase.svg"
+                  alt="Supabase"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
             >
-              Slack
+              Supabase
+            </Chip>
+            <Chip
+              href="https://auth0.com"
+              icon={
+                <Image
+                  src="/auth0.svg"
+                  alt="Auth0"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Auth0
+            </Chip>
+            <Chip
+              href="https://www.framer.com"
+              icon={
+                <Image
+                  src="/framer.svg"
+                  alt="Framer"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Framer
+            </Chip>
+            <Chip
+              href="https://postman.com"
+              icon={
+                <Image
+                  src="/postman.svg"
+                  alt="Postman"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Postman
+            </Chip>
+            <Chip
+              href="https://railway.app"
+              icon={
+                <Image
+                  src="/railway.svg"
+                  alt="Railway"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Railway
+            </Chip>
+            <Chip
+              href="https://zod.dev"
+              icon={
+                <Image
+                  src="/zod.svg"
+                  alt="Zod"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Zod
+            </Chip>
+            <Chip
+              href="https://vercel.com"
+              icon={
+                <Image
+                  src="/vercel.svg"
+                  alt="Vercel"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Vercel
             </Chip>
           </div>
         </div>
