@@ -18,8 +18,8 @@ function AnimatedSignature() {
       ? '/transparent-sig-black.gif'
       : '/transparent-sig-white.gif'
 
-  // Add cache-busting parameter to ensure GIF restarts on page refresh
-  const cacheBuster = Date.now()
+  // Only add cache-busting on mount, not every render
+  const [cacheBuster] = useState(() => Date.now())
 
   return (
     <Image
@@ -81,7 +81,7 @@ export function Header() {
         <nav className="ml-auto flex items-center gap-6">
           <Link
             href="/about"
-            className="text-caption tracking-tight opacity-60 transition-opacity hover:opacity-100"
+            className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
           >
             <span className="hidden md:inline">About</span>
             <span className="md:hidden">
@@ -90,7 +90,7 @@ export function Header() {
           </Link>
           <Link
             href="/projects"
-            className="text-caption tracking-tight opacity-60 transition-opacity hover:opacity-100"
+            className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
           >
             <span className="hidden md:inline">Projects</span>
             <span className="md:hidden">

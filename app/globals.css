@@ -159,43 +159,27 @@
 
 /* Typography System */
 @layer utilities {
-  .text-body {
-    @apply text-sm leading-relaxed font-normal;
+  .text-header-main {
+    @apply text-4xl font-bold tracking-tighter;
+  }
+
+  .text-header-bold {
+    @apply text-2xl font-bold tracking-tighter;
+  }
+
+  .text-body-main {
+    @apply leading-snug font-normal tracking-tighter;
   }
 
   .text-body-bold {
-    @apply text-sm leading-relaxed font-semibold;
+    @apply leading-snug font-semibold tracking-tight;
   }
 
-  .text-caption {
-    @apply text-sm leading-normal font-normal;
+  .text-body-italic {
+    @apply leading-snug font-normal tracking-tighter italic;
   }
 
-  .text-caption-bold {
-    @apply text-sm leading-normal font-semibold;
-  }
-
-  .text-title {
-    @apply text-lg leading-tight font-semibold;
-  }
-
-  .text-title-bold {
-    @apply text-lg leading-tight font-bold;
-  }
-
-  .text-heading {
-    @apply text-xl leading-tight font-semibold;
-  }
-
-  .text-heading-bold {
-    @apply text-xl leading-tight font-bold;
-  }
-
-  .text-display {
-    @apply text-2xl leading-tight font-bold;
-  }
-
-  .text-display-large {
-    @apply text-3xl leading-tight font-bold;
+  .text-chip-main {
+    @apply text-sm font-normal tracking-tight;
   }
 }

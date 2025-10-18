@@ -29,9 +29,9 @@ export function Footer() {
       <div className="flex items-center justify-between p-4 px-8">
         <Link
           href="/"
-          className="text-caption tracking-tight opacity-60 transition-opacity hover:opacity-100"
+          className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
         >
-          <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold tracking-tight">
+          <code className="bg-muted text-body-main relative rounded px-[0.3rem] py-[0.2rem] font-mono font-semibold text-zinc-700 dark:text-zinc-300">
             {'>'} cd ..
           </code>
         </Link>

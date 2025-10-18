@@ -134,16 +134,26 @@ function AnimatedEyes() {
 
   // * MOUSE TRACKING EFFECT
   useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      const x = (event.clientX * 100) / window.innerWidth - 50 + CENTER_OFFSET
-      const y =
-        (event.clientY * 100) / window.innerHeight - 50 - VERTICAL_OFFSET
+    let animationFrame: number
 
-      ballRefs.current.forEach((ball) => {
-        if (ball) {
-          ball.style.left = x + '%'
-          ball.style.top = y + '%'
-        }
+    const handleMouseMove = (event: MouseEvent) => {
+      // Cancel previous animation frame
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame)
+      }
+
+      // Use requestAnimationFrame for smooth updates
+      animationFrame = requestAnimationFrame(() => {
+        const x = (event.clientX * 100) / window.innerWidth - 50 + CENTER_OFFSET
+        const y =
+          (event.clientY * 100) / window.innerHeight - 50 - VERTICAL_OFFSET
+
+        ballRefs.current.forEach((ball) => {
+          if (ball) {
+            ball.style.left = x + '%'
+            ball.style.top = y + '%'
+          }
+        })
       })
     }
 
@@ -151,6 +161,9 @@ function AnimatedEyes() {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame)
+      }
     }
   }, [])
 
@@ -418,7 +431,7 @@ function AnimatedEyes() {
                 opacity: quote.isNew ? 0 : 1 - index * 0.1,
               }}
             >
-              <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <p className="text-chip-main font-medium text-zinc-700 dark:text-zinc-300">
                 {quote.text}
               </p>
             </div>
@@ -430,7 +443,7 @@ function AnimatedEyes() {
       <Popover open={showHelpMenu} onOpenChange={setShowHelpMenu}>
         <PopoverTrigger asChild>
           <div className="pointer-events-none fixed bottom-4 left-4">
-            <p className="text-xs text-zinc-500 opacity-60 dark:text-zinc-400">
+            <p className="text-chip-main text-zinc-700 opacity-60 dark:text-zinc-300">
               Press <Kbd className="font-mono font-semibold">H</Kbd> for help{' '}
               <Kbd className="font-mono font-semibold">esc</Kbd> to close
             </p>
@@ -438,10 +451,10 @@ function AnimatedEyes() {
         </PopoverTrigger>
         <PopoverContent className="w-80" side="top" align="start">
           <div className="space-y-2">
-            <h4 className="mb-4 leading-none font-medium">
+            <h4 className="text-header-bold mb-4 leading-none text-zinc-900 dark:text-zinc-100">
               Keyboard Shortcuts to interact
             </h4>
-            <div className="space-y-2 text-sm">
+            <div className="text-chip-main space-y-2 text-zinc-700 dark:text-zinc-300">
               {/* EXPRESSIONS */}
               <div className="flex items-center justify-between">
                 <Kbd className="font-mono font-semibold">Y</Kbd>
