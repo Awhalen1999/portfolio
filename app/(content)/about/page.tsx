@@ -23,8 +23,8 @@ export default function AboutPage() {
           Alex Whalen
         </h1>
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Hey! I'm Alex Whalen, a full stack mobile/web developer who enjoys
-          building products that are reliable, scalable, and easy to use.
+          Hey! I'm Alex, a full stack mobile/web developer who enjoys building
+          products that are reliable, scalable, and easy to use.
         </p>
       </div>
 
