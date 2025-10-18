@@ -155,6 +155,17 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Custom text selection highlight */
+  ::selection {
+    background-color: #ecc1ff; /* Pink highlight */
+    color: black;
+  }
+
+  ::-moz-selection {
+    background-color: #ecc1ff; /* Pink highlight for Firefox */
+    color: black;
+  }
 }
 
 /* Typography System */

@@ -7,7 +7,7 @@ interface ChipProps {
 
 export function Chip({ children, icon, href, className = '' }: ChipProps) {
   const baseClasses =
-    'inline-flex items-center gap-1 rounded-sm px-1 py-0 text-sm font-medium tracking-tight bg-zinc-900/20 backdrop-blur-md text-zinc-500 hover:bg-zinc-800/30 dark:bg-white/10 dark:text-zinc-400 dark:hover:bg-white/20 transition-all cursor-pointer'
+    'inline-flex items-center gap-1 rounded-sm px-1 py-0 text-sm font-medium tracking-tight bg-zinc-900/20 backdrop-blur-md text-zinc600 hover:bg-zinc-800/30 dark:bg-white/10 dark:text-zinc-400 dark:hover:bg-white/20 transition-all cursor-pointer'
 
   const content = (
     <>

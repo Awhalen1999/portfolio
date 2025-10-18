@@ -16,23 +16,29 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="space-y-6">
-      {/* Name and Introduction */}
-      <div className="space-y-3">
-        <h1 className="text-header-main text-zinc-900 dark:text-zinc-100">
+    <div className="space-y-10">
+      {/* Main text sections */}
+      <div className="space-y-5">
+        <h1 className="text-header-main text-zinc-900 dark:text-zinc-200">
           Alex Whalen
         </h1>
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Hey! I'm Alex, a full stack mobile/web developer who enjoys building
-          products that are reliable, scalable, and easy to use.
+          Hey! I'm Alex. This is my website... you could call it a portfolio
+          website or a blog, but I like to think of it as a collection of my
+          work and thoughts.{' '}
+          <span className="text-body-italic">
+            Maybe the ramblings of a madman.{' '}
+          </span>
+          who knows.
         </p>
-      </div>
-
-      {/* Detailed Sections */}
-      <div className="space-y-6">
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          I'm a serial SaaS idea guy who's obsessed with turning wild ideas into
-          real tools that people actually use.
+          I'm a serial SaaS developer with way too many{' '}
+          <span className="text-xs tracking-wide">
+            amazing and revolutionary
+          </span>{' '}
+          ideas. I'm also a bit of a nerd and love turning said wild ideas into
+          real tools that people <span className="text-body-italic">(me)</span>{' '}
+          actually use.
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
@@ -59,34 +65,31 @@ export default function AboutPage() {
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Outside of programming, I enjoy doing{' '}
-          <Camera className="mx-1 inline h-4 w-4" /> photography and traveling.
-          I also love <Film className="mx-1 inline h-4 w-4" /> movies,{' '}
-          <Code className="mx-1 inline h-4 w-4" /> anime, and exploring new
-          technologies. Also, in case you are interested, here are the{' '}
+          Outside of coding, I enjoy exploring new places, sports, anime and
+          movies - I am trying to list some of my{' '}
           <Link
-            href="/uses"
+            href="/media"
             className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
           >
-            hardware/software I use
-          </Link>
-          .
+            media consumption
+          </Link>{' '}
+          on my website if you're interested.
         </p>
 
         <p className="text-body-main text-zinc-700 dark:text-zinc-300">
           I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{' '}
           <strong className="text-body-bold text-zinc-900 dark:text-zinc-100">
-            Your City
+            St. John's NL
           </strong>
-          , if you are around, please reach out and let's have some{' '}
-          <Coffee className="mx-1 inline h-4 w-4" /> coffee or work together.
+          , if you are around, reach out and let's have some{' '}
+          <Coffee className="mx-1 inline h-4 w-4" /> or work together.
         </p>
       </div>
 
       {/* Tech Stack */}
       <div className="space-y-4">
         <p className="text-body-bold text-zinc-700 dark:text-zinc-300">
-          Code stuff
+          Code and software
         </p>
         {/* Languages */}
         <div className="flex items-start gap-2">
@@ -462,28 +465,38 @@ export default function AboutPage() {
       </div>
 
       {/* Find Me On */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         <p className="text-body-bold text-zinc-700 dark:text-zinc-300">
           Find me on
         </p>
         <div className="flex flex-wrap gap-1">
           <Chip
             href="https://github.com/awhalen1999"
-            icon={<Github className="h-4 w-4" />}
+            icon={
+              <Image
+                src="/github.svg"
+                alt="GitHub Profile"
+                width={16}
+                height={16}
+                className="h-full w-full object-contain"
+              />
+            }
           >
             GitHub
           </Chip>
           <Chip
             href="https://linkedin.com/in/alexwhalen"
-            icon={<Linkedin className="h-4 w-4" />}
+            icon={
+              <Image
+                src="/linkedin.svg"
+                alt="LinkedIn Profile"
+                width={16}
+                height={16}
+                className="h-full w-full object-contain"
+              />
+            }
           >
             LinkedIn
-          </Chip>
-          <Chip
-            href="mailto:alex@alexwhalen.co"
-            icon={<Mail className="h-4 w-4" />}
-          >
-            Email
           </Chip>
         </div>
       </div>
