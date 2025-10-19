@@ -197,10 +197,10 @@
   /* Pixel cloud animation - continuous horizontal scroll */
   @keyframes cloud {
     0% {
-      transform: translateX(100vw);
+      transform: translateX(150vw);
     }
     100% {
-      transform: translateX(-200px);
+      transform: translateX(-300px);
     }
   }
 
