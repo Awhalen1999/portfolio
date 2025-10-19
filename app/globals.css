@@ -179,7 +179,7 @@
   }
 
   .text-body-main {
-    @apply leading-snug font-normal tracking-tighter;
+    @apply leading-snug font-normal tracking-tight;
   }
 
   .text-body-bold {
