@@ -1,18 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Chip } from '@/components/ui/chip'
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Coffee,
-  Camera,
-  Film,
-  Code,
-  Mic,
-  Palette,
-} from 'lucide-react'
+import { MapPin, Coffee } from 'lucide-react'
 
 export default function AboutPage() {
   return (
