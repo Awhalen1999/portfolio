@@ -28,11 +28,25 @@ export const metadata: Metadata = {
     default: 'Alex Whalen - Personal Website',
     template: '%s | Alex Whalen',
   },
-  description: 'Alex Whalen - Personal website',
-  keywords: ['Alex', 'portfolio', 'developer', 'designer', 'personal website'],
-  authors: [{ name: 'Alex Whalen' }],
-  creator: 'Alex',
-  publisher: 'Alex',
+  description:
+    "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it. Based in St. John's, NL.",
+  keywords: [
+    'Alex Whalen',
+    'Full Stack Developer',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'SaaS Developer',
+    'Web Development',
+    'Software Engineer',
+    'Personal Website',
+    "St. John's NL",
+    'Developer',
+    'Coding',
+  ],
+  authors: [{ name: 'Alex Whalen', url: 'https://alexwhalen.co' }],
+  creator: 'Alex Whalen',
+  publisher: 'Alex Whalen',
   robots: {
     index: true,
     follow: true,
@@ -48,9 +62,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://alexwhalen.co/',
-    siteName: 'Alex Whalen - Personal Website',
+    siteName: 'Alex Whalen',
     title: 'Alex Whalen - Personal Website',
-    description: 'Alex Whalen - Personal website',
+    description:
+      "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it.",
     images: [
       {
         url: '/cover.jpg',
@@ -63,7 +78,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Alex Whalen - Personal Website',
-    description: 'Alex Whalen - Personal website',
+    description:
+      "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it.",
     images: ['/cover.jpg'],
   },
 }

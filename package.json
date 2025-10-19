@@ -1,6 +1,13 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Alex Whalen - Full Stack Developer",
+  "author": "Alex Whalen <alex@alexwhalen.co>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awhalen1999/portfolio.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev --port 9000",
