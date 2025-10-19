@@ -2,81 +2,77 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Chip } from '@/components/ui/chip'
 import { MapPin, Coffee } from 'lucide-react'
+import { TextFade } from '@/components/ui/text-fade'
 
 export default function AboutPage() {
   return (
-    <div className="space-y-10">
+    <TextFade direction="up">
       {/* Main text sections */}
-      <div className="space-y-5">
-        <h1 className="text-header-main text-zinc-900 dark:text-zinc-200">
-          Alex Whalen
-        </h1>
-        <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Hey! I'm Alex. This is my website... you could call it a portfolio
-          website or a blog, but I like to think of it as a collection of my
-          work and thoughts.{' '}
-          <span className="text-body-italic">
-            Maybe the ramblings of a madman.{' '}
-          </span>
-          who knows.
-        </p>
-        <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          I'm a serial SaaS developer with way too many{' '}
-          <span className="text-xs tracking-wide">
-            amazing and revolutionary
-          </span>{' '}
-          ideas. I'm also a bit of a nerd and love turning said wild ideas into
-          real tools that people <span className="text-body-italic">(me)</span>{' '}
-          actually use.
-        </p>
+      <h1 className="text-header-main mb-5 text-zinc-900 dark:text-zinc-200">
+        Alex Whalen
+      </h1>
+      <p className="text-body-main mb-5 text-zinc-700 dark:text-zinc-300">
+        Hey! I'm Alex. This is my website... you could call it a portfolio
+        website or a blog, but I like to think of it as a collection of my work
+        and thoughts.{' '}
+        <span className="text-body-italic">
+          Maybe the ramblings of a madman.{' '}
+        </span>
+        who knows.
+      </p>
+      <p className="text-body-main mb-5 text-zinc-700 dark:text-zinc-300">
+        I'm a serial SaaS developer with way too many{' '}
+        <span className="text-xs tracking-wide">amazing and revolutionary</span>{' '}
+        ideas. I'm also a bit of a nerd and love turning said wild ideas into
+        real tools that people <span className="text-body-italic">(me)</span>{' '}
+        actually use.
+      </p>
 
-        <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Currently, I lead the enterprise software team at{' '}
-          <Link
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
-          >
-            Nutraforge Technologies
-          </Link>
-          , building tools for nutrition analysis that help health
-          professionals. I'm also working on and contributing to various (too
-          many){' '}
-          <Link
-            href="/projects"
-            className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
-          >
-            projects
-          </Link>
-          . When I find the time, I try to attend as many hackathons and coding
-          experiments as I can.
-        </p>
+      <p className="text-body-main mb-5 text-zinc-700 dark:text-zinc-300">
+        Currently, I lead the enterprise software team at{' '}
+        <Link
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
+        >
+          Nutraforge Technologies
+        </Link>
+        , building tools for nutrition analysis that help health professionals.
+        I'm also working on and contributing to various (too many){' '}
+        <Link
+          href="/projects"
+          className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
+        >
+          projects
+        </Link>
+        . When I find the time, I try to attend as many hackathons and coding
+        experiments as I can.
+      </p>
 
-        <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          Outside of coding, I enjoy exploring new places, sports, anime and
-          movies - I am trying to list some of my{' '}
-          <Link
-            href="/media"
-            className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
-          >
-            media consumption
-          </Link>{' '}
-          on my website if you're interested.
-        </p>
+      <p className="text-body-main mb-5 text-zinc-700 dark:text-zinc-300">
+        Outside of coding, I enjoy exploring new places, sports, anime and
+        movies - I am trying to list some of my{' '}
+        <Link
+          href="/media"
+          className="text-body-main text-zinc-900 underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:text-zinc-100 dark:hover:decoration-zinc-300"
+        >
+          media consumption
+        </Link>{' '}
+        on my website if you're interested.
+      </p>
 
-        <p className="text-body-main text-zinc-700 dark:text-zinc-300">
-          I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{' '}
-          <strong className="text-body-bold text-zinc-900 dark:text-zinc-100">
-            St. John's NL
-          </strong>
-          , if you are around, reach out and let's have some{' '}
-          <Coffee className="mx-1 inline h-4 w-4" /> or work together.
-        </p>
-      </div>
+      <p className="text-body-main mb-10 text-zinc-700 dark:text-zinc-300">
+        I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{' '}
+        <strong className="text-body-bold text-zinc-900 dark:text-zinc-100">
+          St. John's NL
+        </strong>
+        , if you are around, reach out and let's have some{' '}
+        <Coffee className="mx-1 inline h-4 w-4" /> or work together.
+      </p>
 
       {/* Tech Stack */}
-      <div className="space-y-4">
+      <div className="mb-10 space-y-4">
         <p className="text-body-bold text-zinc-700 dark:text-zinc-300">
           Code and software
         </p>
@@ -454,7 +450,7 @@ export default function AboutPage() {
       </div>
 
       {/* Find Me On */}
-      <div className="space-y-4">
+      <div className="mb-10 space-y-4">
         <p className="text-body-bold text-zinc-700 dark:text-zinc-300">
           Find me on
         </p>
@@ -502,6 +498,6 @@ export default function AboutPage() {
           </Link>
         </p>
       </div>
-    </div>
+    </TextFade>
   )
 }
