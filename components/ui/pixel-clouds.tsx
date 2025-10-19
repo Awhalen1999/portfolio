@@ -56,8 +56,8 @@ const clouds: Cloud[] = [
 
   // Layer 7: Very bottom (90-95%)
   { id: 22, size: 'small', version: 1, duration: 51, delay: 110, top: '90%' },
-  { id: 24, size: 'medium', version: 2, duration: 69, delay: 120, top: '94%' },
-  { id: 25, size: 'xlarge', version: 2, duration: 96, delay: 125, top: '92%' },
+  { id: 24, size: 'medium', version: 2, duration: 69, delay: 120, top: '88%' },
+  { id: 25, size: 'xlarge', version: 2, duration: 96, delay: 125, top: '86%' },
 ]
 
 export function PixelClouds() {
