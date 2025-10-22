@@ -22,7 +22,9 @@ export default function AboutPage() {
       </p>
       <p className="text-body-main mb-5 text-zinc-700 dark:text-zinc-300">
         I'm a serial SaaS developer with way too many{' '}
-        <span className="text-xs tracking-wide">amazing and revolutionary</span>{' '}
+        <span className="text-xs tracking-widest">
+          amazing and revolutionary
+        </span>{' '}
         ideas. I'm also a bit of a nerd and love turning said wild ideas into
         real tools that people <span className="text-body-italic">(me)</span>{' '}
         actually use.
@@ -444,6 +446,48 @@ export default function AboutPage() {
               }
             >
               Vercel
+            </Chip>
+            <Chip
+              href="https://tanstack.com"
+              icon={
+                <Image
+                  src="/tanstack.svg"
+                  alt="TanStack"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              TanStack
+            </Chip>
+            <Chip
+              href="https://zustand-demo.pmnd.rs/"
+              icon={
+                <Image
+                  src="/zustand.svg"
+                  alt="Zustand"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Zustand
+            </Chip>
+            <Chip
+              href="https://stripe.com"
+              icon={
+                <Image
+                  src="/stripe.svg"
+                  alt="Stripe"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Stripe
             </Chip>
           </div>
         </div>
