@@ -504,7 +504,7 @@ export default function AboutPage() {
             icon={<Github strokeWidth={1} />}
             href="https://github.com/awhalen1999"
             hoverBg="hover:bg-purple-600/10"
-            hoverBorder="hover:border-purple-400 dark:hover:border-purple-400"
+            hoverBorder="hover:border-purple-400/20 dark:hover:border-purple-400/10"
             hoverText="hover:text-purple-400"
           >
             GitHub
@@ -513,7 +513,7 @@ export default function AboutPage() {
             icon={<Linkedin strokeWidth={1} />}
             href="https://www.linkedin.com/in/alex-whalen-0496b227b/"
             hoverBg="hover:bg-blue-600/10"
-            hoverBorder="hover:border-blue-400 dark:hover:border-blue-400"
+            hoverBorder="hover:border-blue-400/20 dark:hover:border-blue-400/10"
             hoverText="hover:text-blue-400"
           >
             LinkedIn

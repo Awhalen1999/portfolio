@@ -8,7 +8,6 @@ interface IconButtonProps {
   hoverBg?: string
   hoverBorder?: string
   hoverText?: string
-  className?: string
 }
 
 export function IconButton({
@@ -18,7 +17,6 @@ export function IconButton({
   hoverBg,
   hoverBorder,
   hoverText,
-  className,
 }: IconButtonProps) {
   return (
     <a
@@ -26,15 +24,10 @@ export function IconButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        // Base styles
-        'flex cursor-pointer items-center gap-2 rounded-sm border px-2 py-1 transition-all',
-        // Default state
-        'border-zinc-300 text-gray-400 dark:border-zinc-900',
-        // Hover styles
+        'flex cursor-pointer items-center gap-2 rounded-sm border border-zinc-300 px-2 py-1 text-gray-400 transition-all dark:border-zinc-900',
         hoverBg,
         hoverBorder,
         hoverText,
-        className,
       )}
     >
       <span className="flex-shrink-0">{icon}</span>
