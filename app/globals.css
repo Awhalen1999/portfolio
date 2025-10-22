@@ -243,11 +243,15 @@
   }
 
   .text-body-italic {
-    @apply italic leading-snug font-normal tracking-wide;
+    @apply leading-snug font-normal tracking-wide italic;
   }
 
   .text-chip-main {
     @apply text-sm font-normal tracking-tight;
+  }
+
+  .text-body-small {
+    @apply text-xs font-normal tracking-tight;
   }
 
   /* Pixel cloud animation */
