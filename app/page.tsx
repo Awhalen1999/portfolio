@@ -7,7 +7,7 @@ import { IconButton } from '@/components/ui/icon-button'
 
 export default function AboutPage() {
   return (
-    <TextFade direction="up">
+    <TextFade direction="up" className="mx-auto max-w-xl">
       {/* Main text sections */}
       <h1 className="text-header-main mb-5 text-zinc-900 dark:text-zinc-200">
         Alex Whalen
