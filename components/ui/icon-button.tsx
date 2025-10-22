@@ -2,32 +2,43 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 
 interface IconButtonProps {
+  children: React.ReactNode
   icon: React.ReactNode
-  text: string
-  onClick?: () => void
-  highlightColor?: string
+  href: string
+  hoverBg?: string
+  hoverBorder?: string
+  hoverText?: string
+  className?: string
 }
 
 export function IconButton({
+  children,
   icon,
-  text,
-  onClick,
-  highlightColor = 'bg-yellow-500',
+  href,
+  hoverBg,
+  hoverBorder,
+  hoverText,
+  className,
 }: IconButtonProps) {
   return (
-    <button
-      onClick={onClick}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={cn(
-        'inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium',
-        'border border-gray-400 text-gray-400',
-        'hover:border-transparent hover:text-white',
-        'transition-all duration-200',
-        'focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:outline-none',
-        `hover:${highlightColor}`,
+        // Base styles
+        'flex cursor-pointer items-center gap-2 rounded-sm border px-2 py-1 transition-all',
+        // Default state
+        'border-zinc-300 text-gray-400 dark:border-zinc-900',
+        // Hover styles
+        hoverBg,
+        hoverBorder,
+        hoverText,
+        className,
       )}
     >
-      <span className="h-4 w-4 flex-shrink-0">{icon}</span>
-      <span>{text}</span>
-    </button>
+      <span className="flex-shrink-0">{icon}</span>
+      <span className="font-medium">{children}</span>
+    </a>
   )
 }

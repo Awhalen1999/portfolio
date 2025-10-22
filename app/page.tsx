@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Chip } from '@/components/ui/chip'
-import { MapPin, Coffee } from 'lucide-react'
+import { MapPin, Coffee, Linkedin, Github } from 'lucide-react'
 import { TextFade } from '@/components/ui/text-fade'
+import { IconButton } from '@/components/ui/icon-button'
 
 export default function AboutPage() {
   return (
@@ -499,34 +500,24 @@ export default function AboutPage() {
           Find me on
         </p>
         <div className="flex flex-wrap gap-1">
-          <Chip
+          <IconButton
+            icon={<Github strokeWidth={1} />}
             href="https://github.com/awhalen1999"
-            icon={
-              <Image
-                src="/github.svg"
-                alt="GitHub Profile"
-                width={16}
-                height={16}
-                className="h-full w-full object-contain"
-              />
-            }
+            hoverBg="hover:bg-purple-600/10"
+            hoverBorder="hover:border-purple-400 dark:hover:border-purple-400"
+            hoverText="hover:text-purple-400"
           >
             GitHub
-          </Chip>
-          <Chip
-            href="https://linkedin.com/in/alexwhalen"
-            icon={
-              <Image
-                src="/linkedin.svg"
-                alt="LinkedIn Profile"
-                width={16}
-                height={16}
-                className="h-full w-full object-contain"
-              />
-            }
+          </IconButton>
+          <IconButton
+            icon={<Linkedin strokeWidth={1} />}
+            href="https://www.linkedin.com/in/alex-whalen-0496b227b/"
+            hoverBg="hover:bg-blue-600/10"
+            hoverBorder="hover:border-blue-400 dark:hover:border-blue-400"
+            hoverText="hover:text-blue-400"
           >
             LinkedIn
-          </Chip>
+          </IconButton>
         </div>
       </div>
 
