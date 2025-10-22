@@ -1,21 +1,23 @@
+import React from 'react'
+import { cn } from '@/lib/utils'
+
 interface ChipProps {
   children: React.ReactNode
-  icon?: React.ReactNode // SVG icon (optional)
+  icon?: React.ReactNode
   href?: string
-  className?: string
 }
 
-export function Chip({ children, icon, href, className = '' }: ChipProps) {
-  const baseClasses =
-    'inline-flex items-center gap-1 rounded-sm px-1 py-0 text-sm font-medium tracking-tight bg-zinc-700/20 backdrop-blur-md text-zinc600 hover:bg-zinc-800/30 dark:bg-white/10 dark:text-zinc-400 dark:hover:bg-white/20 transition-all cursor-pointer'
+export function Chip({ children, icon, href }: ChipProps) {
+  const baseClasses = cn(
+    'inline-flex items-center gap-1 rounded-sm px-1 py-0 text-sm font-medium',
+    'bg-zinc-700/20 backdrop-blur-md text-zinc-600',
+    'hover:bg-zinc-800/30 dark:bg-white/10 dark:text-zinc-400 dark:hover:bg-white/20',
+    'transition-all cursor-pointer',
+  )
 
   const content = (
     <>
-      {icon && (
-        <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center [&>img]:h-full [&>img]:w-full [&>img]:object-contain [&>svg]:h-full [&>svg]:w-full">
-          {icon}
-        </div>
-      )}
+      {icon && <div className="h-4 w-4 flex-shrink-0">{icon}</div>}
       {children}
     </>
   )
@@ -26,12 +28,12 @@ export function Chip({ children, icon, href, className = '' }: ChipProps) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${baseClasses} ${className}`}
+        className={baseClasses}
       >
         {content}
       </a>
     )
   }
 
-  return <span className={`${baseClasses} ${className}`}>{content}</span>
+  return <span className={baseClasses}>{content}</span>
 }
