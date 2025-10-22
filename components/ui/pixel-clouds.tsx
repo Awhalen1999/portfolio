@@ -69,20 +69,20 @@ export function PixelClouds() {
         maskImage: `
           linear-gradient(to right, 
             black 0%, 
-            black 15%, 
-            rgba(0,0,0,0.2) 25%, 
-            rgba(0,0,0,0.2) 75%, 
-            black 85%, 
+            black 13%, 
+            rgba(0,0,0,0.2) 22%, 
+              rgba(0,0,0,0.2) 78%, 
+            black 87%, 
             black 100%
           )
         `,
         WebkitMaskImage: `
           linear-gradient(to right, 
             black 0%, 
-            black 15%, 
-            rgba(0,0,0,0.2) 25%, 
-            rgba(0,0,0,0.2) 75%, 
-            black 85%, 
+            black 13%, 
+            rgba(0,0,0,0.2) 22%, 
+            rgba(0,0,0,0.2) 78%, 
+            black 87%, 
             black 100%
           )
         `,
