@@ -67,7 +67,7 @@ function ThemeSwitch() {
   return (
     <button
       onClick={toggleTheme}
-      className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 hover:text-zinc-950 focus-visible:outline-2 dark:hover:text-zinc-50"
+      className="text-color-body-text hover:text-color-body-text-active inline-flex h-7 w-7 items-center justify-center transition-all"
       type="button"
       aria-label="Toggle theme"
     >
@@ -95,7 +95,7 @@ function CloudsToggle() {
   return (
     <button
       onClick={toggleClouds}
-      className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 hover:text-zinc-950 focus-visible:outline-2 dark:hover:text-zinc-50"
+      className="text-body-text hover:text-body-text-active inline-flex h-7 w-7 items-center justify-center transition-all"
       type="button"
       aria-label="Toggle clouds"
     >
@@ -119,7 +119,7 @@ export function Header() {
         <nav className="ml-auto flex items-center gap-4">
           <Link
             href="/projects"
-            className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
+            className="text-body-main text-body-text hover:text-body-text-active transition-all"
           >
             <span className="hidden md:inline">Projects</span>
             <span className="md:hidden">
@@ -128,7 +128,7 @@ export function Header() {
           </Link>
           <Link
             href="/media"
-            className="text-body-main text-zinc-700 opacity-60 transition-opacity hover:opacity-100 dark:text-zinc-300"
+            className="text-body-main text-body-text hover:text-body-text-active transition-all"
           >
             <span className="hidden md:inline">Media</span>
             <span className="md:hidden">
@@ -139,7 +139,7 @@ export function Header() {
             href="https://github.com/awhalen1999"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-7 w-7 items-center justify-center opacity-60 transition-opacity hover:opacity-100"
+            className="text-body-text hover:text-body-text-active inline-flex h-7 w-7 items-center justify-center transition-all"
           >
             <Github className="h-4 w-4" />
           </a>

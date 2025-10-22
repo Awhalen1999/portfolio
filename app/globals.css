@@ -4,14 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Text color system - matching Anthony Fu's prose colors */
-  --text-main: #000; /* --fg-deeper for headers */
-  --text-body: #555; /* --fg for body text */
-  --text-body-hover: #222; /* --fg-deep for hover states */
-  --text-link: #000; /* --fg-deeper for links */
-  --text-chip: #555; /* --fg for chips */
-  --text-chip-hover: #222; /* --fg-deep for chip hover */
-  --text-icon-button: #888; /* --fg-light for icon buttons */
+  /* text */
+  --color-main-text: #000;
+  --color-main-text-active: #222;
+  --color-body-text: #555;
+  --color-body-text-active: #222;
+  --color-link-text: #000;
+  --color-link-text-active: #222;
+  --color-chip-text: #555;
+  --color-chip-text-active: #222;
+  --color-icon-button-text: #888;
+
+  /* background */
+  --color-main-bg: #e0f2fe;
+  --color-chip-bg: rgba(63, 63, 70, 0.22);
+  --color-chip-bg-active: rgba(39, 39, 42, 0.32);
 
   /* TODO: Add syntax highlighting colors */
   /* TODO: Add design tokens (radius, etc.) */
@@ -21,29 +28,33 @@
 }
 
 .dark {
-  /* Text color system - dark mode matching Anthony Fu's prose colors */
-  --text-main: #fff; /* --fg-deeper for headers */
-  --text-body: #bbb; /* --fg for body text */
-  --text-body-hover: #ddd; /* --fg-deep for hover states */
-  --text-link: #fff; /* --fg-deeper for links */
-  --text-chip: #bbb; /* --fg for chips */
-  --text-chip-hover: #ddd; /* --fg-deep for chip hover */
-  --text-icon-button: #888; /* --fg-light for icon buttons */
+  /* text */
+  --color-main-text: #fff;
+  --color-main-text-active: #ddd;
+  --color-body-text: #bbb;
+  --color-body-text-active: #ddd;
+  --color-link-text: #fff;
+  --color-chip-text: #bbb;
+  --color-chip-text-active: #ddd;
+  --color-icon-button-text: #888;
 
-  /* TODO: Add dark theme colors (background, foreground, cards, etc.) */
-  /* TODO: Add dark chart colors */
-  /* TODO: Add dark sidebar colors */
+  /* background */
+  --color-main-bg: #000000;
+  --color-chip-bg: rgba(255, 255, 255, 0.12);
+  --color-chip-bg-active: rgba(255, 255, 255, 0.22);
 }
 
 @theme inline {
-  /* Text color mappings */
-  --color-text-main: var(--text-main);
-  --color-text-body: var(--text-body);
-  --color-text-body-hover: var(--text-body-hover);
-  --color-text-link: var(--text-link);
-  --color-text-chip: var(--text-chip);
-  --color-text-chip-hover: var(--text-chip-hover);
-  --color-text-icon-button: var(--text-icon-button);
+  --color-main-text: var(--color-main-text);
+  --color-body-text: var(--color-body-text);
+  --color-body-text-active: var(--color-body-text-active);
+  --color-link-text: var(--color-link-text);
+  --color-chip-text: var(--color-chip-text);
+  --color-chip-text-active: var(--color-chip-text-active);
+  --color-icon-button-text: var(--color-icon-button-text);
+  --color-bg-main: var(--color-main-bg);
+  --color-chip-bg: var(--color-chip-bg);
+  --color-chip-bg-active: var(--color-chip-bg-active);
 }
 
 @layer base {
@@ -56,19 +67,11 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
-  * {
-    @apply border-border outline-ring/50;
-  }
-
   /* HTML & Body */
   html {
     overflow-x: hidden;
     overflow-y: scroll;
     color-scheme: light dark;
-  }
-
-  body {
-    @apply bg-background text-foreground;
   }
 
   .dark {
@@ -137,31 +140,31 @@
 
 @layer utilities {
   /* Typography System */
-  .text-header-main {
+  .text-style-header-main {
     @apply text-4xl font-bold tracking-tighter;
   }
 
-  .text-header-bold {
+  .text-style-header-bold {
     @apply text-2xl font-bold tracking-tighter;
   }
 
-  .text-body-main {
+  .text-style-body-main {
     @apply leading-snug font-normal tracking-tight;
   }
 
-  .text-body-bold {
+  .text-style-body-bold {
     @apply leading-snug font-semibold tracking-tight;
   }
 
-  .text-body-italic {
+  .text-style-body-italic {
     @apply leading-snug font-normal tracking-wide italic;
   }
 
-  .text-chip-main {
+  .text-style-chip-main {
     @apply text-sm font-normal tracking-tight;
   }
 
-  .text-body-small {
+  .text-style-body-small {
     @apply text-xs font-normal tracking-tight;
   }
 

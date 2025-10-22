@@ -9,8 +9,10 @@ export default function AboutPage() {
   return (
     <TextFade direction="up" className="mx-auto max-w-xl">
       {/* Main text sections */}
-      <h1 className="text-header-main text-text-main mb-5">Alex Whalen</h1>
-      <p className="text-body-main text-text-body mb-5">
+      <h1 className="text-header-main text-color-main-text mb-5">
+        Alex Whalen
+      </h1>
+      <p className="text-body-main text-body-text mb-5">
         Hey! I'm Alex. This is my website... you could call it a portfolio
         website or a blog, but I like to think of it as a collection of my work
         and thoughts.{' '}
@@ -19,7 +21,7 @@ export default function AboutPage() {
         </span>
         who knows.
       </p>
-      <p className="text-body-main text-text-body mb-5">
+      <p className="text-body-main text-body-text mb-5">
         I'm a serial SaaS developer with way too many{' '}
         <span className="text-xs tracking-widest">
           amazing and revolutionary
@@ -29,13 +31,13 @@ export default function AboutPage() {
         actually use.
       </p>
 
-      <p className="text-body-main text-text-body mb-5">
+      <p className="text-body-main text-body-text mb-5">
         Currently, I lead the enterprise software team at{' '}
         <Link
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="text-body-main text-text-link underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
+          className="text-body-main text-link-text underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
         >
           Nutraforge Technologies
         </Link>
@@ -43,7 +45,7 @@ export default function AboutPage() {
         I'm also working on and contributing to various (too many){' '}
         <Link
           href="/projects"
-          className="text-body-main text-text-link underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
+          className="text-body-main text-link-text underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
         >
           projects
         </Link>
@@ -51,31 +53,31 @@ export default function AboutPage() {
         experiments as I can.
       </p>
 
-      <p className="text-body-main text-text-body mb-5">
+      <p className="text-body-main text-body-text mb-5">
         Outside of coding, I enjoy exploring new places, sports, anime and
         movies - I am trying to list some of my{' '}
         <Link
           href="/media"
-          className="text-body-main text-text-link underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
+          className="text-body-main text-link-text underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
         >
           media consumption
         </Link>{' '}
         on my website if you're interested.
       </p>
 
-      <p className="text-body-main text-text-body mb-10">
+      <p className="text-body-main text-body-text mb-10">
         I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{' '}
-        <strong className="text-body-bold text-text-main">St. John's NL</strong>
+        <strong className="text-body-bold text-main-text">St. John's NL</strong>
         , if you are around, reach out and let's have some{' '}
         <Coffee className="mx-1 inline h-4 w-4" /> or work together.
       </p>
 
       {/* Tech Stack */}
       <div className="mb-10 space-y-4">
-        <p className="text-body-bold text-text-body">Code and software</p>
+        <p className="text-body-bold text-body-text">Code and software</p>
         {/* Languages */}
         <div className="flex items-start gap-2">
-          <p className="text-chip-main text-text-body">Languages</p>
+          <p className="text-chip-main text-body-text">Languages</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://www.typescriptlang.org"
@@ -124,7 +126,7 @@ export default function AboutPage() {
 
         {/* Frontend */}
         <div className="flex items-start gap-2">
-          <p className="text-chip-main text-text-body">Frontend</p>
+          <p className="text-chip-main text-body-text">Frontend</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://react.dev"
@@ -187,7 +189,7 @@ export default function AboutPage() {
 
         {/* Backend */}
         <div className="flex items-start gap-2">
-          <p className="text-chip-main text-text-body">Backend</p>
+          <p className="text-chip-main text-body-text">Backend</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://nodejs.org"
@@ -292,7 +294,7 @@ export default function AboutPage() {
 
         {/* Tools & Development */}
         <div className="flex items-start gap-2">
-          <p className="text-chip-main text-text-body">Tools</p>
+          <p className="text-chip-main text-body-text">Tools</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://github.com"
@@ -482,7 +484,7 @@ export default function AboutPage() {
 
       {/* Find Me On */}
       <div className="mb-10 space-y-4">
-        <p className="text-body-bold text-text-body">Find me on</p>
+        <p className="text-body-bold text-body-text">Find me on</p>
         <div className="flex flex-wrap gap-1">
           <IconButton
             icon={<Github strokeWidth={1} />}
@@ -511,7 +513,7 @@ export default function AboutPage() {
           Or mail me at{' '}
           <Link
             href="mailto:alex@alexwhalen.co"
-            className="text-body-main text-text-link underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
+            className="text-body-main text-link-text underline decoration-zinc-400 underline-offset-4 transition-colors hover:decoration-zinc-600 dark:hover:decoration-zinc-300"
           >
             alex@alexwhalen.co
           </Link>
