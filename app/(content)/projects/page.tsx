@@ -3,7 +3,6 @@
 import { ProjectCard } from '@/components/ui/project-card'
 import React from 'react'
 
-
 const projectsPage = () => {
   const projects = [
     {
@@ -26,14 +25,12 @@ const projectsPage = () => {
 
   return (
     <div className="space-y-8">
-      <div>
+      <div className="mx-auto max-w-xl text-center">
         <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100">
           Projects
         </h1>
         <p className="text-gray-600 dark:text-gray-400">
-          A collection of my projects and experiments. Some are finished, some
-          are works in progress, and some are just wild ideas I couldn't resist
-          building.
+          Some are finished, some are works in progress..
         </p>
       </div>
 
