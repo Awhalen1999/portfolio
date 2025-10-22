@@ -14,7 +14,7 @@ export function Chip({ children, icon, href }: ChipProps) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'inline-flex cursor-pointer items-center gap-1 rounded-sm bg-zinc-700/20 px-1 py-0 text-sm font-medium text-zinc-600 backdrop-blur-md transition-all hover:bg-zinc-800/30 dark:bg-white/10 dark:text-zinc-400 dark:hover:bg-white/20',
+        'text-text-chip hover:text-text-chip-hover inline-flex cursor-pointer items-center gap-1 rounded-sm bg-zinc-700/20 px-1 py-0 text-sm font-medium backdrop-blur-md transition-all hover:bg-zinc-800/30 dark:bg-white/10 dark:hover:bg-white/20',
       )}
     >
       {icon && <div className="h-4 w-4 flex-shrink-0">{icon}</div>}
