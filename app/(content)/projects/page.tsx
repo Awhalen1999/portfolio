@@ -26,10 +26,8 @@ const projectsPage = () => {
   return (
     <div className="space-y-8">
       <div className="mx-auto max-w-xl text-center">
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100">
-          Projects
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400">
+        <h1 className="text-style-header-main">Projects</h1>
+        <p className="text-style-body-main">
           Some are finished, some are works in progress..
         </p>
       </div>

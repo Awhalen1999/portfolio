@@ -504,10 +504,10 @@ export default function AboutPage() {
         <p className="text-style-body-small">
           Or mail me at{' '}
           <Link
-            href="mailto:alex@alexwhalen.co"
+            href="mailto:awhalendev@gmail.com"
             className="text-style-body-link"
           >
-            alex@alexwhalen.co
+            awhalendev@gmail.com
           </Link>
         </p>
       </div>
