@@ -1,11 +1,25 @@
 import type { Metadata, Viewport } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
 import { ThemeProvider } from 'next-themes'
 import { Footer } from './footer'
 import { CloudsProvider } from '@/lib/clouds-context'
 import { CloudsBackground } from '@/components/ui/clouds-background'
+import { Inter, DM_Mono } from 'next/font/google'
+
+// Font configurations
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const dmMono = DM_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-mono',
+  weight: ['300', '400', '500'],
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -84,12 +98,6 @@ export const metadata: Metadata = {
   },
 }
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -98,7 +106,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jetbrainsMono.variable} bg-background font-[family-name:var(--font-jetbrains-mono)] tracking-tight text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-100`}
+        className={`${inter.variable} ${dmMono.variable} font-sans tracking-tight text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-100`}
       >
         <ThemeProvider
           enableSystem={true}
