@@ -67,7 +67,7 @@ function ThemeSwitch() {
   return (
     <button
       onClick={toggleTheme}
-      className="text-color-body-text hover:text-color-body-text-active inline-flex h-7 w-7 items-center justify-center transition-all"
+      className="text-style-body-main inline-flex h-7 w-7 items-center justify-center transition-all hover:text-[var(--c-text-100)]"
       type="button"
       aria-label="Toggle theme"
     >
@@ -95,7 +95,7 @@ function CloudsToggle() {
   return (
     <button
       onClick={toggleClouds}
-      className="text-body-text hover:text-body-text-active inline-flex h-7 w-7 items-center justify-center transition-all"
+      className="text-style-body-main inline-flex h-7 w-7 items-center justify-center transition-all hover:text-[var(--c-text-100)]"
       type="button"
       aria-label="Toggle clouds"
     >
@@ -119,7 +119,7 @@ export function Header() {
         <nav className="ml-auto flex items-center gap-4">
           <Link
             href="/projects"
-            className="text-body-main text-body-text hover:text-body-text-active transition-all"
+            className="text-style-body-main transition-all hover:text-[var(--c-text-100)]"
           >
             <span className="hidden md:inline">Projects</span>
             <span className="md:hidden">
@@ -128,7 +128,7 @@ export function Header() {
           </Link>
           <Link
             href="/media"
-            className="text-body-main text-body-text hover:text-body-text-active transition-all"
+            className="text-style-body-main transition-all hover:text-[var(--c-text-100)]"
           >
             <span className="hidden md:inline">Media</span>
             <span className="md:hidden">
@@ -139,7 +139,7 @@ export function Header() {
             href="https://github.com/awhalen1999"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-body-text hover:text-body-text-active inline-flex h-7 w-7 items-center justify-center transition-all"
+            className="text-style-body-main inline-flex h-7 w-7 items-center justify-center transition-all hover:text-[var(--c-text-100)]"
           >
             <Github className="h-4 w-4" />
           </a>

@@ -15,7 +15,7 @@ function ScrollToTop() {
       onClick={scrollToTop}
       variant="ghost"
       size="sm"
-      className="h-8 w-8 p-0 opacity-60 transition-opacity hover:opacity-100"
+      className="text-style-body-main h-8 w-8 cursor-pointer p-0 transition-all hover:text-[var(--c-text-100)]"
     >
       <ArrowUp className="h-4 w-4" />
     </Button>
