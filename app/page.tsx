@@ -50,6 +50,11 @@ export default function AboutPage() {
         experiments as I can.
       </p>
 
+      <p className="text-style-body-main mb-5">
+        Outside of coding, I enjoy exploring new places, sports, anime and
+        movies.
+      </p>
+
       <p className="text-style-body-main mb-10">
         I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{' '}
         <strong className="text-style-body-bold text-[var(--color-main-text)]">

@@ -153,6 +153,24 @@
     @apply text-[2rem] font-semibold tracking-wide;
   }
 
+  .text-style-subheader-main {
+    font-family: var(--font-inter);
+    color: var(--c-text-80);
+    @apply text-[1.25rem] font-medium tracking-wide;
+  }
+
+  .text-style-subheader-bold {
+    font-family: var(--font-inter);
+    color: var(--c-text-100);
+    @apply text-[1.25rem] font-semibold tracking-wide;
+  }
+
+  .text-style-subheader-small {
+    font-family: var(--font-inter);
+    color: var(--c-text-80);
+    @apply text-[0.975rem] font-semibold tracking-wide;
+  }
+
   .text-style-body-main {
     font-family: var(--font-inter);
     color: var(--c-text-80);

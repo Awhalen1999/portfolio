@@ -54,7 +54,7 @@ export default function ProjectsPage() {
       <div>
         <h1 className="text-style-header-main mb-2">Projects</h1>
         <p className="text-style-body-italic">
-          Some are finished, some are works in progress..
+          Some are finished, some are works in progress...
         </p>
       </div>
 
