@@ -25,10 +25,7 @@ export default function AboutPage() {
         ideas. I'm also a bit of a nerd and love turning said ideas into real
         tools that people <span className="text-style-body-italic">(me)</span>{' '}
         actually use. Here are some of the{' '}
-        <Link
-          href="/tools"
-          className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.6px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
-        >
+        <Link href="/tools" className="text-style-body-link">
           tools
         </Link>{' '}
         I am currently using everyday for work and personal projects.
@@ -40,16 +37,13 @@ export default function AboutPage() {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.5px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
+          className="text-style-body-link"
         >
           Nutraforge Technologies
         </Link>
         , building tools for nutrition analysis that help health professionals.
         I'm also working on and contributing to various (too many){' '}
-        <Link
-          href="/projects"
-          className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.5px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
-        >
+        <Link href="/projects" className="text-style-body-link">
           projects
         </Link>
         . When I find the time, I try to attend as many hackathons and coding
@@ -506,7 +500,7 @@ export default function AboutPage() {
           Or mail me at{' '}
           <Link
             href="mailto:awhalendev@gmail.com"
-            className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.5px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
+            className="text-style-body-link"
           >
             awhalendev@gmail.com
           </Link>

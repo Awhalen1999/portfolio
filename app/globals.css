@@ -171,6 +171,12 @@
     @apply text-[0.925rem] leading-relaxed italic;
   }
 
+  .text-style-body-link {
+    font-family: var(--font-inter);
+    color: var(--c-text-100);
+    @apply text-[0.925rem] leading-relaxed font-semibold underline decoration-[var(--c-text-transparent)] decoration-[0.6px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)];
+  }
+
   .text-style-body-small-60 {
     font-family: var(--font-inter);
     color: var(--c-text-60);
