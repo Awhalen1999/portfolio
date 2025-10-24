@@ -15,8 +15,10 @@ const CloudsContext = createContext<CloudsContextType | undefined>(undefined)
 
 export function CloudsProvider({ children }: { children: React.ReactNode }) {
   const [showClouds, setShowClouds] = useState(true)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const stored = localStorage.getItem('show-clouds')
     if (stored !== null) {
       setShowClouds(stored === 'true')
@@ -26,7 +28,9 @@ export function CloudsProvider({ children }: { children: React.ReactNode }) {
   const toggleClouds = () => {
     setShowClouds((prev) => {
       const newValue = !prev
-      localStorage.setItem('show-clouds', String(newValue))
+      if (mounted) {
+        localStorage.setItem('show-clouds', String(newValue))
+      }
       return newValue
     })
   }

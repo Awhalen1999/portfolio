@@ -1,39 +1,35 @@
-'use client'
-
 import { ProjectTile } from '@/components/ui/project-tile'
-import { Folder } from 'lucide-react'
-import React from 'react'
 
-interface ProjectTileProps {
+interface Project {
   title: string
   description: string
   year: string
   image: string
 }
 
-const projectsPage = () => {
-  const projects = [
-    {
-      title: 'Kaboodle',
-      description:
-        'A mobile app for creating and sharing packing lists for your adventures.',
-      year: '2025',
-      image: '/cover.jpg',
-    },
-    {
-      title: 'Project Alpha',
-      description: 'A revolutionary SaaS platform that changes everything.',
-      year: '2025',
-      image: '/cover.jpg',
-    },
-    {
-      title: 'Wild Experiment',
-      description: 'Just a crazy idea I had to build. Still figuring it out.',
-      year: '2025',
-      image: '/cover.jpg',
-    },
-  ]
+const projects: Project[] = [
+  {
+    title: 'Kaboodle',
+    description:
+      'A mobile app for creating and sharing packing lists for your adventures.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+  {
+    title: 'Project Alpha',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+  {
+    title: 'Wild Experiment',
+    description: 'Just a crazy idea I had to build. Still figuring it out.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+]
 
+export default function ProjectsPage() {
   return (
     <div className="w-full space-y-8">
       <div className="mx-auto text-center">
@@ -46,7 +42,7 @@ const projectsPage = () => {
       <div className="w-full space-y-2">
         {projects.map((project, index) => (
           <ProjectTile
-            key={index}
+            key={`${project.title}-${index}`}
             title={project.title}
             description={project.description}
             year={project.year}
@@ -57,5 +53,3 @@ const projectsPage = () => {
     </div>
   )
 }
-
-export default projectsPage

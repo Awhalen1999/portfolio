@@ -31,6 +31,7 @@
   --c-accent: #ecc1ff;
   --c-accent-active: #c4a0d9;
   --c-text-transparent: rgba(50, 50, 50, 0.3);
+  --c-separator: rgba(50, 50, 50, 0.2);
 }
 
 .dark {
@@ -52,6 +53,7 @@
   --c-accent: #ecc1ff;
   --c-accent-active: #c4a0d9;
   --c-text-transparent: rgba(255, 255, 255, 0.3);
+  --c-separator: rgba(255, 255, 255, 0.2);
 }
 
 @layer base {
@@ -62,10 +64,21 @@
     overflow-x: hidden;
     overflow-y: scroll;
     color-scheme: light dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .dark {
     color-scheme: dark;
+  }
+
+  /* Performance optimizations */
+  * {
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Text selection */

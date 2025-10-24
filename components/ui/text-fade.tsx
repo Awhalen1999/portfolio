@@ -14,16 +14,25 @@ export function TextFade({
   staggerChildren?: number
 }) {
   const FADE_DOWN = {
-    show: { opacity: 1, y: 0, transition: { type: 'spring' } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'tween',
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    },
     hidden: { opacity: 0, y: direction === 'down' ? -18 : 18 },
   }
   const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const isInView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' })
+
   return (
     <motion.div
       ref={ref}
       initial="hidden"
-      animate={isInView ? 'show' : ''}
+      animate={isInView ? 'show' : 'hidden'}
       variants={{
         hidden: {},
         show: {

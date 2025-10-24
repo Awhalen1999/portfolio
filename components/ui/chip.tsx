@@ -7,7 +7,11 @@ interface ChipProps {
   href: string
 }
 
-export function Chip({ children, icon, href }: ChipProps) {
+export const Chip = React.memo(function Chip({
+  children,
+  icon,
+  href,
+}: ChipProps) {
   return (
     <a
       href={href}
@@ -21,4 +25,4 @@ export function Chip({ children, icon, href }: ChipProps) {
       {children}
     </a>
   )
-}
+})

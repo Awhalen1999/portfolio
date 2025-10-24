@@ -20,44 +20,22 @@ interface Cloud {
 }
 
 const clouds: Cloud[] = [
-  // Layer 1: Top section (5-15%)
+  // Reduced to 15 clouds for better performance
   { id: 1, size: 'small', version: 1, duration: 50, delay: 0, top: '8%' },
   { id: 5, size: 'xlarge', version: 1, duration: 100, delay: 25, top: '5%' },
-  { id: 23, size: 'large', version: 2, duration: 84, delay: 110, top: '12%' },
-
-  // Layer 2: Upper-middle section (18-28%)
   { id: 2, size: 'medium', version: 2, duration: 70, delay: 8, top: '18%' },
   { id: 3, size: 'large', version: 1, duration: 90, delay: 15, top: '25%' },
-  { id: 16, size: 'small', version: 1, duration: 48, delay: 78, top: '22%' },
-  { id: 17, size: 'medium', version: 2, duration: 73, delay: 85, top: '28%' },
-
-  // Layer 3: Middle section (32-42%)
   { id: 4, size: 'small', version: 2, duration: 55, delay: 20, top: '32%' },
   { id: 6, size: 'medium', version: 1, duration: 65, delay: 30, top: '38%' },
   { id: 8, size: 'large', version: 2, duration: 85, delay: 40, top: '35%' },
-  { id: 18, size: 'large', version: 1, duration: 87, delay: 90, top: '42%' },
-
-  // Layer 4: Lower-middle section (48-58%)
   { id: 7, size: 'small', version: 1, duration: 52, delay: 35, top: '48%' },
-  { id: 9, size: 'medium', version: 2, duration: 68, delay: 45, top: '52%' },
   { id: 10, size: 'xlarge', version: 2, duration: 95, delay: 50, top: '55%' },
-  { id: 19, size: 'small', version: 2, duration: 53, delay: 95, top: '58%' },
-
-  // Layer 5: Lower section (62-72%)
   { id: 11, size: 'small', version: 2, duration: 58, delay: 55, top: '62%' },
   { id: 12, size: 'large', version: 1, duration: 88, delay: 60, top: '68%' },
-  { id: 14, size: 'small', version: 1, duration: 60, delay: 70, top: '72%' },
-
-  // Layer 6: Bottom section (75-85%)
   { id: 13, size: 'medium', version: 1, duration: 72, delay: 65, top: '75%' },
   { id: 15, size: 'xlarge', version: 2, duration: 92, delay: 75, top: '78%' },
   { id: 20, size: 'xlarge', version: 1, duration: 98, delay: 100, top: '82%' },
-  { id: 21, size: 'medium', version: 1, duration: 66, delay: 105, top: '85%' },
-
-  // Layer 7: Very bottom (90-95%)
   { id: 22, size: 'small', version: 1, duration: 51, delay: 110, top: '90%' },
-  { id: 24, size: 'medium', version: 2, duration: 69, delay: 120, top: '88%' },
-  { id: 25, size: 'xlarge', version: 2, duration: 96, delay: 125, top: '86%' },
 ]
 
 export function PixelClouds() {
@@ -103,7 +81,8 @@ export function PixelClouds() {
           style={{
             top: cloud.top,
             animationDuration: `${cloud.duration}s`,
-            animationDelay: `-${cloud.delay}s`, // Negative delay starts animation mid-way
+            animationDelay: `-${cloud.delay}s`,
+            willChange: 'transform',
           }}
         >
           <PixelCloud size={cloud.size} version={cloud.version} />

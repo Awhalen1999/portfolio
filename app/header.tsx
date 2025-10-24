@@ -4,13 +4,12 @@ import Image from 'next/image'
 import { MoonIcon, SunIcon, Github, Folder, Wrench, Cloud } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import * as React from 'react'
 import { useClouds } from '../lib/clouds-context'
 
-function AnimatedSignature() {
+const AnimatedSignature = React.memo(function AnimatedSignature() {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
-  // Only add cache-busting on mount, not every render
-  const [cacheBuster] = useState(() => Date.now())
 
   useEffect(() => {
     setMounted(true)
@@ -37,7 +36,7 @@ function AnimatedSignature() {
 
   return (
     <Image
-      src={`${signatureSrc}?v=${cacheBuster}`}
+      src={signatureSrc}
       alt="Alex Whalen Signature"
       width={100}
       height={100}
@@ -46,9 +45,9 @@ function AnimatedSignature() {
       unoptimized
     />
   )
-}
+})
 
-function ThemeSwitch() {
+const ThemeSwitch = React.memo(function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -57,7 +56,7 @@ function ThemeSwitch() {
   }, [])
 
   if (!mounted) {
-    return null
+    return <div className="h-7 w-7" />
   }
 
   const toggleTheme = () => {
@@ -78,9 +77,9 @@ function ThemeSwitch() {
       )}
     </button>
   )
-}
+})
 
-function CloudsToggle() {
+const CloudsToggle = React.memo(function CloudsToggle() {
   const [mounted, setMounted] = useState(false)
   const { showClouds, toggleClouds } = useClouds()
 
@@ -89,7 +88,7 @@ function CloudsToggle() {
   }, [])
 
   if (!mounted) {
-    return null
+    return <div className="h-7 w-7" />
   }
 
   return (
@@ -102,7 +101,7 @@ function CloudsToggle() {
       <Cloud className="h-4 w-4" fill={showClouds ? 'currentColor' : 'none'} />
     </button>
   )
-}
+})
 
 export function Header() {
   return (
