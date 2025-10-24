@@ -22,8 +22,20 @@ const projects: Project[] = [
     image: '/cover.jpg',
   },
   {
-    title: 'Wild Experiment',
-    description: 'Just a crazy idea I had to build. Still figuring it out.',
+    title: 'Project Beta',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+  {
+    title: 'Project Gamma',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+  {
+    title: 'Project Delta',
+    description: 'A revolutionary SaaS platform that changes everything.',
     year: '2025',
     image: '/cover.jpg',
   },
