@@ -22,12 +22,14 @@
   /* background */
   --c-background: #e0f2fe;
   --c-background-muted: #bababa;
+  --c-background-hover: rgba(50, 50, 50, 0.03);
 
   /* expanded  */
-  --c-chip: rgba(63, 63, 70, 0.22);
-  --c-chip-active: rgba(39, 39, 42, 0.32);
+  --c-chip: rgba(50, 50, 50, 0.15);
+  --c-chip-active: rgba(50, 50, 50, 0.2);
   --c-accent: #ecc1ff;
   --c-accent-active: #c4a0d9;
+  --c-text-transparent: rgba(50, 50, 50, 0.3);
 }
 
 .dark {
@@ -40,12 +42,14 @@
   /* background */
   --c-background: #000000;
   --c-background-muted: #222;
+  --c-background-hover: rgba(255, 255, 255, 0.03);
 
   /* expanded  */
-  --c-chip: rgba(255, 255, 255, 0.12);
-  --c-chip-active: rgba(255, 255, 255, 0.22);
+  --c-chip: rgba(255, 255, 255, 0.15);
+  --c-chip-active: rgba(255, 255, 255, 0.2);
   --c-accent: #ecc1ff;
   --c-accent-active: #c4a0d9;
+  --c-text-transparent: rgba(255, 255, 255, 0.3);
 }
 
 @layer base {

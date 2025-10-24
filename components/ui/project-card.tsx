@@ -1,46 +1,35 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image from 'next/image'
-import { Search } from 'lucide-react'
 import { ImageDialog } from './image-dialog'
 
 interface ProjectCardProps {
   title: string
   description: string
+  icon: React.ReactNode
   image: string
 }
 
-export function ProjectCard({ title, description, image }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  icon,
+  image,
+}: ProjectCardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
   return (
     <>
-      <div className="space-y-3">
-        {/* Image card */}
-        <div
-          onClick={() => setIsDialogOpen(true)}
-          className="group relative cursor-zoom-in rounded-lg border border-gray-200 bg-white transition-all hover:border-gray-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-700"
-        >
-          <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
-            <Image
-              src={image}
-              alt={title}
-              width={400}
-              height={225}
-              className="h-full w-full object-cover transition-transform group-hover:scale-105"
-            />
-          </div>
+      <div
+        className="flex cursor-zoom-in items-center gap-4 rounded-sm p-2 hover:bg-[var(--c-background-hover)]"
+        onClick={() => setIsDialogOpen(true)}
+      >
+        <div className="flex flex-shrink-0 items-center justify-center text-[var(--c-text-transparent)]">
+          {icon}
         </div>
-
-        {/* Title and description outside */}
         <div>
-          <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-gray-100">
-            {title}
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            {description}
-          </p>
+          <h3 className="text-style-body-main">{title}</h3>
+          <p className="text-style-body-small">{description}</p>
         </div>
       </div>
 
