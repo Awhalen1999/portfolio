@@ -23,6 +23,7 @@
   --c-background: #e0f2fe;
   --c-background-muted: #bababa;
   --c-background-hover: rgba(50, 50, 50, 0.03);
+  --c-background-hover-10: rgba(50, 50, 50, 0.1);
 
   /* expanded  */
   --c-chip: rgba(50, 50, 50, 0.15);
@@ -43,6 +44,7 @@
   --c-background: #000000;
   --c-background-muted: #222;
   --c-background-hover: rgba(255, 255, 255, 0.03);
+  --c-background-hover-10: rgba(255, 255, 255, 0.1);
 
   /* expanded  */
   --c-chip: rgba(255, 255, 255, 0.15);
@@ -150,9 +152,15 @@
     @apply leading-relaxed font-semibold;
   }
 
-  .text-style-body-small {
+  .text-style-body-small-60 {
     font-family: var(--font-inter);
     color: var(--c-text-60);
+    @apply text-sm font-medium tracking-tight;
+  }
+
+  .text-style-body-small-100 {
+    font-family: var(--font-inter);
+    color: var(--c-text-100);
     @apply text-sm font-medium tracking-tight;
   }
 

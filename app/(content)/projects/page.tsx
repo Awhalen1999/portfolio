@@ -1,55 +1,55 @@
 'use client'
 
-import { ProjectCard } from '@/components/ui/project-card'
+import { ProjectTile } from '@/components/ui/project-tile'
 import { Folder } from 'lucide-react'
 import React from 'react'
 
-interface Project {
+interface ProjectTileProps {
   title: string
   description: string
-  icon: React.ReactNode
+  year: string
   image: string
 }
 
 const projectsPage = () => {
   const projects = [
     {
-      icon: <Folder className="h-10 w-10" />,
-      title: 'Motion Primitives Pro',
+      title: 'Kaboodle',
       description:
-        'Advanced components and templates to craft beautiful websites.',
+        'A mobile app for creating and sharing packing lists for your adventures.',
+      year: '2025',
       image: '/cover.jpg',
     },
     {
-      icon: <Folder className="h-10 w-10" />,
       title: 'Project Alpha',
       description: 'A revolutionary SaaS platform that changes everything.',
+      year: '2025',
       image: '/cover.jpg',
     },
     {
-      icon: <Folder className="h-10 w-10" />,
       title: 'Wild Experiment',
       description: 'Just a crazy idea I had to build. Still figuring it out.',
+      year: '2025',
       image: '/cover.jpg',
     },
   ]
 
   return (
-    <div className="space-y-8">
-      <div className="mx-auto max-w-xl text-center">
+    <div className="w-full space-y-8">
+      <div className="mx-auto text-center">
         <h1 className="text-style-header-main">Projects</h1>
         <p className="text-style-body-main">
           Some are finished, some are works in progress..
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="w-full space-y-2">
         {projects.map((project, index) => (
-          <ProjectCard
+          <ProjectTile
             key={index}
             title={project.title}
-            icon={project.icon}
             description={project.description}
+            year={project.year}
             image={project.image}
           />
         ))}

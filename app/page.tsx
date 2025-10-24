@@ -69,7 +69,7 @@ export default function AboutPage() {
         <p className="text-style-body-bold">Code and software</p>
         {/* Languages */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small">Languages</p>
+          <p className="text-style-body-small-60">Languages</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://www.typescriptlang.org"
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
         {/* Frontend */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small">Frontend</p>
+          <p className="text-style-body-small-60">Frontend</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://react.dev"
@@ -181,7 +181,7 @@ export default function AboutPage() {
 
         {/* Backend */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small">Backend</p>
+          <p className="text-style-body-small-60">Backend</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://nodejs.org"
@@ -286,7 +286,7 @@ export default function AboutPage() {
 
         {/* Tools & Development */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small">Tools</p>
+          <p className="text-style-body-small-60">Tools</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://github.com"
@@ -501,7 +501,7 @@ export default function AboutPage() {
 
       {/* Email Contact */}
       <div className="pt-3">
-        <p className="text-style-body-small">
+        <p className="text-style--60">
           Or mail me at{' '}
           <Link
             href="mailto:awhalendev@gmail.com"
