@@ -189,6 +189,12 @@
     @apply text-[0.925rem] leading-relaxed italic;
   }
 
+  .text-style-body-italic-transparent {
+    font-family: var(--font-inter);
+    color: var(--c-text-transparent);
+    @apply text-[0.925rem] leading-relaxed italic;
+  }
+
   .text-style-body-link {
     font-family: var(--font-inter);
     color: var(--c-text-100);

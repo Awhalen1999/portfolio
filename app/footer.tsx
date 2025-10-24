@@ -24,7 +24,11 @@ function ScrollToTop() {
 
 export function Footer() {
   return (
-    <footer className="flex items-center justify-end p-4 px-8">
+    <footer className="flex items-center justify-between p-4 px-8">
+      <p className="text-style-body-italic-transparent">
+        Made with <span className="text-style-body-italic">❤️</span> using my
+        actual brain and hands
+      </p>
       <ScrollToTop />
     </footer>
   )

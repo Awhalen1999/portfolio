@@ -1,4 +1,5 @@
 import { ProjectTile } from '@/components/ui/project-tile'
+import { TerminalBackButton } from '@/components/ui/terminal-back-button'
 import { Github } from 'lucide-react'
 
 interface Project {
@@ -46,6 +47,34 @@ const projects: Project[] = [
     year: '2025',
     image: '/cover.jpg',
   },
+  {
+    icon: '/postman.svg',
+    title: 'Project Epsilon',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+  {
+    icon: '/postman.svg',
+    title: 'Project Zeta',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },  
+  {
+    icon: '/postman.svg',
+    title: 'Project Eta',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
+  {
+    icon: '/postman.svg',
+    title: 'Project Theta',
+    description: 'A revolutionary SaaS platform that changes everything.',
+    year: '2025',
+    image: '/cover.jpg',
+  },
 ]
 
 export default function ProjectsPage() {
@@ -70,6 +99,7 @@ export default function ProjectsPage() {
           />
         ))}
       </div>
+      <TerminalBackButton />
     </div>
   )
 }
