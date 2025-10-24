@@ -22,9 +22,9 @@ export default function AboutPage() {
       <p className="text-style-body-main mb-5">
         I'm a serial SaaS developer with way too many{' '}
         <span className="text-style-body-tiny">amazing and revolutionary</span>{' '}
-        ideas. I'm also a bit of a nerd and love turning said wild ideas into
-        real tools that people{' '}
-        <span className="text-style-body-italic">(me)</span> actually use.
+        ideas. I'm also a bit of a nerd and love turning said ideas into real
+        tools that people <span className="text-style-body-italic">(me)</span>{' '}
+        actually use.
       </p>
 
       <p className="text-style-body-main mb-5">
