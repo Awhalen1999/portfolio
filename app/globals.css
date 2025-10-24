@@ -144,25 +144,31 @@
   .text-style-header-main {
     font-family: var(--font-inter);
     color: var(--c-text-100);
-    @apply text-4xl font-medium tracking-wide;
+    @apply text-[2rem] font-medium tracking-wide;
   }
 
   .text-style-header-bold {
     font-family: var(--font-inter);
     color: var(--c-text-100);
-    @apply text-4xl font-semibold tracking-wide;
+    @apply text-[2rem] font-semibold tracking-wide;
   }
 
   .text-style-body-main {
     font-family: var(--font-inter);
     color: var(--c-text-80);
-    @apply leading-relaxed font-medium;
+    @apply text-[0.925rem] leading-relaxed font-medium;
   }
 
   .text-style-body-bold {
     font-family: var(--font-inter);
     color: var(--c-text-100);
-    @apply leading-relaxed font-semibold;
+    @apply text-[0.925rem] leading-relaxed font-semibold;
+  }
+
+  .text-style-body-italic {
+    font-family: var(--font-inter);
+    color: var(--c-text-80);
+    @apply text-[0.925rem] leading-relaxed italic;
   }
 
   .text-style-body-small-60 {
@@ -187,18 +193,6 @@
     font-family: var(--font-inter);
     color: var(--c-text-80);
     @apply text-[0.625rem] tracking-wider;
-  }
-
-  .text-style-body-italic {
-    font-family: var(--font-inter);
-    color: var(--c-text-80);
-    @apply leading-relaxed font-normal tracking-wider italic;
-  }
-
-  .text-style-body-link {
-    font-family: var(--font-inter);
-    color: var(--c-text-100);
-    @apply leading-relaxed font-normal underline underline-offset-3;
   }
 
   /* Code-specific styles */

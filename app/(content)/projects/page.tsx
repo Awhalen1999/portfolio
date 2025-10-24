@@ -50,10 +50,10 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <div className="w-full space-y-8">
-      <div className="mx-auto text-center">
-        <h1 className="text-style-header-main">Projects</h1>
-        <p className="text-style-body-main">
+    <div className="w-full space-y-12">
+      <div>
+        <h1 className="text-style-header-main mb-2">Projects</h1>
+        <p className="text-style-body-italic">
           Some are finished, some are works in progress..
         </p>
       </div>

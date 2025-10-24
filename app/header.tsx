@@ -126,10 +126,10 @@ export function Header() {
             </span>
           </Link>
           <Link
-            href="/media"
+            href="/tools"
             className="text-style-body-main transition-all hover:text-[var(--c-text-100)]"
           >
-            <span className="hidden md:inline">Media</span>
+            <span className="hidden md:inline">Tools</span>
             <span className="md:hidden">
               <Wrench className="h-4 w-4" />
             </span>

@@ -24,7 +24,14 @@ export default function AboutPage() {
         <span className="text-style-body-tiny">amazing and revolutionary</span>{' '}
         ideas. I'm also a bit of a nerd and love turning said ideas into real
         tools that people <span className="text-style-body-italic">(me)</span>{' '}
-        actually use.
+        actually use. Here are some of the{' '}
+        <Link
+          href="/tools"
+          className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.6px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
+        >
+          tools
+        </Link>{' '}
+        I am currently using everyday for work and personal projects.
       </p>
 
       <p className="text-style-body-main mb-5">
@@ -33,26 +40,20 @@ export default function AboutPage() {
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="text-style-body-link"
+          className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.5px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
         >
           Nutraforge Technologies
         </Link>
         , building tools for nutrition analysis that help health professionals.
         I'm also working on and contributing to various (too many){' '}
-        <Link href="/projects" className="text-style-body-link">
+        <Link
+          href="/projects"
+          className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.5px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
+        >
           projects
         </Link>
         . When I find the time, I try to attend as many hackathons and coding
         experiments as I can.
-      </p>
-
-      <p className="text-style-body-main mb-5">
-        Outside of coding, I enjoy exploring new places, sports, anime and
-        movies - I am trying to list some of my{' '}
-        <Link href="/media" className="text-style-body-link">
-          media consumption
-        </Link>{' '}
-        on my website if you're interested.
       </p>
 
       <p className="text-style-body-main mb-10">
@@ -505,7 +506,7 @@ export default function AboutPage() {
           Or mail me at{' '}
           <Link
             href="mailto:awhalendev@gmail.com"
-            className="text-style-body-link"
+            className="text-style-body-bold cursor-pointer underline decoration-[var(--c-text-transparent)] decoration-[0.5px] underline-offset-3 transition-all hover:decoration-[var(--c-text-100)]"
           >
             awhalendev@gmail.com
           </Link>
