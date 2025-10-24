@@ -7,7 +7,7 @@ import { IconButton } from '@/components/ui/icon-button'
 
 export default function AboutPage() {
   return (
-    <TextFade direction="up" className="mx-auto max-w-xl">
+    <TextFade direction="up">
       {/* Main text sections */}
       <h1 className="text-style-header-main mb-5">Alex Whalen</h1>
       <p className="text-style-body-main mb-5">

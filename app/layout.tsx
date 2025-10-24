@@ -119,7 +119,7 @@ export default function RootLayout({
             <CloudsBackground />
             <div className="relative flex min-h-screen flex-col">
               <Header />
-              <main className="mx-auto max-w-5xl flex-1 py-16 lg:px-8">
+              <main className="mx-auto max-w-2xl flex-1 py-16 lg:px-8">
                 {children}
               </main>
               <Footer />
