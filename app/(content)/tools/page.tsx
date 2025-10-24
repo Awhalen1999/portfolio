@@ -158,7 +158,7 @@ export default function ToolsPage() {
             level={1}
           />
           <ToolItem
-            title="Claude code"
+            title="Claude"
             description="My preferred AI agent"
             level={1}
           />

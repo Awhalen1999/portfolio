@@ -1,6 +1,6 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import { ArrowUp } from 'lucide-react'
+import { ArrowUp, Hand } from 'lucide-react'
 
 function ScrollToTop() {
   const scrollToTop = () => {
@@ -24,10 +24,10 @@ function ScrollToTop() {
 
 export function Footer() {
   return (
-    <footer className="flex items-center justify-between p-4 px-8">
-      <p className="text-style-body-italic-transparent">
+    <footer className="flex items-center justify-between p-3 px-6">
+      <p className="text-style-body-italic-transparent flex items-center gap-2">
         Made with <span className="text-style-body-italic">❤️</span> using my
-        actual brain and hands
+        actual <Hand className="inline-block h-4 w-4" />
       </p>
       <ScrollToTop />
     </footer>

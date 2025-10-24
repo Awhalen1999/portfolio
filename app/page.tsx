@@ -470,6 +470,20 @@ export default function AboutPage() {
             >
               Stripe
             </Chip>
+            <Chip
+              href="https://posthog.com"
+              icon={
+                <Image
+                  src="/posthog.svg"
+                  alt="PostHog"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              PostHog
+            </Chip>
           </div>
         </div>
       </div>
