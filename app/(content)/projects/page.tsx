@@ -1,6 +1,6 @@
 import { ProjectTile } from '@/components/ui/project-tile'
 import { TerminalBackButton } from '@/components/ui/terminal-back-button'
-import { Github } from 'lucide-react'
+import { Laptop } from 'lucide-react'
 
 interface Project {
   icon: string | React.ReactNode
@@ -12,7 +12,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    icon: '/postman.svg',
+    icon: '/kaboodle.png',
     title: 'Kaboodle',
     description:
       'A mobile app for creating and sharing packing lists for your adventures.',
@@ -20,59 +20,35 @@ const projects: Project[] = [
     image: '/cover.jpg',
   },
   {
-    icon: <Github className="h-6 w-6" strokeWidth={1.5} />,
-    title: 'Project Alpha',
-    description: 'A revolutionary SaaS platform that changes everything.',
+    icon: '/random-bracket.png',
+    title: 'Random Bracket Daily',
+    description:
+      'A daily game where 16 random things are put into a bracket and you pick the winner.',
     year: '2025',
     image: '/cover.jpg',
   },
   {
-    icon: '/postman.svg',
-    title: 'Project Beta',
-    description: 'A revolutionary SaaS platform that changes everything.',
+    icon: <Laptop className="h-8 w-8" strokeWidth={1.5} />,
+    title: 'OS Mock',
+    description:
+      'A web app that mimics an OS with resizable / draggable windows and a dock.',
     year: '2025',
     image: '/cover.jpg',
   },
   {
-    icon: '/postman.svg',
-    title: 'Project Gamma',
-    description: 'A revolutionary SaaS platform that changes everything.',
-    year: '2025',
+    icon: '/beer-scout.png',
+    title: 'Beer Scout',
+    description:
+      'A community driven app for finding and submitting the cheapest beer deals in your area.',
+    year: '2024',
     image: '/cover.jpg',
   },
   {
-    icon: '/postman.svg',
-    title: 'Project Delta',
-    description: 'A revolutionary SaaS platform that changes everything.',
-    year: '2025',
-    image: '/cover.jpg',
-  },
-  {
-    icon: '/postman.svg',
-    title: 'Project Epsilon',
-    description: 'A revolutionary SaaS platform that changes everything.',
-    year: '2025',
-    image: '/cover.jpg',
-  },
-  {
-    icon: '/postman.svg',
-    title: 'Project Zeta',
-    description: 'A revolutionary SaaS platform that changes everything.',
-    year: '2025',
-    image: '/cover.jpg',
-  },  
-  {
-    icon: '/postman.svg',
-    title: 'Project Eta',
-    description: 'A revolutionary SaaS platform that changes everything.',
-    year: '2025',
-    image: '/cover.jpg',
-  },
-  {
-    icon: '/postman.svg',
-    title: 'Project Theta',
-    description: 'A revolutionary SaaS platform that changes everything.',
-    year: '2025',
+    icon: '/gameon-tap.png',
+    title: 'GameOn Tap',
+    description:
+      'A collection of party games that can be played without any of the setup and items needed.',
+    year: '2024',
     image: '/cover.jpg',
   },
 ]

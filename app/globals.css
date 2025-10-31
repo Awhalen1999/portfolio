@@ -219,6 +219,12 @@
     @apply text-xs font-medium tracking-tight;
   }
 
+  .text-style-body-extra-small-body {
+    font-family: var(--font-inter);
+    color: var(--c-text-80);
+    @apply text-[0.700rem] font-medium;
+  }
+
   .text-style-body-tiny {
     font-family: var(--font-inter);
     color: var(--c-text-80);

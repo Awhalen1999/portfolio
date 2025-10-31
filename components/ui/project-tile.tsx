@@ -34,9 +34,9 @@ export function ProjectTile({
               <Image
                 src={icon}
                 alt={`${title} icon`}
-                width={24}
-                height={24}
-                className="h-6 w-6 object-contain"
+                width={32}
+                height={32}
+                className="h-8 w-8 object-contain"
               />
             ) : (
               icon
@@ -45,7 +45,7 @@ export function ProjectTile({
 
           <div className="flex flex-col">
             <h3 className="text-style-body-small-100">{title}</h3>
-            <p className="text-style-body-extra-small">{description}</p>
+            <p className="text-style-body-extra-small-body">{description}</p>
           </div>
         </div>
 
