@@ -484,6 +484,20 @@ export default function AboutPage() {
             >
               PostHog
             </Chip>
+            <Chip
+              href="https://neon.tech"
+              icon={
+                <Image
+                  src="/neon.svg"
+                  alt="Neon"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Neon
+            </Chip>
           </div>
         </div>
       </div>
