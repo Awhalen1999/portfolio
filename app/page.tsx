@@ -34,7 +34,7 @@ export default function AboutPage() {
       <p className="text-style-body-main mb-5">
         Currently, I lead the enterprise software team at{' '}
         <Link
-          href=""
+          href="https://www.nutraforge.ca/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-style-body-link"
