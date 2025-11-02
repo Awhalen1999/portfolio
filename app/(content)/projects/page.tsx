@@ -45,6 +45,14 @@ const projects: Project[] = [
     link: 'https://github.com/beer-scout-project/beer-scout',
   },
   {
+    icon: '/smart-sip.png',
+    title: 'SmartSip AI',
+    description:
+      'An AI bartending app that will create cocktails based on your requests and ingredients.',
+    year: '2024',
+    link: 'https://github.com/Awhalen1999/smart-sip',
+  },
+  {
     icon: '/gameon-tap.png',
     title: 'GameOn Tap',
     description:
