@@ -7,7 +7,8 @@ interface Project {
   title: string
   description: string
   year: string
-  image: string
+  link?: string
+  disabled?: boolean
 }
 
 const projects: Project[] = [
@@ -17,7 +18,7 @@ const projects: Project[] = [
     description:
       'A mobile app for creating and sharing packing lists for your adventures.',
     year: '2025',
-    image: '/cover.jpg',
+    disabled: true,
   },
   {
     icon: '/random-bracket.png',
@@ -25,7 +26,7 @@ const projects: Project[] = [
     description:
       'A daily game where 16 random things are put into a bracket and you pick the winner.',
     year: '2025',
-    image: '/cover.jpg',
+    disabled: true,
   },
   {
     icon: <Laptop className="h-8 w-8" strokeWidth={1.5} />,
@@ -33,7 +34,7 @@ const projects: Project[] = [
     description:
       'A web app that mimics an OS with resizable / draggable windows and a dock.',
     year: '2025',
-    image: '/cover.jpg',
+    link: 'https://github.com/Awhalen1999/browser-sim',
   },
   {
     icon: '/beer-scout.png',
@@ -41,7 +42,7 @@ const projects: Project[] = [
     description:
       'A community driven app for finding and submitting the cheapest beer deals in your area.',
     year: '2024',
-    image: '/cover.jpg',
+    link: 'https://github.com/beer-scout-project/beer-scout',
   },
   {
     icon: '/gameon-tap.png',
@@ -49,7 +50,7 @@ const projects: Project[] = [
     description:
       'A collection of party games that can be played without any of the setup and items needed.',
     year: '2024',
-    image: '/cover.jpg',
+    link: 'https://github.com/Awhalen1999/GameOn-Tap',
   },
 ]
 
@@ -71,7 +72,8 @@ export default function ProjectsPage() {
             title={project.title}
             description={project.description}
             year={project.year}
-            image={project.image}
+            link={project.link}
+            disabled={project.disabled}
           />
         ))}
       </div>
