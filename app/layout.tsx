@@ -33,23 +33,37 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  // todo: update all this metadata
-  metadataBase: new URL('https://alexwhalen.co/'),
+  metadataBase: new URL('https://awhalen.dev/'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://awhalen.dev/',
   },
   title: {
     default: 'Alex Whalen - Personal Website',
     template: '%s | Alex Whalen',
   },
   description:
-    "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it. Based in St. John's, NL.",
+    "Hey! I'm Alex, a full stack developer who loves building cool stuff for the web and mobile. Currently building SaaS products and having way too much fun with it. Based in St. John's, NL.",
   keywords: [
     'Alex Whalen',
     'Full Stack Developer',
     'TypeScript',
     'React',
     'Next.js',
+    'Mobile Development',
+    'Mobile App Development',
+    'Mobile App',
+    'Mobile',
+    'App',
+    'App Development',
+    'Flutter',
+    'Dart',
+    'TypeScript',
+    'JavaScript',
+    'React',
+    'Next.js',
+    'Tailwind CSS',
+    'HTML',
+    'CSS',
     'SaaS Developer',
     'Web Development',
     'Software Engineer',
@@ -58,7 +72,7 @@ export const metadata: Metadata = {
     'Developer',
     'Coding',
   ],
-  authors: [{ name: 'Alex Whalen', url: 'https://alexwhalen.co' }],
+  authors: [{ name: 'Alex Whalen', url: 'https://awhalen.dev/' }],
   creator: 'Alex Whalen',
   publisher: 'Alex Whalen',
   robots: {
@@ -75,14 +89,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://alexwhalen.co/',
+    url: 'https://awhalen.dev/',
     siteName: 'Alex Whalen',
     title: 'Alex Whalen - Personal Website',
     description:
       "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it.",
     images: [
       {
-        url: '/cover.jpg',
+        url: '/cover.png',
         width: 1200,
         height: 630,
         alt: 'Alex Whalen - Personal Website',
@@ -94,7 +108,7 @@ export const metadata: Metadata = {
     title: 'Alex Whalen - Personal Website',
     description:
       "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it.",
-    images: ['/cover.jpg'],
+    images: ['/cover.png'],
   },
 }
 
