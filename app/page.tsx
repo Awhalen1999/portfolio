@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Chip } from "@/components/ui/chip";
-import { MapPin, Coffee, Linkedin, Github } from "lucide-react";
+import {
+  MapPin,
+  Coffee,
+  Linkedin,
+  Github,
+  CornerDownRight,
+} from "lucide-react";
 import { TextFade } from "@/components/ui/text-fade";
 import { IconButton } from "@/components/ui/icon-button";
 
@@ -536,17 +542,19 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* Email Contact */}
-      <div className=" space-y-2"></div>
-      <p className="text-style--60">
-        <a
-          href="/alex_whalen_resume_11_2025.pdf"
-          download="alex_whalen_resume.pdf"
-          className="text-style-body-link"
-        >
-          Download CV
-        </a>
-      </p>
+      {/* Download CV */}
+      <div className="space-y-2">
+        <p className="text-style--60">
+          <a
+            href="/alex_whalen_resume_11_2025.pdf"
+            download="alex_whalen_resume.pdf"
+            className="text-style-body-link inline-flex items-center gap-1"
+          >
+            <CornerDownRight strokeWidth={1.5} className="h-4 w-4" /> Download
+            CV
+          </a>
+        </p>
+      </div>
     </TextFade>
   );
 }
