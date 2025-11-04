@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Chip } from '@/components/ui/chip'
-import { MapPin, Coffee, Linkedin, Github } from 'lucide-react'
-import { TextFade } from '@/components/ui/text-fade'
-import { IconButton } from '@/components/ui/icon-button'
+import Link from "next/link";
+import Image from "next/image";
+import { Chip } from "@/components/ui/chip";
+import { MapPin, Coffee, Linkedin, Github } from "lucide-react";
+import { TextFade } from "@/components/ui/text-fade";
+import { IconButton } from "@/components/ui/icon-button";
 
 export default function AboutPage() {
   return (
@@ -13,36 +13,33 @@ export default function AboutPage() {
       <p className="text-style-body-main mb-5">
         Hey! I'm Alex. This is my website... you could call it a portfolio
         website or a blog, but I like to think of it as a collection of my work
-        and thoughts.{' '}
+        and thoughts.{" "}
         <span className="text-style-body-italic">
-          Maybe the ramblings of a madman.{' '}
+          Maybe the ramblings of a madman.{" "}
         </span>
         who knows.
       </p>
       <p className="text-style-body-main mb-5">
-        I'm a serial SaaS developer with way too many{' '}
-        <span className="text-style-body-tiny">amazing and revolutionary</span>{' '}
+        I'm a serial SaaS developer with way too many{" "}
+        <span className="text-style-body-tiny">amazing and revolutionary</span>{" "}
         ideas. I'm also a bit of a nerd and love turning said ideas into real
-        tools that people <span className="text-style-body-italic">(me)</span>{' '}
-        actually use. Here are some of the{' '}
-        <Link href="/tools" className="text-style-body-link">
-          tools
-        </Link>{' '}
-        I am currently using everyday for work and personal projects.
+        tools that people <span className="text-style-body-italic">(me)</span>{" "}
+        actually use.
       </p>
 
       <p className="text-style-body-main mb-5">
-        Currently, I lead the enterprise software team at{' '}
-        <Link
-          href="https://www.nutraforge.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-style-body-link"
-        >
-          Nutraforge Technologies
-        </Link>
-        , building tools for nutrition analysis that help health professionals.
-        I'm also working on and contributing to various (too many){' '}
+        Here are some of the{" "}
+        <Link href="/tools" className="text-style-body-link">
+          tools
+        </Link>{" "}
+        I am currently using everyday for work and personal projects if you're
+        interested.
+      </p>
+
+      <p className="text-style-body-main mb-5">
+        Right now, I'm just building stuff I think is cool and useful. I'm also
+        working on and contributing to various{" "}
+        <span className="text-style-body-italic">(too many)</span>{" "}
         <Link href="/projects" className="text-style-body-link">
           projects
         </Link>
@@ -52,15 +49,18 @@ export default function AboutPage() {
 
       <p className="text-style-body-main mb-5">
         Outside of coding, I enjoy exploring new places, sports, anime and
-        movies.
+        movies.{" "}
+        <span className="text-style-body-italic">
+          Oh and trying way too hard to be good at running...
+        </span>
       </p>
 
       <p className="text-style-body-main mb-10">
-        I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{' '}
+        I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{" "}
         <strong className="text-style-body-bold text-[var(--color-main-text)]">
           St. John's NL
         </strong>
-        , if you are around, reach out and let's have some{' '}
+        , if you are around, reach out and let's have some{" "}
         <Coffee className="mx-1 inline h-4 w-4" /> or work together.
       </p>
 
@@ -525,12 +525,8 @@ export default function AboutPage() {
             LinkedIn
           </IconButton>
         </div>
-      </div>
-
-      {/* Email Contact */}
-      <div className="pt-3">
         <p className="text-style--60">
-          Or mail me at{' '}
+          Or mail me at{" "}
           <Link
             href="mailto:awhalendev@gmail.com"
             className="text-style-body-link"
@@ -539,6 +535,18 @@ export default function AboutPage() {
           </Link>
         </p>
       </div>
+
+      {/* Email Contact */}
+      <div className=" space-y-2"></div>
+      <p className="text-style--60">
+        <a
+          href="/alex_whalen_resume_11_2025.pdf"
+          download="alex_whalen_resume.pdf"
+          className="text-style-body-link"
+        >
+          Download CV
+        </a>
+      </p>
     </TextFade>
-  )
+  );
 }
