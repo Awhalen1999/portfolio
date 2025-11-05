@@ -63,7 +63,7 @@ export default function AboutPage() {
 
       <p className="text-style-body-main mb-10">
         I'm currently based in <MapPin className="mx-1 inline h-4 w-4" />{" "}
-        <strong className="text-style-body-bold text-[var(--color-main-text)]">
+        <strong className="text-style-body-bold text-(--c-text-100)">
           St. John's NL
         </strong>
         , if you are around, reach out and let's have some{" "}

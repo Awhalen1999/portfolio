@@ -42,7 +42,7 @@ export function ToolItem({
   return (
     <div className={`${getIndentation()} space-y-1`}>
       <div className="flex items-start gap-2">
-        <span className={`${getBulletStyle()} flex-shrink-0`}>•</span>
+        <span className={`${getBulletStyle()} shrink-0`}>•</span>
         <div className="flex items-center gap-2">
           <h3 className="text-style-body-bold">{title}</h3>
           {description && (

@@ -30,14 +30,14 @@ export function ProjectTile({
     <div
       className={`flex w-full items-center justify-between gap-4 rounded-sm p-2 px-4 transition-colors ${
         disabled || !link
-          ? 'cursor-not-allowed hover:bg-[var(--c-background-hover)]'
-          : 'cursor-pointer hover:bg-[var(--c-background-hover-10)]'
+          ? 'cursor-not-allowed hover:bg-(--c-background-hover)'
+          : 'cursor-pointer hover:bg-(--c-background-hover-10)'
       }`}
       onClick={handleClick}
     >
       <div className="flex items-center gap-3">
         {/* Project Icon */}
-        <div className="flex flex-shrink-0 items-center justify-center">
+        <div className="flex shrink-0 items-center justify-center">
           {typeof icon === 'string' ? (
             <Image
               src={icon}
@@ -59,10 +59,10 @@ export function ProjectTile({
 
       {/* Simple connecting line */}
       <div className="flex flex-1 items-center">
-        <div className="h-px w-full bg-[var(--c-separator)]"></div>
+        <div className="h-px w-full bg-(--c-separator)"></div>
       </div>
 
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <p className="text-style-body-small-100">{year}</p>
       </div>
     </div>

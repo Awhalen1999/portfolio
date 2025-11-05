@@ -30,7 +30,7 @@ export function IconButton({
         hoverText,
       )}
     >
-      <span className="flex-shrink-0">{icon}</span>
+      <span className="shrink-0">{icon}</span>
       <span className="font-medium">{children}</span>
     </a>
   )
