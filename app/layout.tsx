@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { Footer } from "./footer";
 import { CloudsProvider } from "@/lib/clouds-context";
 import { CloudsBackground } from "@/components/ui/clouds-background";
+import { PHProvider } from "@/lib/posthog-provider";
 import { Inter, DM_Mono } from "next/font/google";
 
 // Font configurations
@@ -122,24 +123,26 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmMono.variable} font-sans tracking-tight text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-100`}
       >
-        <ThemeProvider
-          enableSystem={true}
-          attribute="class"
-          storageKey="theme"
-          defaultTheme="system"
-          disableTransitionOnChange={false}
-        >
-          <CloudsProvider>
-            <CloudsBackground />
-            <div className="relative flex min-h-screen flex-col">
-              <Header />
-              <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-16">
-                {children}
-              </main>
-              <Footer />
-            </div>
-          </CloudsProvider>
-        </ThemeProvider>
+        <PHProvider>
+          <ThemeProvider
+            enableSystem={true}
+            attribute="class"
+            storageKey="theme"
+            defaultTheme="system"
+            disableTransitionOnChange={false}
+          >
+            <CloudsProvider>
+              <CloudsBackground />
+              <div className="relative flex min-h-screen flex-col">
+                <Header />
+                <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-16">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+            </CloudsProvider>
+          </ThemeProvider>
+        </PHProvider>
       </body>
     </html>
   );
