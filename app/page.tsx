@@ -546,7 +546,7 @@ export default function AboutPage() {
       <div className="space-y-2">
         <p className="text-style--60">
           <a
-            href="/alex_whalen_resume_11_2025.pdf"
+            href="/alex_whalen_resume.pdf"
             download="alex_whalen_resume.pdf"
             className="text-style-body-link inline-flex items-center gap-1"
           >
