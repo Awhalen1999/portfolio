@@ -393,20 +393,6 @@ export default function AboutPage() {
               Postman
             </Chip>
             <Chip
-              href="https://railway.app"
-              icon={
-                <Image
-                  src="/tech-icons/railway.svg"
-                  alt="Railway"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Railway
-            </Chip>
-            <Chip
               href="https://zod.dev"
               icon={
                 <Image
