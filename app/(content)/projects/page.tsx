@@ -1,6 +1,6 @@
 import { ProjectTile } from "@/components/ui/project-tile";
 import { TerminalBackButton } from "@/components/ui/terminal-back-button";
-import { Laptop } from "lucide-react";
+import { Code } from "lucide-react";
 
 interface Project {
   icon: string | React.ReactNode;
@@ -9,6 +9,7 @@ interface Project {
   year: string;
   link?: string;
   disabled?: boolean;
+  justForFun?: boolean;
 }
 
 const projects: Project[] = [
@@ -18,7 +19,7 @@ const projects: Project[] = [
     description:
       "A mobile app for creating and sharing packing lists for your adventures.",
     year: "2025",
-    disabled: true,
+    link: "https://kaboodle.now/",
   },
   {
     icon: "/app-icons/random-bracket.png",
@@ -29,12 +30,22 @@ const projects: Project[] = [
     disabled: true,
   },
   {
-    icon: <Laptop className="h-8 w-8" strokeWidth={1.5} />,
+    icon: <Code className="h-8 w-8" strokeWidth={1.5} />,
+    title: "Animated Eyes",
+    description:
+      "A web app that animates eyes following your mouse cursor using vanilla tailwind css.",
+    year: "2025",
+    link: "https://github.com/Awhalen1999/animated-eyes",
+    justForFun: true,
+  },
+  {
+    icon: <Code className="h-8 w-8" strokeWidth={1.5} />,
     title: "OS Mock",
     description:
       "A web app that mimics an OS with resizable / draggable windows and a dock.",
     year: "2025",
     link: "https://github.com/Awhalen1999/browser-sim",
+    justForFun: true,
   },
   {
     icon: "/app-icons/beer-scout.png",
@@ -82,6 +93,7 @@ export default function ProjectsPage() {
             year={project.year}
             link={project.link}
             disabled={project.disabled}
+            justForFun={project.justForFun}
           />
         ))}
       </div>
