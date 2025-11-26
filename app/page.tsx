@@ -490,6 +490,20 @@ export default function AboutPage() {
             >
               Neon
             </Chip>
+            <Chip
+              href="https://orm.drizzle.team/"
+              icon={
+                <Image
+                  src="/tech-icons/drizzle.svg"
+                  alt="Drizzle"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Drizzle ORM
+            </Chip>
           </div>
         </div>
       </div>
