@@ -49,8 +49,11 @@ export default function AboutPage() {
         <Link href="/projects" className="text-style-body-link">
           projects
         </Link>
-        . When I find the time, I try to attend as many hackathons and coding
-        experiments as I can.
+        . When I find the time, I try to attend as many{" "}
+        <Link href="dev-events" className="text-style-body-link">
+          hackathons and coding experiment
+        </Link>{" "}
+        as I can.
       </p>
 
       <p className="text-style-body-main mb-5">
