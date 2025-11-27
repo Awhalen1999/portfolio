@@ -36,7 +36,7 @@ const projects: Project[] = [
     description:
       "A web app that animates eyes following your mouse cursor using vanilla tailwind css.",
     year: "2025",
-    link: "https://github.com/Awhalen1999/animated-eyes",
+    link: "https://awhalen1999.github.io/animated-eyes/",
     justForFun: true,
   },
   {
