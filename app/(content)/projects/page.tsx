@@ -8,6 +8,7 @@ interface Project {
   description: string;
   year: string;
   link?: string;
+  liveUrl?: string;
   disabled?: boolean;
   justForFun?: boolean;
 }
@@ -20,6 +21,7 @@ const projects: Project[] = [
       "A mobile app for creating and sharing packing lists for your adventures.",
     year: "2025",
     link: "https://kaboodle.now/",
+    liveUrl: "https://kaboodle.now/",
   },
   {
     icon: <Code className="h-8 w-8" strokeWidth={1.5} />,
@@ -37,6 +39,7 @@ const projects: Project[] = [
       "A web app that animates eyes following your mouse cursor using vanilla tailwind css.",
     year: "2025",
     link: "https://awhalen1999.github.io/animated-eyes/",
+    liveUrl: "https://awhalen1999.github.io/animated-eyes/",
     justForFun: true,
   },
   {
@@ -46,6 +49,7 @@ const projects: Project[] = [
       "A web app that mimics an OS with resizable / draggable windows and a dock.",
     year: "2025",
     link: "https://awhalen1999.github.io/browser-sim/",
+    liveUrl: "https://awhalen1999.github.io/browser-sim/",
     justForFun: true,
   },
   {
@@ -93,6 +97,7 @@ export default function ProjectsPage() {
             description={project.description}
             year={project.year}
             link={project.link}
+            liveUrl={project.liveUrl}
             disabled={project.disabled}
             justForFun={project.justForFun}
           />

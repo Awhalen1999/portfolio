@@ -9,6 +9,7 @@ interface ProjectTileProps {
   year: string;
   icon: string | React.ReactNode;
   link?: string;
+  liveUrl?: string;
   disabled?: boolean;
   justForFun?: boolean;
 }
@@ -19,6 +20,7 @@ export function ProjectTile({
   year,
   icon,
   link,
+  liveUrl,
   disabled = false,
   justForFun = false,
 }: ProjectTileProps) {
@@ -54,7 +56,18 @@ export function ProjectTile({
         </div>
 
         <div className="flex flex-col">
-          <div className="flex items-center gap-2">
+          <div className="flex items-start gap-1">
+            {liveUrl && (
+              <a
+                href={liveUrl}
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-start pt-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="h-1 w-1 rounded-full bg-green-500/60 animate-pulse"></span>
+              </a>
+            )}
             <h3 className="text-style-body-small-100">{title}</h3>
             {justForFun && (
               <span className="text-style-body-tiny inline-flex items-center rounded-sm bg-(--c-chip) px-1.5 py-0.5 backdrop-blur-md">
