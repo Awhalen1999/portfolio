@@ -45,7 +45,7 @@ const projects: Project[] = [
     description:
       "A web app that mimics an OS with resizable / draggable windows and a dock.",
     year: "2025",
-    link: "https://github.com/Awhalen1999/browser-sim",
+    link: "https://awhalen1999.github.io/browser-sim/",
     justForFun: true,
   },
   {
