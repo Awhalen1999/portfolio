@@ -65,7 +65,7 @@ export function ProjectTile({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="h-1 w-1 rounded-full bg-green-500/60 animate-pulse"></span>
+                <span className="h-1 w-1 rounded-full bg-green-500/80 animate-pulse"></span>
               </a>
             )}
             <h3 className="text-style-body-small-100">{title}</h3>
