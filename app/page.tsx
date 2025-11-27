@@ -21,9 +21,9 @@ export default function AboutPage() {
         website or a blog, but I like to think of it as a collection of my work
         and thoughts.{" "}
         <span className="text-style-body-italic">
-          Maybe the ramblings of a madman.{" "}
+          This website is intentionally minimal and simple.{" "}
         </span>
-        who knows.
+        The best ones usually are.
       </p>
       <p className="text-style-body-main mb-5">
         I'm a serial SaaS developer with way too many{" "}
