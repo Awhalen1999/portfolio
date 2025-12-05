@@ -14,6 +14,11 @@ const devEvents: DevEvent[] = [
     year: "2025",
   },
   {
+    image: "/dev-events/cts-meetups.jpg",
+    name: "Weekly CTS Meetups",
+    year: "2025 +",
+  },
+  {
     image: "/dev-events/get-building-hackathon.jpg",
     name: "Get Building Hackathon",
     year: "2025",
