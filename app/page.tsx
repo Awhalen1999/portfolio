@@ -122,6 +122,20 @@ export default function AboutPage() {
             >
               Dart
             </Chip>
+            <Chip
+              href="https://swift.org"
+              icon={
+                <Image
+                  src="/tech-icons/swift.svg"
+                  alt="Swift"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Swift
+            </Chip>
           </div>
         </div>
 
@@ -506,6 +520,20 @@ export default function AboutPage() {
               }
             >
               Drizzle ORM
+            </Chip>
+            <Chip
+              href="https://www.revenuecat.com/"
+              icon={
+                <Image
+                  src="/tech-icons/revenuecat.svg"
+                  alt="Revenue Cat"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Revenue Cat
             </Chip>
           </div>
         </div>
