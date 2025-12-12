@@ -15,6 +15,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    icon: (
+      <span className="flex h-8 w-8 items-center justify-center text-2xl">
+        🌼
+      </span>
+    ),
+    title: "Pluck",
+    description:
+      "A macOS design tool that keeps your design inspiration visible in a side notch while you work.",
+    year: "2025",
+    link: "https://github.com/Awhalen1999/pluck",
+  },
+  {
     icon: "/app-icons/kaboodle.png",
     title: "Kaboodle",
     description:
