@@ -1,5 +1,5 @@
-import { TerminalBackButton } from '@/components/ui/terminal-back-button'
-import { ToolItem } from '@/components/ui/tool-item'
+import { TerminalBackButton } from "@/components/ui/terminal-back-button";
+import { ToolItem } from "@/components/ui/tool-item";
 
 export default function ToolsPage() {
   return (
@@ -163,9 +163,14 @@ export default function ToolsPage() {
             level={1}
           />
           <ToolItem title="Mobbin" description="Design inspiration" level={1} />
+          <ToolItem
+            title="Eagle"
+            description="Design file organization"
+            level={1}
+          />
         </div>
       </section>
       <TerminalBackButton />
     </div>
-  )
+  );
 }
