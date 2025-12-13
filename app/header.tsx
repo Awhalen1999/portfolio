@@ -125,15 +125,6 @@ export function Header() {
               <Folder className="h-4 w-4" />
             </span>
           </Link>
-          <Link
-            href="/tools"
-            className="text-style-body-main transition-all hover:text-(--c-text-100)"
-          >
-            <span className="hidden md:inline">Tools</span>
-            <span className="md:hidden">
-              <Wrench className="h-4 w-4" />
-            </span>
-          </Link>
           <a
             href="https://github.com/awhalen1999"
             target="_blank"
