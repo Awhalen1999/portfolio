@@ -26,10 +26,14 @@ export default function ToolsPage() {
           />
           <ToolItem
             title="Monitor"
-            description="BenQ PD2700U 27 / MSI G274QPX 27"
+            description="LG 32GS95UE-B 32 inch"
             level={1}
           />
-          <ToolItem title="Chair" description="Steelcase Amia 2013" level={1} />
+          <ToolItem
+            title="Chair"
+            description="Steelcase Amia 2013 (discontinued ˙◠˙)"
+            level={1}
+          />
           <ToolItem
             title="Headphones"
             description="Apple AirPods Pro"
