@@ -24,11 +24,7 @@ export default function ToolsPage() {
             description="Logitech MX Keys mini"
             level={1}
           />
-          <ToolItem
-            title="Monitor"
-            description="LG 32GS95UE-B 32 inch"
-            level={1}
-          />
+          <ToolItem title="Monitor" description='LG 32GS95UE-B 32"' level={1} />
           <ToolItem title="Chair" description="Steelcase Amia 2013" level={1} />
           <ToolItem
             title="Headphones"
