@@ -84,6 +84,21 @@ export default function ToolsPage() {
         </div>
       </section>
 
+      {/* Animation Section */}
+      <section className="space-y-4">
+        <h2 className="text-style-subheader-main">Animation</h2>
+        <div className="space-y-2">
+          <ToolItem title="Tablet" description="iPad Pro 12.9 M4" level={1} />
+          <ToolItem title="Pen" description="Apple Pencil Pro" level={1} />
+          <ToolItem
+            title="Procreate"
+            description="Animation software"
+            level={1}
+          />
+          <ToolItem title="Screen Cover" description="Paperlike 3" level={1} />
+        </div>
+      </section>
+
       {/* Browser Section */}
       <section className="space-y-4">
         <h2 className="text-style-subheader-main">Browser</h2>
