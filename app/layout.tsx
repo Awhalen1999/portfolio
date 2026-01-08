@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     template: "%s | Alex Whalen",
   },
   description:
-    "Hey! I'm Alex, a full stack developer who loves building cool stuff for the web and mobile. Currently building SaaS products and having way too much fun with it. Based in St. John's, NL.",
+    "Hey! I'm Alex, a full stack developer who loves building cool stuff for the web and mobile. Based in St. John's, NL.",
   keywords: [
     "Alex Whalen",
     "Full Stack Developer",
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     siteName: "Alex Whalen",
     title: "Alex Whalen - Personal Website",
     description:
-      "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it.",
+      "Hey! I'm Alex, a full stack developer who loves building cool stuff for the web and mobile.",
     images: [
       {
         url: "/cover.png",
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alex Whalen - Personal Website",
     description:
-      "Hey! I'm Alex, a full stack developer who loves building cool stuff with TypeScript, React, and Next.js. Currently building SaaS products and having way too much fun with it.",
+      "Hey! I'm Alex, a full stack developer who loves building cool stuff for the web and mobile.",
     images: ["/cover.png"],
   },
 };
