@@ -173,6 +173,7 @@ export default function ToolsPage() {
             description="My preferred AI agent"
             level={1}
           />
+          <ToolItem title="Figma" description="Design software" level={1} />
           <ToolItem title="Mobbin" description="Design inspiration" level={1} />
           <ToolItem
             title="Eagle"
