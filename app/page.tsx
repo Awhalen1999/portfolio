@@ -136,6 +136,20 @@ export default function AboutPage() {
             >
               Swift
             </Chip>
+            <Chip
+              href="https://en.wikipedia.org/wiki/SQL"
+              icon={
+                <Image
+                  src="/tech-icons/sql.svg"
+                  alt="SQL"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              SQL
+            </Chip>
           </div>
         </div>
 
