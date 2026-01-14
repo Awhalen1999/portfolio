@@ -75,11 +75,13 @@ export default function AboutPage() {
       </p>
 
       {/* Tech Stack */}
-      <div className="mb-10 space-y-4">
+      <div className="mb-10 space-y-5">
         <p className="text-style-body-bold">Code and software</p>
         {/* Coding Languages */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Coding Languages</p>
+          <p className="text-style-body-small-60 w-28 shrink-0">
+            Coding Languages
+          </p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -156,7 +158,9 @@ export default function AboutPage() {
 
         {/* Frameworks & Libraries */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Frameworks & Libraries</p>
+          <p className="text-style-body-small-60 w-28 shrink-0">
+            Frameworks & Libraries
+          </p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://react.dev"
@@ -345,7 +349,9 @@ export default function AboutPage() {
 
         {/* Databases & Backend */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Databases & Backend</p>
+          <p className="text-style-body-small-60 w-28 shrink-0">
+            Databases & Backend
+          </p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://www.postgresql.org"
@@ -436,7 +442,9 @@ export default function AboutPage() {
 
         {/* Cloud & Infrastructure */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Cloud & Infrastructure</p>
+          <p className="text-style-body-small-60 w-28 shrink-0">
+            Cloud & Infrastructure
+          </p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://cloud.google.com"
@@ -485,7 +493,7 @@ export default function AboutPage() {
 
         {/* Tools */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Tools</p>
+          <p className="text-style-body-small-60 w-28 shrink-0">Tools</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://github.com"
