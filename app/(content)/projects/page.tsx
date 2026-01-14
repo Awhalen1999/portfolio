@@ -36,12 +36,13 @@ const projects: Project[] = [
     liveUrl: "https://kaboodle.now/",
   },
   {
-    icon: <Code className="h-8 w-8" strokeWidth={1.5} />,
+    icon: "/app-icons/random-bracket.png",
     title: "Random Bracket Daily",
     description:
       "A daily game where 16 random things are put into a bracket and you pick the winner.",
     year: "2025",
-    link: "https://github.com/Awhalen1999/random-bracket",
+    link: "https://www.randombracket.com/",
+    liveUrl: "https://www.randombracket.com/",
     justForFun: true,
   },
   {
