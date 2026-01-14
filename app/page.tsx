@@ -7,6 +7,7 @@ import {
   Linkedin,
   Github,
   CornerDownRight,
+  Code,
 } from "lucide-react";
 import { TextFade } from "@/components/ui/text-fade";
 import { IconButton } from "@/components/ui/icon-button";
@@ -76,24 +77,10 @@ export default function AboutPage() {
       {/* Tech Stack */}
       <div className="mb-10 space-y-4">
         <p className="text-style-body-bold">Code and software</p>
-        {/* Languages */}
+        {/* Coding Languages */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Languages</p>
+          <p className="text-style-body-small-60">Coding Languages</p>
           <div className="flex flex-wrap gap-1">
-            <Chip
-              href="https://www.typescriptlang.org"
-              icon={
-                <Image
-                  src="/tech-icons/typescript.svg"
-                  alt="TypeScript"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              TypeScript
-            </Chip>
             <Chip
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               icon={
@@ -107,6 +94,20 @@ export default function AboutPage() {
               }
             >
               JavaScript
+            </Chip>
+            <Chip
+              href="https://www.typescriptlang.org"
+              icon={
+                <Image
+                  src="/tech-icons/typescript.svg"
+                  alt="TypeScript"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              TypeScript
             </Chip>
             <Chip
               href="https://dart.dev"
@@ -153,9 +154,9 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Frontend */}
+        {/* Frameworks & Libraries */}
         <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Frontend</p>
+          <p className="text-style-body-small-60">Frameworks & Libraries</p>
           <div className="flex flex-wrap gap-1">
             <Chip
               href="https://react.dev"
@@ -186,20 +187,6 @@ export default function AboutPage() {
               Next.js
             </Chip>
             <Chip
-              href="https://tailwindcss.com"
-              icon={
-                <Image
-                  src="/tech-icons/tailwindcss.svg"
-                  alt="Tailwind CSS"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Tailwind CSS
-            </Chip>
-            <Chip
               href="https://flutter.dev"
               icon={
                 <Image
@@ -213,13 +200,6 @@ export default function AboutPage() {
             >
               Flutter
             </Chip>
-          </div>
-        </div>
-
-        {/* Backend */}
-        <div className="flex items-start gap-2">
-          <p className="text-style-body-small-60">Backend</p>
-          <div className="flex flex-wrap gap-1">
             <Chip
               href="https://nodejs.org"
               icon={
@@ -232,7 +212,7 @@ export default function AboutPage() {
                 />
               }
             >
-              Node.js
+              Node
             </Chip>
             <Chip
               href="https://deno.land"
@@ -263,6 +243,111 @@ export default function AboutPage() {
               Hono
             </Chip>
             <Chip
+              href="https://expressjs.com"
+              icon={
+                <Image
+                  src="/tech-icons/express.svg"
+                  alt="Express"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Express
+            </Chip>
+            <Chip
+              href="https://tailwindcss.com"
+              icon={
+                <Image
+                  src="/tech-icons/tailwindcss.svg"
+                  alt="Tailwind CSS"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              TailwindCSS
+            </Chip>
+            <Chip
+              href="https://orm.drizzle.team/"
+              icon={
+                <Image
+                  src="/tech-icons/drizzle.svg"
+                  alt="Drizzle ORM"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Drizzle ORM
+            </Chip>
+            <Chip
+              href="https://mongoosejs.com"
+              icon={
+                <Image
+                  src="/tech-icons/mongoose.svg"
+                  alt="Mongoose"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Mongoose
+            </Chip>
+            <Chip
+              href="https://tanstack.com"
+              icon={
+                <Image
+                  src="/tech-icons/tanstack.svg"
+                  alt="TanStack"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              TanStack
+            </Chip>
+            <Chip
+              href="https://zustand-demo.pmnd.rs/"
+              icon={
+                <Image
+                  src="/tech-icons/zustand.svg"
+                  alt="Zustand"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Zustand
+            </Chip>
+            <Chip
+              href="https://zod.dev"
+              icon={
+                <Image
+                  src="/tech-icons/zod.svg"
+                  alt="Zod"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Zod
+            </Chip>
+          </div>
+        </div>
+
+        {/* Databases & Backend */}
+        <div className="flex items-start gap-2">
+          <p className="text-style-body-small-60">Databases & Backend</p>
+          <div className="flex flex-wrap gap-1">
+            <Chip
               href="https://www.postgresql.org"
               icon={
                 <Image
@@ -291,6 +376,69 @@ export default function AboutPage() {
               MongoDB
             </Chip>
             <Chip
+              href="https://redis.io"
+              icon={
+                <Image
+                  src="/tech-icons/redis.svg"
+                  alt="Redis"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Redis
+            </Chip>
+            <Chip
+              href="https://firebase.google.com"
+              icon={
+                <Image
+                  src="/tech-icons/firebase.svg"
+                  alt="Firebase"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Firebase
+            </Chip>
+            <Chip
+              href="https://supabase.com"
+              icon={
+                <Image
+                  src="/tech-icons/supabase.svg"
+                  alt="Supabase"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Supabase
+            </Chip>
+            <Chip
+              href="https://neon.tech"
+              icon={
+                <Image
+                  src="/tech-icons/neon.svg"
+                  alt="Neon"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Neon
+            </Chip>
+          </div>
+        </div>
+
+        {/* Cloud & Infrastructure */}
+        <div className="flex items-start gap-2">
+          <p className="text-style-body-small-60">Cloud & Infrastructure</p>
+          <div className="flex flex-wrap gap-1">
+            <Chip
               href="https://cloud.google.com"
               icon={
                 <Image
@@ -318,10 +466,24 @@ export default function AboutPage() {
             >
               AWS
             </Chip>
+            <Chip
+              href="https://vercel.com"
+              icon={
+                <Image
+                  src="/tech-icons/vercel.svg"
+                  alt="Vercel"
+                  width={16}
+                  height={16}
+                  className="h-full w-full object-contain"
+                />
+              }
+            >
+              Vercel
+            </Chip>
           </div>
         </div>
 
-        {/* Tools & Development */}
+        {/* Tools */}
         <div className="flex items-start gap-2">
           <p className="text-style-body-small-60">Tools</p>
           <div className="flex flex-wrap gap-1">
@@ -354,34 +516,6 @@ export default function AboutPage() {
               Figma
             </Chip>
             <Chip
-              href="https://firebase.google.com"
-              icon={
-                <Image
-                  src="/tech-icons/firebase.svg"
-                  alt="Firebase"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Firebase
-            </Chip>
-            <Chip
-              href="https://supabase.com"
-              icon={
-                <Image
-                  src="/tech-icons/supabase.svg"
-                  alt="Supabase"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Supabase
-            </Chip>
-            <Chip
               href="https://auth0.com"
               icon={
                 <Image
@@ -396,20 +530,6 @@ export default function AboutPage() {
               Auth0
             </Chip>
             <Chip
-              href="https://www.framer.com"
-              icon={
-                <Image
-                  src="/tech-icons/framer.svg"
-                  alt="Framer"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Framer
-            </Chip>
-            <Chip
               href="https://postman.com"
               icon={
                 <Image
@@ -422,62 +542,6 @@ export default function AboutPage() {
               }
             >
               Postman
-            </Chip>
-            <Chip
-              href="https://zod.dev"
-              icon={
-                <Image
-                  src="/tech-icons/zod.svg"
-                  alt="Zod"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Zod
-            </Chip>
-            <Chip
-              href="https://vercel.com"
-              icon={
-                <Image
-                  src="/tech-icons/vercel.svg"
-                  alt="Vercel"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Vercel
-            </Chip>
-            <Chip
-              href="https://tanstack.com"
-              icon={
-                <Image
-                  src="/tech-icons/tanstack.svg"
-                  alt="TanStack"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              TanStack
-            </Chip>
-            <Chip
-              href="https://zustand-demo.pmnd.rs/"
-              icon={
-                <Image
-                  src="/tech-icons/zustand.svg"
-                  alt="Zustand"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Zustand
             </Chip>
             <Chip
               href="https://stripe.com"
@@ -506,34 +570,6 @@ export default function AboutPage() {
               }
             >
               PostHog
-            </Chip>
-            <Chip
-              href="https://neon.tech"
-              icon={
-                <Image
-                  src="/tech-icons/neon.svg"
-                  alt="Neon"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Neon
-            </Chip>
-            <Chip
-              href="https://orm.drizzle.team/"
-              icon={
-                <Image
-                  src="/tech-icons/drizzle.svg"
-                  alt="Drizzle"
-                  width={16}
-                  height={16}
-                  className="h-full w-full object-contain"
-                />
-              }
-            >
-              Drizzle ORM
             </Chip>
             <Chip
               href="https://www.revenuecat.com/"
