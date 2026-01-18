@@ -49,6 +49,7 @@ export function ProjectTile({
               width={32}
               height={32}
               className="h-8 w-8 object-contain"
+              unoptimized={icon.endsWith(".gif")}
             />
           ) : (
             icon

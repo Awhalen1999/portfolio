@@ -15,6 +15,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    icon: "/blob-you.gif",
+    title: "blob.you",
+    description:
+      "Draw shapes and watch them fight with physics. Multiplayer with websockets.",
+    year: "2025",
+    disabled: true,
+  },
+  {
     icon: (
       <span className="flex h-8 w-8 items-center justify-center text-2xl">
         🌼
