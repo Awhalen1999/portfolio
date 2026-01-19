@@ -82,7 +82,11 @@ const projects: Project[] = [
     link: "https://github.com/beer-scout-project/beer-scout",
   },
   {
-    icon: "/app-icons/smart-sip.png",
+    icon: (
+      <span className="flex h-8 w-8 items-center justify-center text-2xl">
+        🍹
+      </span>
+    ),
     title: "SmartSip AI",
     description:
       "An AI bartending app that will create cocktails based on your requests and ingredients.",
@@ -90,7 +94,11 @@ const projects: Project[] = [
     link: "https://github.com/Awhalen1999/smart-sip",
   },
   {
-    icon: "/app-icons/gameon-tap.png",
+    icon: (
+      <span className="flex h-8 w-8 items-center justify-center text-2xl">
+        🃏
+      </span>
+    ),
     title: "GameOn Tap",
     description:
       "A collection of party games that can be played without any of the setup and items needed.",
