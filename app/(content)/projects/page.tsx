@@ -20,7 +20,8 @@ const projects: Project[] = [
     description:
       "Draw shapes and watch them fight with physics. Multiplayer with websockets.",
     year: "2025",
-    disabled: true,
+    link: "https://blob.you",
+    liveUrl: "https://blob.you",
   },
   {
     icon: (
