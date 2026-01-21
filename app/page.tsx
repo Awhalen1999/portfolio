@@ -640,7 +640,7 @@ export default function AboutPage() {
             className="text-style-body-link inline-flex items-center gap-1"
           >
             <CornerDownRight strokeWidth={1.5} className="h-4 w-4" /> Download
-            CV
+            Resume
           </a>
         </p>
       </div>
