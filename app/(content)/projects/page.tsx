@@ -33,7 +33,7 @@ const projects: Project[] = [
     description:
       "A macOS design tool that keeps your design inspiration visible in a side notch while you work.",
     year: "2025",
-    link: "https://github.com/Awhalen1999/pluck",
+    link: "https://github.com/Awhalen1999/pluck-d",
   },
   {
     icon: "/app-icons/kaboodle.png",
