@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: "blob.you",
     description:
       "Draw shapes and watch them fight with physics. Multiplayer with websockets.",
-    year: "2025",
+    year: "2026",
     link: "https://blob.you",
     liveUrl: "https://blob.you",
   },
