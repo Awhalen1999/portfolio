@@ -15,6 +15,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    icon: "/app-icons/cooked-photo.png",
+    title: "cooked.photo",
+    description:
+      "A web app with a bunch of filters for twisting and breaking photos in interesting ways.",
+    year: "2026",
+    link: "https://cooked.photo",
+    liveUrl: "https://cooked.photo",
+  },
+  {
     icon: "/blob-you.gif",
     title: "blob.you",
     description:
