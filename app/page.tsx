@@ -18,11 +18,9 @@ export default function AboutPage() {
       {/* Main text sections */}
       <h1 className="text-style-header-main mb-5">Alex Whalen</h1>
       <p className="text-style-body-main mb-5">
-        Hey! I'm Alex. This is my website... you could call it a portfolio
-        website or a blog, but I like to think of it as a collection of my work
-        and thoughts.{" "}
+        Hey! I'm Alex. This is my website.{" "}
         <span className="text-style-body-italic">
-          This website is intentionally minimal and simple.{" "}
+          Intentionally minimal and simple.{" "}
         </span>
         The best ones usually are.
       </p>
@@ -31,28 +29,30 @@ export default function AboutPage() {
         <span className="text-style-body-tiny">amazing and revolutionary</span>{" "}
         ideas. I'm also a bit of a nerd and love turning said ideas into real
         tools that people <span className="text-style-body-italic">(me)</span>{" "}
-        actually use.
-      </p>
-
-      <p className="text-style-body-main mb-5">
-        Here are some of the{" "}
+        actually use. Here are some of the{" "}
         <Link href="/tools" className="text-style-body-link">
           tools
         </Link>{" "}
-        I am currently using everyday for work and personal projects if you're
-        interested.
+        I use everyday if you're interested.
       </p>
 
       <p className="text-style-body-main mb-5">
-        Right now, I'm just building stuff I think is cool and useful. I'm also
-        working on and contributing to various{" "}
+        Right now, I'm working at{" "}
+        <Link
+          href="https://enaimco.com/"
+          className="text-style-body-link"
+          target="_blank"
+        >
+          Enaimco
+        </Link>{" "}
+        as a software developer. I'm also working on various{" "}
         <span className="text-style-body-italic">(too many)</span>{" "}
         <Link href="/projects" className="text-style-body-link">
           projects
         </Link>
         . When I find the time, I try to attend as many{" "}
         <Link href="dev-events" className="text-style-body-link">
-          hackathons and coding experiment
+          hackathons and events
         </Link>{" "}
         as I can.
       </p>
