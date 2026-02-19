@@ -61,7 +61,6 @@ const projects: Project[] = [
     year: "2025",
     link: "https://www.randombracket.com/",
     liveUrl: "https://www.randombracket.com/",
-    justForFun: true,
   },
   {
     icon: <Code className="h-8 w-8" strokeWidth={1.5} />,
@@ -71,7 +70,6 @@ const projects: Project[] = [
     year: "2025",
     link: "https://awhalen1999.github.io/animated-eyes/",
     liveUrl: "https://awhalen1999.github.io/animated-eyes/",
-    justForFun: true,
   },
   {
     icon: <Code className="h-8 w-8" strokeWidth={1.5} />,
@@ -81,7 +79,6 @@ const projects: Project[] = [
     year: "2025",
     link: "https://awhalen1999.github.io/browser-sim/",
     liveUrl: "https://awhalen1999.github.io/browser-sim/",
-    justForFun: true,
   },
   {
     icon: "/app-icons/beer-scout.png",
