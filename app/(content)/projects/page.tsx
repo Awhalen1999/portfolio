@@ -20,8 +20,8 @@ const projects: Project[] = [
     description:
       "A web app with a bunch of Wonderlic practice questions and answers.",
     year: "2026",
-    link: "https://wonderlic-practice.com",
-    liveUrl: "https://wonderlic-practice.com",
+    link: "https://wonderlic-practice.vercel.app/",
+    liveUrl: "https://wonderlic-practice.vercel.app/",
   },
   {
     icon: "/app-icons/cooked-photo.png",
