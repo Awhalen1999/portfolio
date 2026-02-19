@@ -15,6 +15,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    icon: "/app-icons/wonderlic-practice.png",
+    title: "Wonderlic Practice",
+    description:
+      "A web app with a bunch of Wonderlic practice questions and answers.",
+    year: "2026",
+    link: "https://wonderlic-practice.com",
+    liveUrl: "https://wonderlic-practice.com",
+  },
+  {
     icon: "/app-icons/cooked-photo.png",
     title: "cooked.photo",
     description:
